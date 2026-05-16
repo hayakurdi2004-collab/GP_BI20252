@@ -1,4 +1,4 @@
-```md id="w2o3d4"
+
 # Jordan Logistics Performance — Decision Support Tool
 
 Interactive Business Intelligence and analytics project focused on Jordan’s Logistics Performance Index (LPI).
