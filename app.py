@@ -10,8 +10,8 @@ st.set_page_config(
 
 st.title("Jordan Logistics Performance — Decision Support Tool")
 st.write(
-    "Interactive tool to simulate how improving Jordan’s weakest logistics indicators "
-    "could affect the Overall Logistics Performance Index (LPI)."
+    "Interactive Business Intelligence tool to analyze Jordan’s logistics performance, "
+    "simulate improvement scenarios, and generate strategic recommendations."
 )
 
 # ============================================================
@@ -21,7 +21,15 @@ st.write(
 def load_data():
     return pd.read_csv("outputs/LPI_interpolated.csv")
 
+@st.cache_data
+def load_gdp():
+    try:
+        return pd.read_excel("data/GDP_Final.csv.xlsx")
+    except Exception:
+        return None
+
 df = load_data()
+gdp_df = load_gdp()
 
 country_code = "JOR"
 overall_code = "LP.LPI.OVRL.XQ"
@@ -36,7 +44,7 @@ indicator_names = {
 }
 
 # ============================================================
-# Jordan overall data
+# Jordan data
 # ============================================================
 jordan_overall = df[
     (df["Country Code"] == country_code) &
@@ -45,9 +53,6 @@ jordan_overall = df[
 
 latest_baseline = jordan_overall["Value"].iloc[-1]
 
-# ============================================================
-# Jordan indicators latest values
-# ============================================================
 indicator_df = df[
     (df["Country Code"] == country_code) &
     (df["Indicator Code"].isin(indicator_names.keys()))
@@ -63,7 +68,7 @@ indicator_ranking = latest_indicators[
 ].sort_values("Value")
 
 # ============================================================
-# Correlations with overall LPI
+# Correlations
 # ============================================================
 corrs = {}
 
@@ -91,26 +96,17 @@ st.sidebar.header("What-if Inputs")
 
 customs_improvement = st.sidebar.slider(
     "Customs improvement",
-    min_value=0.0,
-    max_value=0.7,
-    value=0.25,
-    step=0.05
+    0.0, 0.7, 0.25, 0.05
 )
 
 shipments_improvement = st.sidebar.slider(
     "International Shipments improvement",
-    min_value=0.0,
-    max_value=0.7,
-    value=0.35,
-    step=0.05
+    0.0, 0.7, 0.35, 0.05
 )
 
 impact_weight = st.sidebar.slider(
     "Impact weight",
-    min_value=0.1,
-    max_value=0.7,
-    value=0.4,
-    step=0.05,
+    0.1, 0.7, 0.4, 0.05,
     help="Conservative multiplier translating indicator improvement into Overall LPI impact."
 )
 
@@ -138,54 +134,86 @@ col4.metric("Shipments Impact", round(shipments_impact, 3))
 st.divider()
 
 # ============================================================
-# Recommendation engine
+# Smart Recommendation Engine
 # ============================================================
-st.subheader("Recommended Alternative Solutions")
+st.subheader("Smart Recommendation Engine")
 
 recommendations = []
 
-if customs_improvement >= 0.25:
+if customs_improvement >= 0.45:
     recommendations.append({
-        "Solution": "Digital Customs Reform",
-        "Action": "Automate customs clearance, reduce paperwork, and improve border processing.",
-        "Expected Benefit": "Faster clearance and higher logistics efficiency."
+        "Priority": "High",
+        "Area": "Customs",
+        "Recommendation": "Aggressive Customs Digital Transformation",
+        "Expected Impact": "Strong border efficiency improvement and faster logistics processing."
+    })
+elif customs_improvement >= 0.25:
+    recommendations.append({
+        "Priority": "Medium",
+        "Area": "Customs",
+        "Recommendation": "Partial customs automation and paperwork reduction",
+        "Expected Impact": "Moderate customs efficiency improvement."
+    })
+else:
+    recommendations.append({
+        "Priority": "Low",
+        "Area": "Customs",
+        "Recommendation": "Current customs reforms may be insufficient",
+        "Expected Impact": "Limited logistics improvement expected."
     })
 
-if shipments_improvement >= 0.25:
+if shipments_improvement >= 0.45:
     recommendations.append({
-        "Solution": "International Shipment Facilitation",
-        "Action": "Improve shipment procedures, reduce delays, and strengthen logistics coordination.",
-        "Expected Benefit": "Better shipment reliability and easier trade operations."
+        "Priority": "High",
+        "Area": "International Shipments",
+        "Recommendation": "Major shipment facilitation reforms and logistics coordination upgrades",
+        "Expected Impact": "Strong international logistics competitiveness improvement."
+    })
+elif shipments_improvement >= 0.25:
+    recommendations.append({
+        "Priority": "Medium",
+        "Area": "International Shipments",
+        "Recommendation": "Moderate shipment process optimization",
+        "Expected Impact": "Noticeable shipment efficiency improvement."
+    })
+else:
+    recommendations.append({
+        "Priority": "Low",
+        "Area": "International Shipments",
+        "Recommendation": "Shipment improvements remain limited",
+        "Expected Impact": "Minor logistics impact expected."
     })
 
-if change >= 0.12:
+if change >= 0.15:
     st.success(
-        "Strong improvement scenario: the selected reforms could noticeably improve Jordan’s LPI performance."
+        "High-impact scenario detected: combined logistics reforms may significantly improve Jordan’s logistics competitiveness."
     )
-elif change >= 0.06:
+elif change >= 0.08:
     st.info(
-        "Moderate improvement scenario: the selected reforms may improve Jordan’s LPI, but more reforms are needed."
+        "Moderate-impact scenario detected: selected reforms may improve Jordan’s LPI gradually over time."
     )
 else:
     st.warning(
-        "Limited improvement scenario: current changes may not be enough to significantly improve Jordan’s position."
+        "Low-impact scenario detected: broader logistics reforms may still be required."
     )
 
-if recommendations:
-    st.table(pd.DataFrame(recommendations))
+if customs_impact > shipments_impact:
+    st.write("Strategic Insight: Customs reform appears more influential than shipment facilitation alone.")
 else:
-    st.write("Increase one of the improvement sliders to generate alternative solution recommendations.")
+    st.write("Strategic Insight: Shipment facilitation contributes strongly to projected logistics improvement.")
+
+st.dataframe(pd.DataFrame(recommendations), width="stretch")
 
 st.divider()
 
 # ============================================================
 # Explanation
 # ============================================================
-st.subheader("How the simulation works")
+st.subheader("How the Simulation Works")
 
 st.write(
     """
-    This simulator does not change the original LPI calculation.
+    This simulator does not change the official LPI calculation.
     It estimates how improvements in Jordan’s weak indicators may affect the Overall LPI score.
     """
 )
@@ -216,14 +244,7 @@ with left:
 
     fig, ax = plt.subplots(figsize=(9, 5))
 
-    ax.plot(
-        jordan_overall["Year"],
-        jordan_overall["Value"],
-        "o-",
-        linewidth=2,
-        label="Historical LPI"
-    )
-
+    ax.plot(jordan_overall["Year"], jordan_overall["Value"], "o-", linewidth=2, label="Historical LPI")
     ax.plot(future_years, baseline, "o--", linewidth=2, label="Baseline")
     ax.plot(future_years, scenario, "o-", linewidth=2, label="What-if Scenario")
     ax.plot(future_years, decline, "o-", linewidth=2, label="Decline Scenario")
@@ -242,11 +263,7 @@ with right:
 
     fig2, ax2 = plt.subplots(figsize=(9, 5))
 
-    ax2.barh(
-        indicator_ranking["Indicator"],
-        indicator_ranking["Value"]
-    )
-
+    ax2.barh(indicator_ranking["Indicator"], indicator_ranking["Value"])
     ax2.set_xlabel("Score")
     ax2.set_ylabel("Indicator")
     ax2.set_xlim(1, 5)
@@ -279,14 +296,64 @@ impact_table = pd.DataFrame({
 st.dataframe(impact_table.round(3), width="stretch")
 
 # ============================================================
-# Final insight
+# Key insight
 # ============================================================
 st.subheader("Key Insight")
 
 st.write(
     """
     Jordan’s weakest indicators are **International Shipments** and **Customs**.
-    However, Customs has a stronger relationship with the Overall LPI score, meaning that customs reform
-    may produce a stronger improvement effect than shipment improvements alone.
+    Customs has a stronger relationship with the Overall LPI score, meaning customs reform may produce
+    stronger improvement effects than shipment improvements alone.
     """
 )
+
+# ============================================================
+# GDP Economic Context
+# ============================================================
+st.divider()
+
+st.subheader("GDP Economic Context")
+
+if gdp_df is not None:
+    jordan_gdp = gdp_df[gdp_df["Country Code"] == "JOR"].copy()
+
+    jordan_gdp["Year"] = pd.to_numeric(jordan_gdp["Year"], errors="coerce")
+    jordan_gdp["GDP"] = pd.to_numeric(jordan_gdp["GDP"], errors="coerce")
+
+    jordan_gdp = jordan_gdp.dropna(subset=["Year", "GDP"]).sort_values("Year")
+
+    st.write(
+        """
+        GDP was added as a secondary economic context dataset.
+        It was not used as a forecasting feature, but it helps explain the broader economic environment
+        that may support logistics development.
+        """
+    )
+
+    fig3, ax3 = plt.subplots(figsize=(10, 5))
+
+    ax3.plot(
+        jordan_gdp["Year"],
+        jordan_gdp["GDP"] / 1e9,
+        marker="o",
+        linewidth=2
+    )
+
+    ax3.set_title("Jordan GDP Trend")
+    ax3.set_xlabel("Year")
+    ax3.set_ylabel("GDP (Billion USD)")
+    ax3.grid(True, alpha=0.3)
+
+    st.pyplot(fig3)
+
+    latest_gdp = jordan_gdp["GDP"].iloc[-1] / 1e9
+
+    st.metric("Latest Jordan GDP (Billion USD)", round(latest_gdp, 2))
+
+    st.info(
+        "GDP provides economic context only. It is not treated as a direct cause of LPI improvement."
+    )
+
+else:
+    st.warning("GDP dataset not found.")
