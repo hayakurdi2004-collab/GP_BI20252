@@ -273,3 +273,166 @@ The simulation uses:
 
 ```text
 Estimated Impact = Improvement Amount × Correlation with Overall LPI × Impact Weight
+```md
+```
+
+The Streamlit application includes:
+
+* scenario sliders
+* simulated LPI
+* reform priority score
+* rule-based recommendations
+* strategic insights
+
+More details:
+[What-if Analysis](docs/07_what_if_analysis.md)
+
+---
+
+## Tools Research and Selection Effort
+
+| Tool         | Purpose                           | Reason for Selection                        |
+| ------------ | --------------------------------- | ------------------------------------------- |
+| Python       | Data analysis and modeling        | Flexible and suitable for analytics         |
+| Pandas       | Data cleaning                     | Efficient tabular data handling             |
+| NumPy        | Numerical processing              | Supports calculations and arrays            |
+| Matplotlib   | Visualization                     | Generates analytical charts                 |
+| Scikit-learn | Clustering and forecasting        | Machine learning support                    |
+| KNIME        | GDP preprocessing                 | Visual ETL workflow                         |
+| Power BI     | BI dashboards                     | Required BI dashboarding and reporting      |
+| Streamlit    | Interactive app deployment        | Easy Python-based dashboard deployment      |
+| GitHub       | Version control and documentation | Markdown documentation and project tracking |
+
+---
+
+## Project Deployment Effort and Use Case
+
+The project can be consumed in two ways:
+
+### 1. Power BI Dashboard
+
+Business users can use the Power BI dashboard to monitor logistics KPIs, trends, comparisons, and indicator performance.
+
+### 2. Streamlit Web Application
+
+Business users can use the Streamlit web application to simulate improvement scenarios and view recommendations.
+
+Deployment steps:
+
+1. Project files were pushed to GitHub.
+2. Required dependencies were added to `requirements.txt`.
+3. The Streamlit app was connected to the GitHub repository.
+4. The app was deployed using Streamlit Community Cloud.
+5. The public app link was generated and tested.
+
+Live application:
+https://gpbi20252-gqcxmgnwreelog4izl8syj.streamlit.app/
+
+---
+
+## Results
+
+The project produced several important results.
+
+Jordan’s weakest logistics indicators were identified as Customs and International Shipments. These indicators became the focus of what-if simulation and recommendations.
+
+Forecasting showed that Jordan’s LPI performance may remain moderate if no major reforms are introduced. This supports the need for targeted logistics improvement strategies.
+
+The what-if simulation showed that customs modernization and shipment facilitation may improve Jordan’s overall logistics performance. The Streamlit tool provides reform priority scoring and rule-based recommendations to support logistics decision-making.
+
+---
+
+## Code Setup and Dependencies
+
+To run the project locally:
+
+```bash
+git clone https://github.com/hayakurdi2004-collab/GP_BI20252.git
+cd GP_BI20252
+pip install -r requirements.txt
+python -m streamlit run app.py
+```
+
+Required packages are listed in:
+
+```text
+requirements.txt
+```
+
+---
+
+## Project Structure
+
+```text
+GP_BI20252/
+│
+├── data/
+├── docs/
+├── images/
+├── knime/
+├── outputs/
+│
+├── 01_cleaning.py
+├── 01b_interpolation.py
+├── 02_outliers.py
+├── 02a_eda.py
+├── 02b_pattern.py
+├── 02c_clustering.py
+├── 02d_clustering_by_year.py
+├── 03_forecasting.py
+├── 03b_evaluation.py
+├── 04_whatif.py
+├── app.py
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## Dashboard Preview
+
+### Main Dashboard
+
+![Main Dashboard](images/home_dashboard.png)
+
+### Decision-Support Features
+
+![Decision Support](images/decision_support.png)
+
+### What-if Simulation
+
+![What-if](images/what_if_analysis.png)
+
+### GDP Economic Context
+
+![GDP](images/gdp_context.png)
+
+### Indicator Impact Details
+
+![Impact](images/indicator_impact.png)
+
+### Sidebar Inputs
+
+![Sidebar](images/sidebar_inputs.png)
+
+---
+
+## References
+
+* World Bank Open Data — Logistics Performance Index
+  https://data.worldbank.org/indicator/LP.LPI.OVRL.XQ
+
+* World Bank Open Data — GDP Current US$
+  https://data.worldbank.org/indicator/NY.GDP.MKTP.CD
+
+* Streamlit Documentation
+  https://docs.streamlit.io/
+
+* Microsoft Power BI Documentation
+  https://learn.microsoft.com/en-us/power-bi/
+
+* Scikit-learn Documentation
+  https://scikit-learn.org/stable/
+
+```
+```
