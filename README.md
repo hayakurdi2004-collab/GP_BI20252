@@ -4,13 +4,15 @@
 Interactive Business Intelligence and analytics project focused on Jordan’s Logistics Performance Index (LPI).
 
 The project combines:
-- Business Intelligence dashboards
+
+- Power BI dashboards and business reporting
+- Business Intelligence analytics
 - Data preprocessing and interpolation
 - Clustering analysis
 - Forecasting
 - What-if simulation
 - Decision-support features
-- Streamlit deployment
+- Streamlit web deployment
 
 ## Project Objectives
 
@@ -33,6 +35,19 @@ This project aims to:
 - Streamlit
 - KNIME
 - GitHub
+- Power BI
+## Power BI Dashboard
+
+Power BI was used to build traditional Business Intelligence dashboards and visual analytics components.
+
+The Power BI phase focused on:
+- KPI reporting
+- logistics trend visualization
+- indicator comparison
+- business-oriented dashboarding
+- executive-style analytics
+
+Streamlit was later used to extend the project into an interactive decision-support and simulation application.
 
 ## Streamlit Application
 
