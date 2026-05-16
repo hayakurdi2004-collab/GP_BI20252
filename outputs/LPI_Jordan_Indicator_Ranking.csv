@@ -1,0 +1,7 @@
+Indicator Code,Indicator Name,Value
+LP.LPI.ITRN.XQ,International Shipments,2.509
+LP.LPI.CUST.XQ,Customs,2.5694
+LP.LPI.LOGS.XQ,Logistics Quality,2.7009
+LP.LPI.INFR.XQ,Infrastructure,2.7844
+LP.LPI.TRAC.XQ,Tracking & Tracing,2.9588
+LP.LPI.TIME.XQ,Timeliness,3.285

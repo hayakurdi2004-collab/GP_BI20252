@@ -1,0 +1,5 @@
+Scenario,New Score,Improvement,Changes
+Scenario A - Fix weakest indicator only,2.761,0.073,{'Int_Shipments': np.float64(2.8356067368421054)}
+Scenario B - Fix top 2 weakest indicators,2.81,0.122,"{'Int_Shipments': np.float64(2.8356067368421054), 'Logistics_Quality': np.float64(2.83985452631579)}"
+Scenario C - Fix all 3 weakest indicators,2.841,0.153,"{'Int_Shipments': np.float64(2.8356067368421054), 'Logistics_Quality': np.float64(2.83985452631579), 'Tracking': np.float64(2.9674231052631574)}"
+Scenario D - Reach Mid-High Performers level,3.313,0.625,"{'Customs': np.float64(3.1142857142857143), 'Infrastructure': np.float64(3.5), 'Int_Shipments': np.float64(3.185714285714286), 'Logistics_Quality': np.float64(3.2714285714285714), 'Tracking': np.float64(3.4285714285714284), 'Timeliness': np.float64(3.4142857142857146)}"

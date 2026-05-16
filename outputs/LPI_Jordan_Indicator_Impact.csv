@@ -1,0 +1,7 @@
+Indicator Code,Indicator Name,Correlation with Overall
+LP.LPI.CUST.XQ,Customs,0.8125501864288606
+LP.LPI.INFR.XQ,Infrastructure,0.48802345076009984
+LP.LPI.ITRN.XQ,International Shipments,0.3187890309116306
+LP.LPI.LOGS.XQ,Logistics Quality,0.9596953518734274
+LP.LPI.TRAC.XQ,Tracking & Tracing,0.559515353113388
+LP.LPI.TIME.XQ,Timeliness,0.7180941741433476
