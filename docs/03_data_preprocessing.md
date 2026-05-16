@@ -144,6 +144,203 @@ Predicted/interpolated values were clipped within valid LPI boundaries:
 This prevented invalid or unrealistic scores.
 
 ---
+# Gap-Filling Strategy
+
+One of the most important preprocessing challenges in this project was handling missing observations and irregular reporting years.
+
+The Logistics Performance Index dataset is not reported annually for all countries.
+Instead, official observations exist only for selected years, and many countries contain incomplete records.
+
+This created several analytical problems:
+- inconsistent time-series continuity
+- sparse country observations
+- interrupted logistics trajectories
+- forecasting instability
+- visualization inconsistency
+
+Therefore, a dedicated gap-filling strategy was designed instead of simply removing missing rows.
+
+---
+
+# Why Missing Values Could Not Be Ignored
+
+Removing all incomplete observations would significantly reduce the usable dataset.
+
+This would create multiple problems:
+- loss of historical information
+- reduced country coverage
+- weaker forecasting reliability
+- unstable clustering behavior
+- inconsistent visualization trends
+
+Because the dataset already contains limited historical years, preserving useful information was extremely important.
+
+---
+
+# Small Gap Handling
+
+For small missing gaps between nearby observations:
+- linear interpolation was applied
+
+Linear interpolation estimates missing values by assuming gradual change between nearby years.
+
+This method was selected because logistics performance usually changes progressively rather than abruptly over short periods.
+
+Example:
+If a country had:
+- 2014 value
+- 2018 value
+
+but a missing intermediate year,
+the missing value could be estimated using linear progression.
+
+---
+
+# Why Linear Interpolation Was Appropriate
+
+Linear interpolation was appropriate because:
+- LPI scores generally evolve gradually
+- abrupt extreme yearly changes are uncommon
+- the dataset contains limited observations
+- simpler interpolation reduces overfitting risk
+
+Linear interpolation also preserves:
+- trend continuity
+- relative country positioning
+- realistic movement patterns
+
+---
+
+# Large Gap Handling
+
+Large gaps required special handling.
+
+The largest example was:
+- 2018 → 2023
+
+This five-year gap introduced substantial uncertainty because:
+- logistics systems may change significantly
+- economic conditions may shift
+- global disruptions may occur
+- simple linear estimation may become unrealistic
+
+Therefore, large gaps were not treated identically to smaller gaps.
+
+Instead:
+- trend-based estimation
+- historical behavior analysis
+- weighted forecasting logic
+
+were used to improve estimation quality.
+
+---
+
+# Hybrid Estimation Strategy
+
+A hybrid strategy was adopted because no single interpolation technique was sufficient for all situations.
+
+The project combined:
+- linear interpolation
+- trend estimation
+- weighted historical behavior
+- conservative forecasting assumptions
+
+This hybrid approach improved:
+- flexibility
+- realism
+- stability
+- analytical consistency
+
+---
+
+# Conservative Estimation Philosophy
+
+A conservative estimation philosophy was intentionally adopted.
+
+The project avoided:
+- aggressive extrapolation
+- unrealistic jumps
+- exaggerated country improvement
+- extreme forecast behavior
+
+This was important because:
+- the dataset is limited
+- overfitting risk is high
+- logistics systems evolve gradually
+
+The goal was to produce:
+- stable estimates
+- interpretable values
+- realistic trajectories
+
+rather than artificially optimistic predictions.
+
+---
+
+# Value Clipping and Constraints
+
+All interpolated and estimated values were constrained within the valid LPI range:
+
+- Minimum = 1
+- Maximum = 5
+
+This prevented:
+- invalid scores
+- unrealistic outputs
+- extreme forecasting behavior
+
+The clipping mechanism improved:
+- model reliability
+- analytical consistency
+- visualization quality
+
+---
+
+# Why a Gap-Filling Strategy Was Necessary
+
+Without a proper gap-filling strategy:
+- forecasting models would become unstable
+- clustering quality would decrease
+- country trends would become fragmented
+- visualization continuity would break
+
+The strategy helped maintain:
+- temporal continuity
+- country comparability
+- stable logistics trajectories
+- analytical usability
+
+---
+
+# Limitations of Gap Filling
+
+Although interpolation improves continuity, it also introduces uncertainty.
+
+Interpolated values are:
+- estimates
+- not official observations
+
+Therefore:
+- the project used conservative assumptions
+- predictions were short-term
+- confidence intervals were included during forecasting
+
+This limitation was acknowledged to maintain analytical transparency.
+
+---
+
+# Importance in the Overall Project
+
+The gap-filling strategy became one of the foundational preprocessing components in the project.
+
+It directly supported:
+- forecasting
+- clustering
+- trend analysis
+- visualization
+- what-if simulation
+
+Without this stage, later analytical components would become significantly weaker and less reliable.
 
 # Step 5 — Outlier Detection
 
