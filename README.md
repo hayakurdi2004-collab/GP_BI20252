@@ -302,3 +302,16 @@ sqlalchemy==2.0.0
 ---
 
 **Good luck with your Business Intelligence graduation project!** 
+# Dashboard Preview
+
+## Main Dashboard
+![Main Dashboard](images/home_dashboard.png)
+
+## Decision-Support Features
+![Decision Support](images/decision_support.png)
+
+## What-if Simulation
+![What-if](images/what_if_analysis.png)
+
+## GDP Economic Context
+![GDP](images/gdp_context.png)
