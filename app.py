@@ -134,75 +134,164 @@ col4.metric("Shipments Impact", round(shipments_impact, 3))
 st.divider()
 
 # ============================================================
-# Smart Recommendation Engine
 # ============================================================
-st.subheader("Smart Recommendation Engine")
+# Decision-Support Features
+# ============================================================
+st.subheader("Decision-Support Features")
 
+st.write(
+    """
+    The system evaluates hypothetical logistics reform scenarios and generates
+    strategic recommendations based on projected LPI impact strength.
+    """
+)
+
+# ============================================================
+# Reform Priority Score
+# ============================================================
+priority_score = (
+    (customs_improvement / 0.7) * 35 +
+    (shipments_improvement / 0.7) * 35 +
+    (change / 0.25) * 30
+)
+
+priority_score = max(0, min(priority_score, 100))
+
+score_col1, score_col2 = st.columns([1, 2])
+
+with score_col1:
+    st.metric(
+        "Reform Priority Score",
+        f"{priority_score:.0f}/100"
+    )
+
+with score_col2:
+
+    if priority_score >= 75:
+        st.success(
+            "High-priority reform scenario detected. Strong logistics intervention may significantly improve Jordan’s competitiveness."
+        )
+
+    elif priority_score >= 45:
+        st.info(
+            "Moderate-priority scenario detected. Gradual logistics reforms may improve LPI performance over time."
+        )
+
+    else:
+        st.warning(
+            "Low-priority scenario detected. Current reforms may not be sufficient for major logistics improvement."
+        )
+
+# ============================================================
+# Rule-Based Recommendation Logic
+# ============================================================
 recommendations = []
 
-if customs_improvement >= 0.45:
+# Customs logic
+if customs_improvement >= 0.50:
+
     recommendations.append({
         "Priority": "High",
         "Area": "Customs",
-        "Recommendation": "Aggressive Customs Digital Transformation",
-        "Expected Impact": "Strong border efficiency improvement and faster logistics processing."
+        "Recommendation": "Aggressive customs digital transformation",
+        "Strategic Action": "Expand automation, reduce paperwork, and modernize border clearance systems.",
+        "Expected Outcome": "Major customs efficiency and logistics flow improvement."
     })
+
 elif customs_improvement >= 0.25:
+
     recommendations.append({
         "Priority": "Medium",
         "Area": "Customs",
-        "Recommendation": "Partial customs automation and paperwork reduction",
-        "Expected Impact": "Moderate customs efficiency improvement."
+        "Recommendation": "Partial customs modernization",
+        "Strategic Action": "Improve clearance workflows and reduce operational delays.",
+        "Expected Outcome": "Moderate customs performance improvement."
     })
+
 else:
+
     recommendations.append({
         "Priority": "Low",
         "Area": "Customs",
-        "Recommendation": "Current customs reforms may be insufficient",
-        "Expected Impact": "Limited logistics improvement expected."
+        "Recommendation": "Current customs reform intensity is limited",
+        "Strategic Action": "Additional customs intervention may still be required.",
+        "Expected Outcome": "Minor projected impact."
     })
 
-if shipments_improvement >= 0.45:
+# Shipment logic
+if shipments_improvement >= 0.50:
+
     recommendations.append({
         "Priority": "High",
         "Area": "International Shipments",
-        "Recommendation": "Major shipment facilitation reforms and logistics coordination upgrades",
-        "Expected Impact": "Strong international logistics competitiveness improvement."
+        "Recommendation": "Advanced shipment facilitation reform",
+        "Strategic Action": "Strengthen logistics coordination and reduce shipment bottlenecks.",
+        "Expected Outcome": "Higher international logistics competitiveness."
     })
+
 elif shipments_improvement >= 0.25:
+
     recommendations.append({
         "Priority": "Medium",
         "Area": "International Shipments",
-        "Recommendation": "Moderate shipment process optimization",
-        "Expected Impact": "Noticeable shipment efficiency improvement."
+        "Recommendation": "Moderate shipment optimization",
+        "Strategic Action": "Improve shipment handling efficiency and coordination.",
+        "Expected Outcome": "Noticeable logistics improvement."
     })
+
 else:
+
     recommendations.append({
         "Priority": "Low",
         "Area": "International Shipments",
-        "Recommendation": "Shipment improvements remain limited",
-        "Expected Impact": "Minor logistics impact expected."
+        "Recommendation": "Shipment reform remains limited",
+        "Strategic Action": "Broader shipment improvements may still be necessary.",
+        "Expected Outcome": "Limited projected improvement."
     })
 
-if change >= 0.15:
-    st.success(
-        "High-impact scenario detected: combined logistics reforms may significantly improve Jordan’s logistics competitiveness."
-    )
-elif change >= 0.08:
-    st.info(
-        "Moderate-impact scenario detected: selected reforms may improve Jordan’s LPI gradually over time."
-    )
-else:
-    st.warning(
-        "Low-impact scenario detected: broader logistics reforms may still be required."
-    )
+# GDP-based contextual logic
+if gdp_df is not None and priority_score >= 70:
+
+    recommendations.append({
+        "Priority": "Strategic",
+        "Area": "Economic Context",
+        "Recommendation": "Leverage economic growth to accelerate logistics reform",
+        "Strategic Action": "Increase infrastructure investment and supply-chain modernization.",
+        "Expected Outcome": "Long-term logistics competitiveness improvement."
+    })
+
+# ============================================================
+# Strategic Insight
+# ============================================================
+st.subheader("Strategic Insight")
 
 if customs_impact > shipments_impact:
-    st.write("Strategic Insight: Customs reform appears more influential than shipment facilitation alone.")
-else:
-    st.write("Strategic Insight: Shipment facilitation contributes strongly to projected logistics improvement.")
 
-st.dataframe(pd.DataFrame(recommendations), width="stretch")
+    st.write(
+        """
+        Customs reform currently appears more influential than shipment facilitation alone.
+        Improving border efficiency and customs operations may generate stronger overall LPI gains.
+        """
+    )
+
+else:
+
+    st.write(
+        """
+        Shipment facilitation currently contributes strongly to projected logistics improvement.
+        International logistics coordination may significantly improve Jordan’s logistics performance.
+        """
+    )
+
+# ============================================================
+# Recommendation Table
+# ============================================================
+st.subheader("Recommended Alternative Solutions")
+
+st.dataframe(
+    pd.DataFrame(recommendations),
+    width="stretch"
+)
 
 st.divider()
 
