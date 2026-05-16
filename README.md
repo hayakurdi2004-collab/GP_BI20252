@@ -1,43 +1,57 @@
-# Business Intelligence Graduation Project Template
+```md id="w2o3d4"
+# Jordan Logistics Performance — Decision Support Tool
 
-**University of Petra, Graduation Projects, Business Intelligence, 20252**
+Interactive Business Intelligence and analytics project focused on Jordan’s Logistics Performance Index (LPI).
 
----
+The project combines:
+- Business Intelligence dashboards
+- Data preprocessing and interpolation
+- Clustering analysis
+- Forecasting
+- What-if simulation
+- Decision-support features
+- Streamlit deployment
 
-## How to Use This Template
+## Project Objectives
 
-This repository serves as a **template for Business Intelligence graduation projects**. Students should **fork this repository** and use it as the foundation for their project work. All project-related files and documentation should be organized within this single repository.
+This project aims to:
 
-### For Students: Quick Start
-1. **Fork this repository** to create your own copy
-2. **Clone your fork** to your local machine
-3. **Follow the sections below** to structure your project documentation in markdown format
-4. **Push your work** regularly to track progress
+- Analyze Jordan’s logistics performance over time
+- Identify weak logistics indicators
+- Forecast future logistics trends
+- Simulate improvement scenarios
+- Generate strategic logistics recommendations
+- Support data-driven logistics decision-making
 
----
+## Technologies Used
 
-## Project Structure
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Scikit-learn
+- Streamlit
+- KNIME
+- GitHub
 
+## Streamlit Application
+
+Live application:
+
+https://gpbi20252-gqcxmgnwreelog4izl8syj.streamlit.app/
+
+## Project Features
+
+- Historical LPI trend analysis
+- Weak indicator detection
+- Correlation-based impact estimation
+- What-if scenario simulation
+- Rule-based recommendation engine
+- Reform priority scoring
+- GDP economic context integration
+- Interactive dashboard visualization
 ```
-your-project-name/
-├── README.md                 # Project overview (UPDATE THIS)
-├── docs/                     # All project documentation
-│   ├── 01_project_description.md
-│   ├── 02_data_research.md
-│   ├── 03_data_analysis.md
-│   ├── 04_dashboard_design.md
-│   ├── 05_advanced_analytics.md
-│   └── 06_deployment.md
-├── data/
-│   ├── raw/                  # Original data files
-│   └── processed/            # Cleaned, transformed data
-├── notebooks/                # Jupyter notebooks for analysis
-├── src/                       # Source code (scripts, apps)
-├── dashboards/               # BI tool exports (Tableau, Power BI, etc.)
-├── models/                    # Trained ML/AI models
-├── requirements.txt          # Python dependencies
-└── .gitignore                # Git ignore file
-```
+
 
 ---
 
