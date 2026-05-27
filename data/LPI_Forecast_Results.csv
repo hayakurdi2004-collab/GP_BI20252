@@ -1,0 +1,25 @@
+Country Code,Country Name,Cluster Label,Model Used,Year,Predicted LPI Score,CI Lower,CI Upper,R2 Train,RMSE Train,MAE Train,Test Error
+JOR,Jordan,Mid-Low Performers,Linear,2024,3.351,3.063,3.639,0.584,0.208,0.151,0.354
+JOR,Jordan,Mid-Low Performers,Linear,2025,3.403,3.115,3.691,0.584,0.208,0.151,0.354
+JOR,Jordan,Mid-Low Performers,Linear,2026,3.454,3.166,3.742,0.584,0.208,0.151,0.354
+SAU,Saudi Arabia,Mid-High Performers,Linear,2024,2.91,2.743,3.077,0.77,0.121,0.07,0.467
+SAU,Saudi Arabia,Mid-High Performers,Linear,2025,2.886,2.719,3.053,0.77,0.121,0.07,0.467
+SAU,Saudi Arabia,Mid-High Performers,Linear,2026,2.863,2.696,3.03,0.77,0.121,0.07,0.467
+ARE,United Arab Emirates,High Performers,Linear,2024,4.206,3.986,4.426,0.527,0.154,0.121,0.162
+ARE,United Arab Emirates,High Performers,Linear,2025,4.249,4.029,4.469,0.527,0.154,0.121,0.162
+ARE,United Arab Emirates,High Performers,Linear,2026,4.293,4.073,4.513,0.527,0.154,0.121,0.162
+EGY,"Egypt, Arab Rep.",Mid-High Performers,Linear,2024,3.148,2.836,3.46,0.13,0.217,0.192,0.025
+EGY,"Egypt, Arab Rep.",Mid-High Performers,Linear,2025,3.172,2.86,3.484,0.13,0.217,0.192,0.025
+EGY,"Egypt, Arab Rep.",Mid-High Performers,Linear,2026,3.195,2.883,3.507,0.13,0.217,0.192,0.025
+DEU,Germany,High Performers,Linear,2024,4.327,4.247,4.407,0.605,0.055,0.048,0.208
+DEU,Germany,High Performers,Linear,2025,4.345,4.265,4.425,0.605,0.055,0.048,0.208
+DEU,Germany,High Performers,Linear,2026,4.364,4.284,4.444,0.605,0.055,0.048,0.208
+SGP,Singapore,High Performers,Linear,2024,3.98,3.897,4.063,0.164,0.056,0.051,0.311
+SGP,Singapore,High Performers,Linear,2025,3.971,3.888,4.054,0.164,0.056,0.051,0.311
+SGP,Singapore,High Performers,Linear,2026,3.962,3.879,4.045,0.164,0.056,0.051,0.311
+CHN,China,High Performers,Linear,2024,3.744,3.666,3.822,0.665,0.055,0.04,0.026
+CHN,China,High Performers,Linear,2025,3.762,3.684,3.84,0.665,0.055,0.04,0.026
+CHN,China,High Performers,Linear,2026,3.78,3.702,3.858,0.665,0.055,0.04,0.026
+USA,United States,High Performers,Linear,2024,3.958,3.894,4.022,0.065,0.043,0.038,0.154
+USA,United States,High Performers,Linear,2025,3.962,3.898,4.026,0.065,0.043,0.038,0.154
+USA,United States,High Performers,Linear,2026,3.967,3.903,4.031,0.065,0.043,0.038,0.154

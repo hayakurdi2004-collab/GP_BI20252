@@ -1,0 +1,48 @@
+Country Code,Country Name,Year,Actual,Predicted,Residual,Model Used
+JOR,Jordan,2007,2.89,2.475,0.415,Linear
+JOR,Jordan,2010,2.738,2.63,0.108,Linear
+JOR,Jordan,2012,2.557,2.733,-0.176,Linear
+JOR,Jordan,2014,2.874,2.836,0.038,Linear
+JOR,Jordan,2016,2.957,2.939,0.018,Linear
+SAU,Saudi Arabia,2007,3.019,3.307,-0.288,Linear
+SAU,Saudi Arabia,2010,3.221,3.237,-0.016,Linear
+SAU,Saudi Arabia,2012,3.178,3.19,-0.012,Linear
+SAU,Saudi Arabia,2014,3.148,3.143,0.005,Linear
+SAU,Saudi Arabia,2016,3.156,3.097,0.06,Linear
+SAU,Saudi Arabia,2018,3.011,3.05,-0.039,Linear
+ARE,United Arab Emirates,2007,3.728,3.462,0.266,Linear
+ARE,United Arab Emirates,2010,3.63,3.593,0.037,Linear
+ARE,United Arab Emirates,2012,3.778,3.681,0.098,Linear
+ARE,United Arab Emirates,2014,3.539,3.768,-0.229,Linear
+ARE,United Arab Emirates,2016,3.942,3.856,0.086,Linear
+ARE,United Arab Emirates,2018,3.956,3.943,0.013,Linear
+EGY,"Egypt, Arab Rep.",2007,2.371,2.748,-0.377,Linear
+EGY,"Egypt, Arab Rep.",2010,2.615,2.819,-0.204,Linear
+EGY,"Egypt, Arab Rep.",2012,2.979,2.866,0.113,Linear
+EGY,"Egypt, Arab Rep.",2014,2.966,2.913,0.053,Linear
+EGY,"Egypt, Arab Rep.",2016,3.185,2.96,0.225,Linear
+EGY,"Egypt, Arab Rep.",2018,2.825,3.007,-0.182,Linear
+DEU,Germany,2007,4.099,4.011,0.088,Linear
+DEU,Germany,2010,4.114,4.066,0.048,Linear
+DEU,Germany,2012,4.033,4.104,-0.071,Linear
+DEU,Germany,2014,4.122,4.141,-0.019,Linear
+DEU,Germany,2016,4.226,4.178,0.048,Linear
+DEU,Germany,2018,4.201,4.215,-0.014,Linear
+SGP,Singapore,2007,4.19,4.136,0.054,Linear
+SGP,Singapore,2010,4.09,4.109,-0.018,Linear
+SGP,Singapore,2012,4.126,4.09,0.036,Linear
+SGP,Singapore,2014,4.004,4.072,-0.067,Linear
+SGP,Singapore,2016,4.144,4.054,0.09,Linear
+SGP,Singapore,2018,3.996,4.035,-0.039,Linear
+CHN,China,2007,3.322,3.433,-0.111,Linear
+CHN,China,2010,3.489,3.488,0.001,Linear
+CHN,China,2012,3.517,3.525,-0.008,Linear
+CHN,China,2014,3.531,3.561,-0.03,Linear
+CHN,China,2016,3.661,3.598,0.063,Linear
+CHN,China,2018,3.605,3.634,-0.029,Linear
+USA,United States,2007,3.844,3.887,-0.043,Linear
+USA,United States,2010,3.856,3.899,-0.043,Linear
+USA,United States,2012,3.93,3.908,0.022,Linear
+USA,United States,2014,3.918,3.916,0.002,Linear
+USA,United States,2016,3.992,3.924,0.068,Linear
+USA,United States,2018,3.885,3.933,-0.048,Linear

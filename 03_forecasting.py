@@ -146,7 +146,7 @@ cluster_colors = {
 
 results      = []
 eval_results = []
-
+residual_records = []
 print(f"\n{'Country':<25} {'Model':<12} {'R2':>6} {'RMSE':>7} {'MAE':>7} "
       f"{'Test Actual':>12} {'Test Pred':>10} {'Test Err':>10}")
 print("-" * 95)
@@ -179,8 +179,23 @@ for idx, code in enumerate(COUNTRIES):
     print(f"{name:<25} {res['model']:<12} {res['r2']:>6} {res['rmse']:>7} "
           f"{res['mae']:>7} {res['test_actual']:>12} {res['test_pred']:>10} "
           f"{res['test_error']:>10}")
+    # Save residuals for residual plot
+    train_actual = data['Value'].values[train_mask]
+    train_predicted = res['y_hat'][train_mask]
+    train_years = years[train_mask]
 
-    ax    = axes[idx]
+    for yr, actual, pred in zip(train_years, train_actual, train_predicted):
+        residual_records.append({
+            'Country Code': code,
+            'Country Name': name,
+            'Year': int(yr),
+            'Actual': round(float(actual), 3),
+            'Predicted': round(float(pred), 3),
+            'Residual': round(float(actual - pred), 3),
+            'Model Used': res['model']
+        })
+
+    ax = axes[idx]
     sizes = (weights / weights.max()) * 150 + 30
 
     # Train points
@@ -257,6 +272,30 @@ plt.tight_layout()
 plt.savefig('outputs/LPI_Forecast.png', dpi=150, bbox_inches='tight')
 print("\nSaved: outputs/LPI_Forecast.png")
 plt.show()
+# ============================================================
+# Residual Plot
+# ============================================================
+df_residuals = pd.DataFrame(residual_records)
+
+if not df_residuals.empty:
+    plt.figure(figsize=(10, 6))
+    plt.scatter(
+        df_residuals['Predicted'],
+        df_residuals['Residual'],
+        alpha=0.7
+    )
+    plt.axhline(y=0, color='black', linestyle='--', linewidth=1)
+    plt.xlabel('Predicted LPI Score')
+    plt.ylabel('Residuals (Actual - Predicted)')
+    plt.title('Residual Plot — Forecasting Model Errors')
+    plt.grid(True, alpha=0.3)
+    plt.tight_layout()
+    plt.savefig('outputs/LPI_Residual_Plot.png', dpi=150, bbox_inches='tight')
+    print("Saved: outputs/LPI_Residual_Plot.png")
+    plt.show()
+
+    df_residuals.to_csv('outputs/LPI_Residuals.csv', index=False)
+    print("Saved: outputs/LPI_Residuals.csv")
 
 # ============================================================
 # Save results
@@ -270,10 +309,12 @@ print("Saved: outputs/LPI_Forecast_Results.csv")
 print("Saved: outputs/LPI_Evaluation.csv")
 
 print("\nForecast Summary:")
-print(df_results.pivot(
-    index='Country Name', columns='Year', values='Predicted LPI Score'
+print(df_results.pivot_table(
+    index='Country Name',
+    columns='Year',
+    values='Predicted LPI Score',
+    aggfunc='mean'
 ).to_string())
-
 print("\nEvaluation Summary:")
 print(df_eval[['Country Name', 'Model Used', 'R2 Train',
                'RMSE Train', 'Test Actual', 'Test Pred',

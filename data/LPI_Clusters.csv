@@ -1,0 +1,169 @@
+Country Code,Country Name,Region,Income Group,Cluster,Cluster Label,LPI_Overall
+AFG,Afghanistan,South Asia,Low income,3,Low Performers,1.9
+AGO,Angola,Sub-Saharan Africa,Lower middle income,3,Low Performers,2.1
+ALB,Albania,Europe & Central Asia,Upper middle income,3,Low Performers,2.5
+ARE,United Arab Emirates,Middle East & North Africa,High income,2,High Performers,4.0
+ARG,Argentina,Latin America & Caribbean,Upper middle income,1,Mid-Low Performers,2.8
+ARM,Armenia,Europe & Central Asia,Lower middle income,3,Low Performers,2.5
+AUS,Australia,East Asia & Pacific,High income,2,High Performers,3.7
+AUT,Austria,Europe & Central Asia,High income,2,High Performers,4.0
+AZE,Azerbaijan,Europe & Central Asia,Upper middle income,3,Low Performers,2.448376
+BDI,Burundi,Sub-Saharan Africa,Low income,3,Low Performers,2.063609
+BEL,Belgium,Europe & Central Asia,High income,2,High Performers,4.0
+BEN,Benin,Sub-Saharan Africa,Low income,1,Mid-Low Performers,2.9
+BFA,Burkina Faso,Sub-Saharan Africa,Low income,3,Low Performers,2.3
+BGD,Bangladesh,South Asia,Lower middle income,1,Mid-Low Performers,2.6
+BGR,Bulgaria,Europe & Central Asia,Upper middle income,0,Mid-High Performers,3.2
+BHR,Bahrain,Middle East & North Africa,High income,0,Mid-High Performers,3.5
+BHS,"Bahamas, The",Latin America & Caribbean,High income,1,Mid-Low Performers,2.7
+BIH,Bosnia and Herzegovina,Europe & Central Asia,Upper middle income,1,Mid-Low Performers,3.0
+BLR,Belarus,Europe & Central Asia,Upper middle income,1,Mid-Low Performers,2.7
+BOL,Bolivia,Latin America & Caribbean,Lower middle income,3,Low Performers,2.4
+BRA,Brazil,Latin America & Caribbean,Upper middle income,0,Mid-High Performers,3.2
+BRN,Brunei Darussalam,East Asia & Pacific,High income,1,Mid-Low Performers,2.706557
+BTN,Bhutan,South Asia,Lower middle income,3,Low Performers,2.5
+BWA,Botswana,Sub-Saharan Africa,Upper middle income,0,Mid-High Performers,3.1
+CAF,Central African Republic,Sub-Saharan Africa,Low income,3,Low Performers,2.5
+CAN,Canada,North America,High income,2,High Performers,4.0
+CHE,Switzerland,Europe & Central Asia,High income,2,High Performers,4.1
+CHL,Chile,Latin America & Caribbean,High income,1,Mid-Low Performers,3.0
+CHN,China,East Asia & Pacific,Upper middle income,2,High Performers,3.7
+CIV,Cote d'Ivoire,Sub-Saharan Africa,Lower middle income,0,Mid-High Performers,3.082253
+CMR,Cameroon,Sub-Saharan Africa,Lower middle income,3,Low Performers,2.1
+COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,3,Low Performers,2.5
+COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,1,Mid-Low Performers,2.6
+COL,Colombia,Latin America & Caribbean,Upper middle income,1,Mid-Low Performers,2.9
+COM,Comoros,Sub-Saharan Africa,Low income,1,Mid-Low Performers,2.557098
+CRI,Costa Rica,Latin America & Caribbean,Upper middle income,1,Mid-Low Performers,2.9
+CUB,Cuba,Latin America & Caribbean,Upper middle income,3,Low Performers,2.2
+CYP,Cyprus,Europe & Central Asia,High income,0,Mid-High Performers,3.2
+CZE,Czech Republic,Europe & Central Asia,High income,0,Mid-High Performers,3.3
+DEU,Germany,Europe & Central Asia,High income,2,High Performers,4.1
+DJI,Djibouti,Middle East & North Africa,Lower middle income,1,Mid-Low Performers,2.7
+DNK,Denmark,Europe & Central Asia,High income,2,High Performers,4.1
+DOM,Dominican Republic,Latin America & Caribbean,Upper middle income,1,Mid-Low Performers,2.6
+DZA,Algeria,Middle East & North Africa,Upper middle income,3,Low Performers,2.5
+ECU,Ecuador,Latin America & Caribbean,Upper middle income,1,Mid-Low Performers,2.881649
+EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,0,Mid-High Performers,3.1
+ERI,Eritrea,Sub-Saharan Africa,Low income,3,Low Performers,2.087142
+ESP,Spain,Europe & Central Asia,High income,2,High Performers,3.9
+EST,Estonia,Europe & Central Asia,High income,2,High Performers,3.6
+ETH,Ethiopia,Sub-Saharan Africa,Low income,3,Low Performers,2.376767
+FIN,Finland,Europe & Central Asia,High income,2,High Performers,4.2
+FJI,Fiji,East Asia & Pacific,Upper middle income,3,Low Performers,2.3
+FRA,France,Europe & Central Asia,High income,2,High Performers,3.9
+GAB,Gabon,Sub-Saharan Africa,Upper middle income,3,Low Performers,2.4
+GBR,United Kingdom,Europe & Central Asia,High income,2,High Performers,3.7
+GEO,Georgia,Europe & Central Asia,Lower middle income,1,Mid-Low Performers,2.7
+GHA,Ghana,Sub-Saharan Africa,Lower middle income,3,Low Performers,2.5
+GIN,Guinea,Sub-Saharan Africa,Low income,3,Low Performers,2.5
+GMB,"Gambia, The",Sub-Saharan Africa,Low income,3,Low Performers,2.3
+GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,1,Mid-Low Performers,2.6
+GNQ,Equatorial Guinea,Sub-Saharan Africa,Upper middle income,3,Low Performers,2.317643
+GRC,Greece,Europe & Central Asia,High income,2,High Performers,3.7
+GTM,Guatemala,Latin America & Caribbean,Lower middle income,1,Mid-Low Performers,2.6
+GUY,Guyana,Latin America & Caribbean,Upper middle income,3,Low Performers,2.4
+HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2,High Performers,4.0
+HND,Honduras,Latin America & Caribbean,Lower middle income,1,Mid-Low Performers,2.9
+HRV,Croatia,Europe & Central Asia,Upper middle income,0,Mid-High Performers,3.3
+HTI,Haiti,Latin America & Caribbean,Low income,3,Low Performers,2.1
+HUN,Hungary,Europe & Central Asia,High income,0,Mid-High Performers,3.2
+IDN,Indonesia,East Asia & Pacific,Lower middle income,1,Mid-Low Performers,3.0
+IND,India,South Asia,Lower middle income,0,Mid-High Performers,3.4
+IRL,Ireland,Europe & Central Asia,High income,2,High Performers,3.6
+IRN,"Iran, Islamic Rep.",Middle East & North Africa,Upper middle income,3,Low Performers,2.3
+IRQ,Iraq,Middle East & North Africa,Upper middle income,3,Low Performers,2.4
+ISL,Iceland,Europe & Central Asia,High income,2,High Performers,3.6
+ISR,Israel,Middle East & North Africa,High income,2,High Performers,3.6
+ITA,Italy,Europe & Central Asia,High income,2,High Performers,3.7
+JAM,Jamaica,Latin America & Caribbean,Upper middle income,1,Mid-Low Performers,2.5
+JOR,Jordan,Middle East & North Africa,Lower middle income,1,Mid-Low Performers,2.687973
+JPN,Japan,East Asia & Pacific,High income,2,High Performers,3.9
+KAZ,Kazakhstan,Europe & Central Asia,Upper middle income,1,Mid-Low Performers,2.7
+KEN,Kenya,Sub-Saharan Africa,Lower middle income,1,Mid-Low Performers,2.814935
+KGZ,Kyrgyz Republic,Europe & Central Asia,Lower middle income,3,Low Performers,2.3
+KHM,Cambodia,East Asia & Pacific,Lower middle income,3,Low Performers,2.4
+KOR,"Korea, Rep.",East Asia & Pacific,High income,2,High Performers,3.8
+KWT,Kuwait,Middle East & North Africa,High income,0,Mid-High Performers,3.2
+LAO,Lao PDR,East Asia & Pacific,Lower middle income,3,Low Performers,2.4
+LBN,Lebanon,Middle East & North Africa,Upper middle income,1,Mid-Low Performers,2.716853
+LBR,Liberia,Sub-Saharan Africa,Low income,3,Low Performers,2.4
+LBY,Libya,Middle East & North Africa,Upper middle income,3,Low Performers,1.9
+LKA,Sri Lanka,South Asia,Lower middle income,1,Mid-Low Performers,2.8
+LSO,Lesotho,Sub-Saharan Africa,Lower middle income,3,Low Performers,2.277266
+LTU,Lithuania,Europe & Central Asia,High income,0,Mid-High Performers,3.4
+LUX,Luxembourg,Europe & Central Asia,High income,2,High Performers,3.6
+LVA,Latvia,Europe & Central Asia,High income,0,Mid-High Performers,3.5
+MAR,Morocco,Middle East & North Africa,Lower middle income,1,Mid-Low Performers,2.539661
+MDA,Moldova,Europe & Central Asia,Lower middle income,1,Mid-Low Performers,2.5
+MDG,Madagascar,Sub-Saharan Africa,Low income,3,Low Performers,2.3
+MDV,Maldives,South Asia,Upper middle income,1,Mid-Low Performers,2.665471
+MEX,Mexico,Latin America & Caribbean,Upper middle income,1,Mid-Low Performers,2.9
+MKD,"Macedonia, FYR",Europe & Central Asia,Upper middle income,0,Mid-High Performers,3.1
+MLI,Mali,Sub-Saharan Africa,Low income,1,Mid-Low Performers,2.6
+MLT,Malta,Middle East & North Africa,High income,0,Mid-High Performers,3.3
+MMR,Myanmar,East Asia & Pacific,Lower middle income,3,Low Performers,2.297734
+MNE,Montenegro,Europe & Central Asia,Upper middle income,1,Mid-Low Performers,2.8
+MNG,Mongolia,East Asia & Pacific,Lower middle income,3,Low Performers,2.5
+MOZ,Mozambique,Sub-Saharan Africa,Low income,1,Mid-Low Performers,2.684105
+MRT,Mauritania,Sub-Saharan Africa,Lower middle income,3,Low Performers,2.3
+MUS,Mauritius,Sub-Saharan Africa,Upper middle income,1,Mid-Low Performers,2.5
+MWI,Malawi,Sub-Saharan Africa,Low income,1,Mid-Low Performers,2.585645
+MYS,Malaysia,East Asia & Pacific,Upper middle income,2,High Performers,3.6
+NAM,Namibia,Sub-Saharan Africa,Upper middle income,1,Mid-Low Performers,2.9
+NER,Niger,Sub-Saharan Africa,Low income,3,Low Performers,2.06995
+NGA,Nigeria,Sub-Saharan Africa,Lower middle income,1,Mid-Low Performers,2.6
+NIC,Nicaragua,Latin America & Caribbean,Lower middle income,3,Low Performers,2.5
+NLD,Netherlands,Europe & Central Asia,High income,2,High Performers,4.1
+NOR,Norway,Europe & Central Asia,High income,2,High Performers,3.7
+NPL,Nepal,South Asia,Low income,1,Mid-Low Performers,2.513022
+NZL,New Zealand,East Asia & Pacific,High income,2,High Performers,3.6
+OMN,Oman,Middle East & North Africa,High income,0,Mid-High Performers,3.3
+PAK,Pakistan,South Asia,Lower middle income,3,Low Performers,2.419197
+PAN,Panama,Latin America & Caribbean,Upper middle income,0,Mid-High Performers,3.1
+PER,Peru,Latin America & Caribbean,Upper middle income,1,Mid-Low Performers,3.0
+PHL,Philippines,East Asia & Pacific,Lower middle income,0,Mid-High Performers,3.3
+PNG,Papua New Guinea,East Asia & Pacific,Lower middle income,1,Mid-Low Performers,2.7
+POL,Poland,Europe & Central Asia,High income,2,High Performers,3.6
+PRT,Portugal,Europe & Central Asia,High income,0,Mid-High Performers,3.4
+PRY,Paraguay,Latin America & Caribbean,Upper middle income,1,Mid-Low Performers,2.7
+QAT,Qatar,Middle East & North Africa,High income,0,Mid-High Performers,3.5
+ROU,Romania,Europe & Central Asia,Upper middle income,0,Mid-High Performers,3.2
+RUS,Russian Federation,Europe & Central Asia,Upper middle income,1,Mid-Low Performers,2.6
+RWA,Rwanda,Sub-Saharan Africa,Low income,1,Mid-Low Performers,2.8
+SAU,Saudi Arabia,Middle East & North Africa,High income,0,Mid-High Performers,3.4
+SDN,Sudan,Sub-Saharan Africa,Lower middle income,3,Low Performers,2.4
+SEN,Senegal,Sub-Saharan Africa,Low income,3,Low Performers,2.252378
+SGP,Singapore,East Asia & Pacific,High income,2,High Performers,4.3
+SLB,Solomon Islands,East Asia & Pacific,Lower middle income,1,Mid-Low Performers,2.8
+SLE,Sierra Leone,Sub-Saharan Africa,Low income,3,Low Performers,2.078033
+SLV,El Salvador,Latin America & Caribbean,Lower middle income,1,Mid-Low Performers,2.7
+SOM,Somalia,Sub-Saharan Africa,Low income,3,Low Performers,2.0
+SRB,Serbia,Europe & Central Asia,Upper middle income,1,Mid-Low Performers,2.8
+STP,São Tomé and Principe,Sub-Saharan Africa,Lower middle income,1,Mid-Low Performers,2.653207
+SVK,Slovak Republic,Europe & Central Asia,High income,0,Mid-High Performers,3.3
+SVN,Slovenia,Europe & Central Asia,High income,0,Mid-High Performers,3.3
+SWE,Sweden,Europe & Central Asia,High income,2,High Performers,4.0
+SYR,Syrian Arab Republic,Middle East & North Africa,Lower middle income,3,Low Performers,2.3
+TCD,Chad,Sub-Saharan Africa,Low income,3,Low Performers,2.417437
+TGO,Togo,Sub-Saharan Africa,Low income,1,Mid-Low Performers,2.5
+THA,Thailand,East Asia & Pacific,Upper middle income,0,Mid-High Performers,3.5
+TJK,Tajikistan,Europe & Central Asia,Lower middle income,3,Low Performers,2.5
+TKM,Turkmenistan,Europe & Central Asia,Upper middle income,3,Low Performers,2.409804
+TLS,Timor-Leste,East Asia & Pacific,Lower middle income,3,Low Performers,1.71177373606909
+TTO,Trinidad and Tobago,Latin America & Caribbean,High income,3,Low Performers,2.5
+TUN,Tunisia,Middle East & North Africa,Lower middle income,1,Mid-Low Performers,2.569547
+TUR,Turkey,Europe & Central Asia,Upper middle income,0,Mid-High Performers,3.4
+TWN,"Taiwan, China",East Asia & Pacific,High income,2,High Performers,3.9
+TZA,Tanzania,Sub-Saharan Africa,Low income,1,Mid-Low Performers,2.990185
+UGA,Uganda,Sub-Saharan Africa,Low income,1,Mid-Low Performers,2.575405
+UKR,Ukraine,Europe & Central Asia,Lower middle income,1,Mid-Low Performers,2.7
+URY,Uruguay,Latin America & Caribbean,High income,1,Mid-Low Performers,3.0
+USA,United States,North America,High income,2,High Performers,3.8
+UZB,Uzbekistan,Europe & Central Asia,Lower middle income,1,Mid-Low Performers,2.6
+VEN,"Venezuela, RB",Latin America & Caribbean,Upper middle income,3,Low Performers,2.3
+VNM,Vietnam,East Asia & Pacific,Lower middle income,0,Mid-High Performers,3.3
+YEM,"Yemen, Rep.",Middle East & North Africa,Lower middle income,3,Low Performers,2.2
+ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2,High Performers,3.7
+ZMB,Zambia,Sub-Saharan Africa,Lower middle income,1,Mid-Low Performers,2.526313
+ZWE,Zimbabwe,Sub-Saharan Africa,Low income,3,Low Performers,2.5

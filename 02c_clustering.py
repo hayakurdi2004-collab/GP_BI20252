@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
+from sklearn.metrics import silhouette_score
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -68,6 +69,13 @@ for k in K_range:
 K      = 4
 kmeans = KMeans(n_clusters=K, random_state=42, n_init=10)
 df_latest['Cluster'] = kmeans.fit_predict(X_scaled)
+# ============================================================
+# Silhouette Score
+# ============================================================
+sil_score = silhouette_score(X_scaled, df_latest['Cluster'])
+
+print("\nSilhouette Score:")
+print(f"Silhouette Score = {sil_score:.3f}")
 
 cluster_means = (df_latest.groupby('Cluster')['LPI_Overall']
                  .mean().sort_values())
@@ -197,4 +205,13 @@ df_latest[['Country Code', 'Country Name', 'Region',
            'Income Group', 'Cluster', 'Cluster Label',
            'LPI_Overall']].to_csv('outputs/LPI_Clusters.csv', index=False)
 print("Saved: outputs/LPI_Clusters.csv")
+pd.DataFrame({
+    'Metric': ['Silhouette Score'],
+    'Value': [round(sil_score, 3)]
+}).to_csv(
+    'outputs/LPI_Clustering_Quality.csv',
+    index=False
+)
+
+print("Saved: outputs/LPI_Clustering_Quality.csv")
 print("\nDone — run next: python 03_forecasting.py")
