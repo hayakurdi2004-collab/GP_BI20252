@@ -3,6 +3,11 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import numpy as np
+try:
+    from wb_api import fetch_jordan_latest
+    WB_API_AVAILABLE = True
+except Exception:
+    WB_API_AVAILABLE = False
 
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
@@ -153,7 +158,7 @@ section[data-testid="stSidebar"] hr { border-color:#334155; }
 """, unsafe_allow_html=True)
 
 # ── Data loader ───────────────────────────────────────────────────────────────
-@st.cache_data
+@st.cache_data(ttl=0)
 def load_data():
     base = "data/"
     d = {}
@@ -168,6 +173,7 @@ def load_data():
         "indicator_ranking": "LPI_Jordan_Indicator_Ranking.csv",
         "whatif_indicators": "LPI_WhatIf_Jordan_Indicators.csv",
         "forecast":          "LPI_Forecast_Results.csv",
+        "indicator_forecast": "LPI_Jordan_Indicators_Forecast.csv",
         "clean":             "LPI_clean.csv",
     }
     for key, fname in files.items():
@@ -179,11 +185,12 @@ def load_data():
 
 data = load_data()
 
-@st.cache_data
+@st.cache_data(ttl=0)
 def build_jordan_full():
     jc   = data["jordan_cluster"].copy()
     fc_j = data["forecast"][data["forecast"]["Country Name"] == "Jordan"].copy()
-
+    ind_fc = data["indicator_forecast"].copy()
+    
     hist_rows = [
         {
             "Year": int(r["Year"]), "LPI_Overall": r["LPI_Overall"],
@@ -196,17 +203,37 @@ def build_jordan_full():
         }
         for _, r in jc.iterrows()
     ]
-    fore_rows = [
-        {
-            "Year": int(r["Year"]), "LPI_Overall": r["Predicted LPI Score"],
-            "Customs": None, "Infrastructure": None,
-            "International_Shipments": None, "Logistics_Quality": None,
-            "Timeliness": None, "Tracking_Tracing": None,
-            "Cluster Label": r["Cluster Label"], "Type": "Forecast",
-            "CI_Lower": r["CI Lower"], "CI_Upper": r["CI Upper"],
-        }
-        for _, r in fc_j.iterrows()
-    ]
+    fore_rows = []
+
+    for _, r in fc_j.iterrows():
+        year = int(r["Year"])
+        ind_row = ind_fc[ind_fc["Year"] == year]
+
+        if not ind_row.empty:
+            ind_row = ind_row.iloc[0]
+            customs = ind_row.get("Customs", None)
+            infrastructure = ind_row.get("Infrastructure", None)
+            shipments = ind_row.get("International_Shipments", None)
+            logistics = ind_row.get("Logistics_Quality", None)
+            timeliness = ind_row.get("Timeliness", None)
+            tracking = ind_row.get("Tracking_Tracing", None)
+        else:
+            customs = infrastructure = shipments = logistics = timeliness = tracking = None
+
+        fore_rows.append({
+            "Year": year,
+            "LPI_Overall": r["Predicted LPI Score"],
+            "Customs": customs,
+            "Infrastructure": infrastructure,
+            "International_Shipments": shipments,
+            "Logistics_Quality": logistics,
+            "Timeliness": timeliness,
+            "Tracking_Tracing": tracking,
+            "Cluster Label": r["Cluster Label"],
+            "Type": "Forecast",
+            "CI_Lower": r["CI Lower"],
+            "CI_Upper": r["CI Upper"],
+        })
     return pd.DataFrame(hist_rows + fore_rows).sort_values("Year").reset_index(drop=True)
 
 jordan_full = build_jordan_full()
@@ -257,6 +284,20 @@ with st.sidebar:
     )
 
     st.markdown("---")
+    st.markdown("### 🌐 Live Data")
+    if WB_API_AVAILABLE:
+        if st.button("🔄 Fetch Latest from World Bank", use_container_width=True):
+            with st.spinner("Fetching live data..."):
+                live = fetch_jordan_latest()
+                if live:
+                    st.session_state["wb_live"] = live
+                    st.success("✅ Live data loaded!")
+                else:
+                    st.warning("⚠️ API unavailable, using local data")
+    else:
+        st.caption("wb_api.py not found")
+
+    st.markdown("---")
     st.markdown("### 📊 About")
     st.markdown("""
 Data: World Bank LPI
@@ -296,15 +337,18 @@ if not jrow.empty:
 
     k1, k2, k3, k4, k5 = st.columns(5)
     for col, lbl, val, prev_val, hb in [
-        (k1, "Overall LPI Score",    r["LPI_Overall"],    pr["LPI_Overall"]    if pr is not None else None, True),
-        (k2, "Global Rank",          rank,                None,                                              False),
-        (k3, "Timeliness Score",     r["Timeliness"],     pr["Timeliness"]     if pr is not None else None, True),
-        (k4, "Customs Score",        r["Customs"],        pr["Customs"]        if pr is not None else None, True),
-        (k5, "Infrastructure Score", r["Infrastructure"], pr["Infrastructure"] if pr is not None else None, True),
+        (k1, "Overall LPI Score",    r["LPI_Overall"],                                      pr["LPI_Overall"]    if pr is not None else None, True),
+        (k2, "Global Rank",          rank,                                                   None,                False),
+        (k3, "Timeliness Score",     r["Timeliness"]    ,              pr["Timeliness"]     if pr is not None else None, True),
+        (k4, "Customs Score",        r["Customs"]       ,              pr["Customs"]        if pr is not None else None, True),
+        (k5, "Infrastructure Score", r["Infrastructure"] ,             pr["Infrastructure"] if pr is not None else None, True),
     ]:
         if isinstance(val, float) and not np.isnan(val):
             disp = f"{val:.3f}"
             dlt  = delta_html(val, prev_val, hb)
+        elif val is None or (isinstance(val, float) and np.isnan(val)):
+            disp = "—"
+            dlt  = '<span class="delta-neu">Forecast year</span>'
         else:
             disp = str(val)
             dlt  = '<span class="delta-neu">—</span>'
@@ -319,9 +363,10 @@ if not jrow.empty:
 st.markdown("<br>", unsafe_allow_html=True)
 
 # ══════════════════════════════════════════════════════════════════════════════
-tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
+tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([
     "📍 Cluster Position", "🔍 Gap Analysis", "🔮 What-If Simulator",
     "📈 Trend & Forecast",  "🎯 DSS Recommendations", "💬 Ask the Data",
+    "🌐 Live World Bank Data",
 ])
 
 # ── TAB 1 ─────────────────────────────────────────────────────────────────────
@@ -1177,3 +1222,112 @@ with tab6:
         if st.button("🗑️ Clear chat", key="clear_chat"):
             st.session_state["chat_history"] = []
             st.rerun()
+
+
+# ── TAB 7: Live World Bank Data ───────────────────────────────────────────────
+with tab7:
+    st.markdown('<div class="section-title">🌐 Live Data from World Bank API</div>',
+                unsafe_allow_html=True)
+
+    st.markdown("""
+    <div class="alert-box alert-blue">
+      🌐 <b>World Bank Open Data API</b> — Free, no API key required.<br>
+      Click the button in the sidebar to fetch the latest LPI data directly
+      from the World Bank database.
+    </div>""", unsafe_allow_html=True)
+
+    live = st.session_state.get("wb_live", {})
+
+    if live:
+        st.markdown('<div class="section-title" style="font-size:1rem">'
+                    'Jordan Latest LPI — Live from World Bank</div>',
+                    unsafe_allow_html=True)
+
+        cols = st.columns(3)
+        for i, (name, info) in enumerate(live.items()):
+            cols[i % 3].markdown(f"""
+            <div class="kpi-card">
+              <div class="kpi-label">{name}</div>
+              <div class="kpi-value" style="font-size:1.5rem">{info['value']:.3f}</div>
+              <div class="kpi-delta delta-neu">Year: {info['year']}</div>
+            </div><br>""", unsafe_allow_html=True)
+
+        # Compare live vs local CSV
+        st.markdown('<div class="section-title" style="font-size:1rem">'
+                    'Live vs Local CSV Comparison</div>', unsafe_allow_html=True)
+
+        clean = data["clean"]
+        rows  = []
+        for name, info in live.items():
+            local_row = clean[
+                (clean["Indicator Short"] == name) &
+                (clean["Country Name"] == "Jordan") &
+                (clean["Year"] == info["year"])
+            ]["Value"]
+            local_val = float(local_row.values[0]) if not local_row.empty else None
+            diff      = round(info["value"] - local_val, 4) if local_val else None
+            rows.append({
+                "Indicator":   name,
+                "Year":        info["year"],
+                "Live (API)":  info["value"],
+                "Local (CSV)": local_val if local_val else "N/A",
+                "Difference":  diff if diff is not None else "N/A",
+            })
+
+        df_compare = pd.DataFrame(rows)
+        st.dataframe(df_compare, use_container_width=True, hide_index=True)
+
+        # Bar chart comparison
+        df_scores_only = df_compare[
+            df_compare["Indicator"].str.contains("Score") &
+            df_compare["Live (API)"].notna() &
+            df_compare["Local (CSV)"].apply(lambda x: x != "N/A")
+        ].copy()
+
+        if not df_scores_only.empty:
+            fig_live = go.Figure()
+            fig_live.add_trace(go.Bar(
+                name="Live (API)",
+                x=df_scores_only["Indicator"],
+                y=df_scores_only["Live (API)"],
+                marker_color=JORDAN_RED,
+                text=[f"{v:.3f}" for v in df_scores_only["Live (API)"]],
+                textposition="outside",
+                textfont=dict(color=TEXT_DARK),
+            ))
+            fig_live.add_trace(go.Bar(
+                name="Local (CSV)",
+                x=df_scores_only["Indicator"],
+                y=df_scores_only["Local (CSV)"],
+                marker_color=ACCENT_BLUE,
+                text=[f"{v:.3f}" for v in df_scores_only["Local (CSV)"]],
+                textposition="outside",
+                textfont=dict(color=TEXT_DARK),
+            ))
+            apply_chart_style(fig_live, "Jordan LPI: Live API vs Local CSV", 400, -0.2)
+            fig_live.update_layout(
+                barmode="group",
+                xaxis=dict(tickangle=-20, tickfont=dict(color=TEXT_DARK, size=10)),
+                yaxis=dict(range=[0, 5.5], title="Score"),
+            )
+            st.plotly_chart(fig_live, use_container_width=True)
+
+    else:
+        st.markdown("""
+        <div style="text-align:center;padding:60px 20px;color:#9CA3AF">
+          <div style="font-size:3rem">🌐</div>
+          <div style="font-size:1.1rem;font-weight:600;margin-top:12px">
+            No live data loaded yet</div>
+          <div style="font-size:.9rem;margin-top:8px">
+            Click <b>"🔄 Fetch Latest from World Bank"</b> in the sidebar</div>
+        </div>""", unsafe_allow_html=True)
+
+    st.markdown("---")
+    st.markdown("""
+    <div style="font-size:.8rem;color:#9CA3AF">
+      📡 <b>API Source:</b>
+      <a href="https://api.worldbank.org/v2" target="_blank"
+         style="color:#3B82F6">api.worldbank.org</a> &nbsp;|&nbsp;
+      Free & open access &nbsp;|&nbsp; No authentication required &nbsp;|&nbsp;
+      Data updated by World Bank annually
+    </div>""", unsafe_allow_html=True)
