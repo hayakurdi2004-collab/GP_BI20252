@@ -117,7 +117,7 @@ for (cc, cn, reg, inc, ic, ish, it), grp in groups:
         # --------------------------------
         # Big gap → Improved Hybrid
         # --------------------------------
-        if 2018 < year < 2023 and lin_model is not None:
+        if 2018 < year <= 2023 and lin_model is not None:
 
             pred_lin  = lin_model.predict(np.array([[year]]))[0]
             pred_poly = poly_model.predict(np.array([[year]]))[0]

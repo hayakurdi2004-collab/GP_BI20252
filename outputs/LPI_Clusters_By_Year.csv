@@ -2538,140 +2538,169 @@ YEM,"Yemen, Rep.",Middle East & North Africa,Lower middle income,2022,2.2189,2.0
 ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2022,3.3375,3.3078,3.6046,3.4953,3.309,3.9082,3.4498,2,Mid-High Performers
 ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2022,2.2736,2.5071,3.0798,2.5897,2.6029,3.0967,1.8817,1,Mid-Low Performers
 ZWE,Zimbabwe,Sub-Saharan Africa,Low income,2022,1.9604,1.9804,1.8942,1.9817,2.1385,1.9789,1.9135,3,Low Performers
-AFG,Afghanistan,South Asia,Low income,2023,2.1,1.7,1.8,1.9,2.0,2.3,1.6,3,Low Performers
-AGO,Angola,Sub-Saharan Africa,Lower middle income,2023,1.7,2.1,2.4,2.1,2.3,2.1,2.3,3,Low Performers
-ALB,Albania,Europe & Central Asia,Upper middle income,2023,2.4,2.7,2.8,2.5,2.3,2.5,2.3,3,Low Performers
-ARE,United Arab Emirates,Middle East & North Africa,High income,2023,3.7,4.1,3.8,4.0,4.0,4.2,4.1,1,High Performers
-ARG,Argentina,Latin America & Caribbean,Upper middle income,2023,2.7,2.8,2.7,2.8,2.7,3.1,2.9,0,Mid-Low Performers
-ARM,Armenia,Europe & Central Asia,Lower middle income,2023,2.5,2.6,2.2,2.5,2.6,2.7,2.3,3,Low Performers
-AUS,Australia,East Asia & Pacific,High income,2023,3.7,4.1,3.1,3.7,3.9,3.6,4.1,1,High Performers
-AUT,Austria,Europe & Central Asia,High income,2023,3.7,3.9,3.8,4.0,4.0,4.3,4.2,1,High Performers
-BEL,Belgium,Europe & Central Asia,High income,2023,3.9,4.1,3.8,4.0,4.2,4.2,4.0,1,High Performers
-BEN,Benin,Sub-Saharan Africa,Low income,2023,2.7,2.5,2.9,2.9,3.0,2.7,3.2,0,Mid-Low Performers
-BFA,Burkina Faso,Sub-Saharan Africa,Low income,2023,2.0,2.3,2.4,2.3,2.4,2.4,2.2,3,Low Performers
-BGD,Bangladesh,South Asia,Lower middle income,2023,2.3,2.3,2.6,2.6,2.7,3.0,2.4,0,Mid-Low Performers
-BGR,Bulgaria,Europe & Central Asia,Upper middle income,2023,3.1,3.1,3.0,3.2,3.3,3.5,3.3,2,Mid-High Performers
-BHR,Bahrain,Middle East & North Africa,High income,2023,3.3,3.6,3.1,3.5,3.3,4.1,3.4,2,Mid-High Performers
-BHS,"Bahamas, The",Latin America & Caribbean,High income,2023,2.7,2.5,3.1,2.7,2.5,3.0,2.6,0,Mid-Low Performers
-BIH,Bosnia and Herzegovina,Europe & Central Asia,Upper middle income,2023,2.7,2.6,3.1,3.0,2.9,3.2,3.2,0,Mid-Low Performers
-BLR,Belarus,Europe & Central Asia,Upper middle income,2023,2.6,2.7,2.6,2.7,2.6,3.1,2.6,0,Mid-Low Performers
-BOL,Bolivia,Latin America & Caribbean,Lower middle income,2023,2.1,2.4,2.5,2.4,2.4,2.4,2.5,3,Low Performers
-BRA,Brazil,Latin America & Caribbean,Upper middle income,2023,2.9,3.2,2.9,3.2,3.3,3.5,3.2,2,Mid-High Performers
-BTN,Bhutan,South Asia,Lower middle income,2023,2.7,2.2,2.3,2.5,2.6,2.6,2.3,3,Low Performers
-BWA,Botswana,Sub-Saharan Africa,Upper middle income,2023,3.0,3.1,3.0,3.1,3.4,3.3,3.0,2,Mid-High Performers
-CAF,Central African Republic,Sub-Saharan Africa,Low income,2023,2.4,2.6,2.1,2.5,2.9,2.6,2.4,3,Low Performers
-CAN,Canada,North America,High income,2023,4.0,4.3,3.6,4.0,4.2,4.1,4.1,1,High Performers
-CHE,Switzerland,Europe & Central Asia,High income,2023,4.1,4.4,3.6,4.1,4.3,4.2,4.2,1,High Performers
-CHL,Chile,Latin America & Caribbean,High income,2023,3.0,2.8,2.7,3.0,3.1,3.2,3.0,0,Mid-Low Performers
-CHN,China,East Asia & Pacific,Upper middle income,2023,3.3,4.0,3.6,3.7,3.8,3.7,3.8,1,High Performers
-CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2023,2.1,2.1,2.2,2.1,2.1,2.1,1.8,3,Low Performers
-COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2023,2.3,2.3,2.5,2.5,2.4,2.8,2.5,3,Low Performers
-COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2023,2.3,2.1,2.6,2.6,2.9,2.9,2.7,0,Mid-Low Performers
-COL,Colombia,Latin America & Caribbean,Upper middle income,2023,2.5,2.9,3.0,2.9,3.1,3.2,3.1,0,Mid-Low Performers
-CRI,Costa Rica,Latin America & Caribbean,Upper middle income,2023,2.8,2.7,2.8,2.9,2.9,3.2,2.9,0,Mid-Low Performers
-CUB,Cuba,Latin America & Caribbean,Upper middle income,2023,2.0,2.2,2.1,2.2,2.2,2.6,2.4,3,Low Performers
-CYP,Cyprus,Europe & Central Asia,High income,2023,2.9,2.8,3.1,3.2,3.2,3.5,3.4,2,Mid-High Performers
-CZE,Czech Republic,Europe & Central Asia,High income,2023,3.0,3.0,3.4,3.3,3.6,3.7,3.2,2,Mid-High Performers
-DEU,Germany,Europe & Central Asia,High income,2023,3.9,4.3,3.7,4.1,4.2,4.1,4.2,1,High Performers
-DJI,Djibouti,Middle East & North Africa,Lower middle income,2023,2.6,2.3,2.5,2.7,2.8,3.6,2.7,0,Mid-Low Performers
-DNK,Denmark,Europe & Central Asia,High income,2023,4.1,4.1,3.6,4.1,4.1,4.1,4.3,1,High Performers
-DOM,Dominican Republic,Latin America & Caribbean,Upper middle income,2023,2.6,2.7,2.4,2.6,2.6,3.1,2.4,0,Mid-Low Performers
-DZA,Algeria,Middle East & North Africa,Upper middle income,2023,2.3,2.1,3.0,2.5,2.2,2.6,2.5,3,Low Performers
-EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2023,2.8,3.0,3.2,3.1,2.9,3.6,2.9,2,Mid-High Performers
-ESP,Spain,Europe & Central Asia,High income,2023,3.6,3.8,3.7,3.9,3.9,4.2,4.1,1,High Performers
-EST,Estonia,Europe & Central Asia,High income,2023,3.2,3.5,3.4,3.6,3.7,4.1,3.8,1,High Performers
-FIN,Finland,Europe & Central Asia,High income,2023,4.0,4.2,4.1,4.2,4.2,4.3,4.2,1,High Performers
-FJI,Fiji,East Asia & Pacific,Upper middle income,2023,2.3,2.2,2.3,2.3,2.3,2.3,2.2,3,Low Performers
-FRA,France,Europe & Central Asia,High income,2023,3.7,3.8,3.7,3.9,3.8,4.1,4.0,1,High Performers
-GAB,Gabon,Sub-Saharan Africa,Upper middle income,2023,2.0,2.2,2.6,2.4,2.0,3.0,2.5,3,Low Performers
-GBR,United Kingdom,Europe & Central Asia,High income,2023,3.5,3.7,3.5,3.7,3.7,3.7,4.0,1,High Performers
-GEO,Georgia,Europe & Central Asia,Lower middle income,2023,2.6,2.3,2.7,2.7,2.6,3.1,2.8,0,Mid-Low Performers
-GHA,Ghana,Sub-Saharan Africa,Lower middle income,2023,2.7,2.4,2.4,2.5,2.5,2.7,2.2,3,Low Performers
-GIN,Guinea,Sub-Saharan Africa,Low income,2023,2.4,2.4,2.2,2.5,2.7,2.5,2.7,3,Low Performers
-GMB,"Gambia, The",Sub-Saharan Africa,Low income,2023,1.8,2.3,2.6,2.3,2.3,2.6,2.4,3,Low Performers
-GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2023,2.7,2.4,2.9,2.6,2.9,2.4,2.3,0,Mid-Low Performers
-GRC,Greece,Europe & Central Asia,High income,2023,3.2,3.7,3.8,3.7,3.8,3.9,3.9,1,High Performers
-GTM,Guatemala,Latin America & Caribbean,Lower middle income,2023,2.3,2.4,2.8,2.6,2.7,2.6,2.7,0,Mid-Low Performers
-GUY,Guyana,Latin America & Caribbean,Upper middle income,2023,2.3,2.4,2.1,2.4,2.6,2.6,2.2,3,Low Performers
-HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2023,3.8,4.0,4.0,4.0,4.0,4.1,4.2,1,High Performers
-HND,Honduras,Latin America & Caribbean,Lower middle income,2023,2.8,2.7,3.0,2.9,2.7,3.2,2.6,0,Mid-Low Performers
-HRV,Croatia,Europe & Central Asia,Upper middle income,2023,3.0,3.0,3.6,3.3,3.4,3.2,3.4,2,Mid-High Performers
-HTI,Haiti,Latin America & Caribbean,Low income,2023,2.1,1.8,2.3,2.1,2.0,2.5,2.1,3,Low Performers
-HUN,Hungary,Europe & Central Asia,High income,2023,2.7,3.1,3.4,3.2,3.1,3.6,3.4,2,Mid-High Performers
-IDN,Indonesia,East Asia & Pacific,Lower middle income,2023,2.8,2.9,3.0,3.0,2.9,3.3,3.0,0,Mid-Low Performers
-IND,India,South Asia,Lower middle income,2023,3.0,3.2,3.5,3.4,3.5,3.6,3.4,2,Mid-High Performers
-IRL,Ireland,Europe & Central Asia,High income,2023,3.4,3.5,3.6,3.6,3.6,3.7,3.7,1,High Performers
-IRN,"Iran, Islamic Rep.",Middle East & North Africa,Upper middle income,2023,2.2,2.4,2.4,2.3,2.1,2.7,2.4,3,Low Performers
-IRQ,Iraq,Middle East & North Africa,Upper middle income,2023,2.1,2.2,2.5,2.4,2.2,3.0,2.4,3,Low Performers
-ISL,Iceland,Europe & Central Asia,High income,2023,3.7,3.6,3.3,3.6,3.5,3.6,3.7,1,High Performers
-ISR,Israel,Middle East & North Africa,High income,2023,3.4,3.7,3.5,3.6,3.8,3.8,3.7,1,High Performers
-ITA,Italy,Europe & Central Asia,High income,2023,3.4,3.8,3.4,3.7,3.8,3.9,3.9,1,High Performers
-JAM,Jamaica,Latin America & Caribbean,Upper middle income,2023,2.2,2.4,2.4,2.5,2.5,2.9,2.8,3,Low Performers
-JPN,Japan,East Asia & Pacific,High income,2023,3.9,4.2,3.3,3.9,4.1,4.0,4.0,1,High Performers
-KAZ,Kazakhstan,Europe & Central Asia,Upper middle income,2023,2.6,2.5,2.6,2.7,2.7,2.9,2.8,0,Mid-Low Performers
-KGZ,Kyrgyz Republic,Europe & Central Asia,Lower middle income,2023,2.2,2.4,2.4,2.3,2.2,2.4,2.3,3,Low Performers
-KHM,Cambodia,East Asia & Pacific,Lower middle income,2023,2.2,2.1,2.3,2.4,2.4,2.7,2.8,3,Low Performers
-KOR,"Korea, Rep.",East Asia & Pacific,High income,2023,3.9,4.1,3.4,3.8,3.8,3.8,3.8,1,High Performers
-KWT,Kuwait,Middle East & North Africa,High income,2023,3.2,3.6,3.2,3.2,2.9,2.8,3.3,2,Mid-High Performers
-LAO,Lao PDR,East Asia & Pacific,Lower middle income,2023,2.3,2.3,2.3,2.4,2.4,2.8,2.4,3,Low Performers
-LBR,Liberia,Sub-Saharan Africa,Low income,2023,2.1,2.4,2.8,2.4,2.4,2.3,2.4,3,Low Performers
-LBY,Libya,Middle East & North Africa,Upper middle income,2023,1.9,1.7,2.0,1.9,1.9,2.2,1.8,3,Low Performers
-LKA,Sri Lanka,South Asia,Lower middle income,2023,2.5,2.4,2.8,2.8,2.7,3.3,3.0,0,Mid-Low Performers
-LTU,Lithuania,Europe & Central Asia,High income,2023,3.2,3.5,3.4,3.4,3.6,3.6,3.1,2,Mid-High Performers
-LUX,Luxembourg,Europe & Central Asia,High income,2023,3.6,3.6,3.6,3.6,3.9,3.5,3.5,1,High Performers
-LVA,Latvia,Europe & Central Asia,High income,2023,3.3,3.3,3.2,3.5,3.7,4.0,3.6,2,Mid-High Performers
-MDA,Moldova,Europe & Central Asia,Lower middle income,2023,1.9,1.9,2.7,2.5,2.8,3.0,2.8,0,Mid-Low Performers
-MDG,Madagascar,Sub-Saharan Africa,Low income,2023,1.8,1.8,2.9,2.3,2.2,2.6,2.0,3,Low Performers
-MEX,Mexico,Latin America & Caribbean,Upper middle income,2023,2.5,2.8,2.8,2.9,3.0,3.5,3.1,0,Mid-Low Performers
-MKD,"Macedonia, FYR",Europe & Central Asia,Upper middle income,2023,3.1,3.0,2.8,3.1,3.2,3.5,3.2,2,Mid-High Performers
-MLI,Mali,Sub-Saharan Africa,Low income,2023,2.6,2.0,2.6,2.6,2.5,3.1,2.7,0,Mid-Low Performers
-MLT,Malta,Middle East & North Africa,High income,2023,3.4,3.7,3.0,3.3,3.4,3.2,3.4,2,Mid-High Performers
-MNE,Montenegro,Europe & Central Asia,Upper middle income,2023,2.6,2.5,2.8,2.8,2.8,3.2,3.2,0,Mid-Low Performers
-MNG,Mongolia,East Asia & Pacific,Lower middle income,2023,2.5,2.3,2.5,2.5,2.3,2.7,2.4,3,Low Performers
-MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2023,2.1,2.0,2.2,2.3,2.5,2.8,2.5,3,Low Performers
-MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2023,2.4,2.5,1.9,2.5,2.5,3.1,2.9,3,Low Performers
-MYS,Malaysia,East Asia & Pacific,Upper middle income,2023,3.3,3.6,3.7,3.6,3.7,3.7,3.7,1,High Performers
-NAM,Namibia,Sub-Saharan Africa,Upper middle income,2023,2.8,2.8,3.0,2.9,2.9,2.9,2.8,0,Mid-Low Performers
-NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2023,2.4,2.4,2.5,2.6,2.3,3.1,2.7,0,Mid-Low Performers
-NIC,Nicaragua,Latin America & Caribbean,Lower middle income,2023,2.0,1.9,2.8,2.5,2.8,2.9,2.4,3,Low Performers
-NLD,Netherlands,Europe & Central Asia,High income,2023,3.9,4.2,3.7,4.1,4.2,4.0,4.2,1,High Performers
-NOR,Norway,Europe & Central Asia,High income,2023,3.8,3.9,3.0,3.7,3.8,4.0,3.7,1,High Performers
-NZL,New Zealand,East Asia & Pacific,High income,2023,3.4,3.8,3.2,3.6,3.7,3.8,3.8,1,High Performers
-OMN,Oman,Middle East & North Africa,High income,2023,3.0,3.2,3.4,3.3,3.2,3.1,3.9,2,Mid-High Performers
-PAN,Panama,Latin America & Caribbean,Upper middle income,2023,3.0,3.3,3.1,3.1,3.0,3.4,2.9,2,Mid-High Performers
-PER,Peru,Latin America & Caribbean,Upper middle income,2023,2.6,2.5,3.1,3.0,2.7,3.4,3.4,0,Mid-Low Performers
-PHL,Philippines,East Asia & Pacific,Lower middle income,2023,2.8,3.2,3.1,3.3,3.3,3.9,3.3,2,Mid-High Performers
-PNG,Papua New Guinea,East Asia & Pacific,Lower middle income,2023,2.4,2.4,2.6,2.7,2.7,3.3,3.0,0,Mid-Low Performers
-POL,Poland,Europe & Central Asia,High income,2023,3.4,3.5,3.3,3.6,3.6,3.9,3.8,1,High Performers
-PRT,Portugal,Europe & Central Asia,High income,2023,3.2,3.6,3.1,3.4,3.6,3.6,3.2,2,Mid-High Performers
-PRY,Paraguay,Latin America & Caribbean,Upper middle income,2023,2.4,2.5,2.7,2.7,2.6,3.0,2.8,0,Mid-Low Performers
-QAT,Qatar,Middle East & North Africa,High income,2023,3.1,3.8,3.1,3.5,3.9,3.5,3.6,2,Mid-High Performers
-ROU,Romania,Europe & Central Asia,Upper middle income,2023,2.7,2.9,3.4,3.2,3.3,3.6,3.5,2,Mid-High Performers
-RUS,Russian Federation,Europe & Central Asia,Upper middle income,2023,2.4,2.7,2.3,2.6,2.6,2.9,2.5,3,Low Performers
-RWA,Rwanda,Sub-Saharan Africa,Low income,2023,2.5,2.9,2.4,2.8,3.0,3.1,3.0,0,Mid-Low Performers
-SAU,Saudi Arabia,Middle East & North Africa,High income,2023,3.0,3.6,3.3,3.4,3.3,3.6,3.5,2,Mid-High Performers
-SDN,Sudan,Sub-Saharan Africa,Lower middle income,2023,2.1,2.3,2.4,2.4,2.4,2.7,2.3,3,Low Performers
-SGP,Singapore,East Asia & Pacific,High income,2023,4.2,4.6,4.0,4.3,4.4,4.3,4.4,1,High Performers
-SLB,Solomon Islands,East Asia & Pacific,Lower middle income,2023,2.4,2.6,2.9,2.8,2.9,3.2,2.9,0,Mid-Low Performers
-SLV,El Salvador,Latin America & Caribbean,Lower middle income,2023,2.4,2.2,2.6,2.7,2.7,3.2,2.9,0,Mid-Low Performers
-SOM,Somalia,Sub-Saharan Africa,Low income,2023,1.5,1.9,2.4,2.0,1.8,2.3,1.8,3,Low Performers
-SRB,Serbia,Europe & Central Asia,Upper middle income,2023,2.2,2.4,2.9,2.8,2.7,3.4,2.9,0,Mid-Low Performers
-SVK,Slovak Republic,Europe & Central Asia,High income,2023,3.2,3.3,3.0,3.3,3.4,3.5,3.3,2,Mid-High Performers
-SVN,Slovenia,Europe & Central Asia,High income,2023,3.4,3.6,3.4,3.3,3.3,3.3,3.0,2,Mid-High Performers
-SWE,Sweden,Europe & Central Asia,High income,2023,4.0,4.2,3.4,4.0,4.2,4.2,4.1,1,High Performers
-SYR,Syrian Arab Republic,Middle East & North Africa,Lower middle income,2023,2.2,2.2,2.3,2.3,2.2,2.5,2.3,3,Low Performers
-TGO,Togo,Sub-Saharan Africa,Low income,2023,2.3,2.3,3.0,2.5,2.4,2.8,2.3,3,Low Performers
-THA,Thailand,East Asia & Pacific,Upper middle income,2023,3.3,3.7,3.5,3.5,3.5,3.5,3.6,2,Mid-High Performers
-TJK,Tajikistan,Europe & Central Asia,Lower middle income,2023,2.2,2.5,2.5,2.5,2.8,2.9,2.0,3,Low Performers
-TTO,Trinidad and Tobago,Latin America & Caribbean,High income,2023,2.2,2.4,2.5,2.5,2.4,2.9,2.5,3,Low Performers
-TUR,Turkey,Europe & Central Asia,Upper middle income,2023,3.0,3.4,3.4,3.4,3.5,3.6,3.5,2,Mid-High Performers
-TWN,"Taiwan, China",East Asia & Pacific,High income,2023,3.5,3.8,3.7,3.9,3.9,4.2,4.2,1,High Performers
-UKR,Ukraine,Europe & Central Asia,Lower middle income,2023,2.4,2.4,2.8,2.7,2.6,3.1,2.6,0,Mid-Low Performers
-URY,Uruguay,Latin America & Caribbean,High income,2023,2.9,2.7,2.7,3.0,3.1,3.2,3.3,0,Mid-Low Performers
-USA,United States,North America,High income,2023,3.7,3.9,3.4,3.8,3.9,3.8,4.2,1,High Performers
-UZB,Uzbekistan,Europe & Central Asia,Lower middle income,2023,2.6,2.4,2.6,2.6,2.6,2.8,2.4,0,Mid-Low Performers
-VEN,"Venezuela, RB",Latin America & Caribbean,Upper middle income,2023,2.1,2.4,2.0,2.3,2.5,2.5,2.3,3,Low Performers
-VNM,Vietnam,East Asia & Pacific,Lower middle income,2023,3.1,3.2,3.3,3.3,3.2,3.3,3.4,2,Mid-High Performers
-YEM,"Yemen, Rep.",Middle East & North Africa,Lower middle income,2023,1.7,1.9,1.7,2.2,2.6,2.8,2.3,3,Low Performers
-ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2023,3.3,3.6,3.6,3.7,3.8,3.8,3.8,1,High Performers
-ZWE,Zimbabwe,Sub-Saharan Africa,Low income,2023,2.2,2.4,2.5,2.5,2.3,2.8,2.7,3,Low Performers
+AFG,Afghanistan,South Asia,Low income,2023,2.1,1.7,1.8,1.9,2.0,2.3,1.6,1,Low Performers
+AGO,Angola,Sub-Saharan Africa,Lower middle income,2023,1.7,2.1,2.4,2.1,2.3,2.1,2.3,1,Low Performers
+ALB,Albania,Europe & Central Asia,Upper middle income,2023,2.4,2.7,2.8,2.5,2.3,2.5,2.3,1,Low Performers
+ARE,United Arab Emirates,Middle East & North Africa,High income,2023,3.7,4.1,3.8,4.0,4.0,4.2,4.1,2,High Performers
+ARG,Argentina,Latin America & Caribbean,Upper middle income,2023,2.7,2.8,2.7,2.8,2.7,3.1,2.9,3,Mid-Low Performers
+ARM,Armenia,Europe & Central Asia,Lower middle income,2023,2.5,2.6,2.2,2.5,2.6,2.7,2.3,1,Low Performers
+AUS,Australia,East Asia & Pacific,High income,2023,3.7,4.1,3.1,3.7,3.9,3.6,4.1,2,High Performers
+AUT,Austria,Europe & Central Asia,High income,2023,3.7,3.9,3.8,4.0,4.0,4.3,4.2,2,High Performers
+AZE,Azerbaijan,Europe & Central Asia,Upper middle income,2023,3.3051,3.7318,1.9758,2.283,1.7803,1.8008,1.3685,1,Low Performers
+BDI,Burundi,Sub-Saharan Africa,Low income,2023,1.6976,1.8298,2.3827,2.3422,2.5662,3.0624,2.4729,1,Low Performers
+BEL,Belgium,Europe & Central Asia,High income,2023,3.9,4.1,3.8,4.0,4.2,4.2,4.0,2,High Performers
+BEN,Benin,Sub-Saharan Africa,Low income,2023,2.7,2.5,2.9,2.9,3.0,2.7,3.2,3,Mid-Low Performers
+BFA,Burkina Faso,Sub-Saharan Africa,Low income,2023,2.0,2.3,2.4,2.3,2.4,2.4,2.2,1,Low Performers
+BGD,Bangladesh,South Asia,Lower middle income,2023,2.3,2.3,2.6,2.6,2.7,3.0,2.4,3,Mid-Low Performers
+BGR,Bulgaria,Europe & Central Asia,Upper middle income,2023,3.1,3.1,3.0,3.2,3.3,3.5,3.3,0,Mid-High Performers
+BHR,Bahrain,Middle East & North Africa,High income,2023,3.3,3.6,3.1,3.5,3.3,4.1,3.4,0,Mid-High Performers
+BHS,"Bahamas, The",Latin America & Caribbean,High income,2023,2.7,2.5,3.1,2.7,2.5,3.0,2.6,3,Mid-Low Performers
+BIH,Bosnia and Herzegovina,Europe & Central Asia,Upper middle income,2023,2.7,2.6,3.1,3.0,2.9,3.2,3.2,3,Mid-Low Performers
+BLR,Belarus,Europe & Central Asia,Upper middle income,2023,2.6,2.7,2.6,2.7,2.6,3.1,2.6,3,Mid-Low Performers
+BOL,Bolivia,Latin America & Caribbean,Lower middle income,2023,2.1,2.4,2.5,2.4,2.4,2.4,2.5,1,Low Performers
+BRA,Brazil,Latin America & Caribbean,Upper middle income,2023,2.9,3.2,2.9,3.2,3.3,3.5,3.2,0,Mid-High Performers
+BTN,Bhutan,South Asia,Lower middle income,2023,2.7,2.2,2.3,2.5,2.6,2.6,2.3,1,Low Performers
+BWA,Botswana,Sub-Saharan Africa,Upper middle income,2023,3.0,3.1,3.0,3.1,3.4,3.3,3.0,0,Mid-High Performers
+CAF,Central African Republic,Sub-Saharan Africa,Low income,2023,2.4,2.6,2.1,2.5,2.9,2.6,2.4,1,Low Performers
+CAN,Canada,North America,High income,2023,4.0,4.3,3.6,4.0,4.2,4.1,4.1,2,High Performers
+CHE,Switzerland,Europe & Central Asia,High income,2023,4.1,4.4,3.6,4.1,4.3,4.2,4.2,2,High Performers
+CHL,Chile,Latin America & Caribbean,High income,2023,3.0,2.8,2.7,3.0,3.1,3.2,3.0,3,Mid-Low Performers
+CHN,China,East Asia & Pacific,Upper middle income,2023,3.3,4.0,3.6,3.7,3.8,3.7,3.8,2,High Performers
+CIV,Cote d'Ivoire,Sub-Saharan Africa,Lower middle income,2023,3.0841,3.0358,3.4025,3.2144,3.3441,3.0813,3.2953,0,Mid-High Performers
+CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2023,2.1,2.1,2.2,2.1,2.1,2.1,1.8,1,Low Performers
+COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2023,2.3,2.3,2.5,2.5,2.4,2.8,2.5,1,Low Performers
+COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2023,2.3,2.1,2.6,2.6,2.9,2.9,2.7,3,Mid-Low Performers
+COL,Colombia,Latin America & Caribbean,Upper middle income,2023,2.5,2.9,3.0,2.9,3.1,3.2,3.1,3,Mid-Low Performers
+COM,Comoros,Sub-Saharan Africa,Low income,2023,3.0144,2.4485,2.6697,2.6667,2.2918,2.6838,2.8647,3,Mid-Low Performers
+CRI,Costa Rica,Latin America & Caribbean,Upper middle income,2023,2.8,2.7,2.8,2.9,2.9,3.2,2.9,3,Mid-Low Performers
+CUB,Cuba,Latin America & Caribbean,Upper middle income,2023,2.0,2.2,2.1,2.2,2.2,2.6,2.4,1,Low Performers
+CYP,Cyprus,Europe & Central Asia,High income,2023,2.9,2.8,3.1,3.2,3.2,3.5,3.4,0,Mid-High Performers
+CZE,Czech Republic,Europe & Central Asia,High income,2023,3.0,3.0,3.4,3.3,3.6,3.7,3.2,0,Mid-High Performers
+DEU,Germany,Europe & Central Asia,High income,2023,3.9,4.3,3.7,4.1,4.2,4.1,4.2,2,High Performers
+DJI,Djibouti,Middle East & North Africa,Lower middle income,2023,2.6,2.3,2.5,2.7,2.8,3.6,2.7,3,Mid-Low Performers
+DNK,Denmark,Europe & Central Asia,High income,2023,4.1,4.1,3.6,4.1,4.1,4.1,4.3,2,High Performers
+DOM,Dominican Republic,Latin America & Caribbean,Upper middle income,2023,2.6,2.7,2.4,2.6,2.6,3.1,2.4,3,Mid-Low Performers
+DZA,Algeria,Middle East & North Africa,Upper middle income,2023,2.3,2.1,3.0,2.5,2.2,2.6,2.5,1,Low Performers
+ECU,Ecuador,Latin America & Caribbean,Upper middle income,2023,3.0479,2.7807,2.8505,2.9388,2.7779,3.0417,3.116,3,Mid-Low Performers
+EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2023,2.8,3.0,3.2,3.1,2.9,3.6,2.9,0,Mid-High Performers
+ERI,Eritrea,Sub-Saharan Africa,Low income,2023,2.2754,2.0651,2.1855,2.2175,2.1764,2.3838,2.2069,1,Low Performers
+ESP,Spain,Europe & Central Asia,High income,2023,3.6,3.8,3.7,3.9,3.9,4.2,4.1,2,High Performers
+EST,Estonia,Europe & Central Asia,High income,2023,3.2,3.5,3.4,3.6,3.7,4.1,3.8,2,High Performers
+ETH,Ethiopia,Sub-Saharan Africa,Low income,2023,3.0881,2.4261,2.5179,2.5229,2.8317,2.0681,2.178,1,Low Performers
+FIN,Finland,Europe & Central Asia,High income,2023,4.0,4.2,4.1,4.2,4.2,4.3,4.2,2,High Performers
+FJI,Fiji,East Asia & Pacific,Upper middle income,2023,2.3,2.2,2.3,2.3,2.3,2.3,2.2,1,Low Performers
+FRA,France,Europe & Central Asia,High income,2023,3.7,3.8,3.7,3.9,3.8,4.1,4.0,2,High Performers
+GAB,Gabon,Sub-Saharan Africa,Upper middle income,2023,2.0,2.2,2.6,2.4,2.0,3.0,2.5,1,Low Performers
+GBR,United Kingdom,Europe & Central Asia,High income,2023,3.5,3.7,3.5,3.7,3.7,3.7,4.0,2,High Performers
+GEO,Georgia,Europe & Central Asia,Lower middle income,2023,2.6,2.3,2.7,2.7,2.6,3.1,2.8,3,Mid-Low Performers
+GHA,Ghana,Sub-Saharan Africa,Lower middle income,2023,2.7,2.4,2.4,2.5,2.5,2.7,2.2,1,Low Performers
+GIN,Guinea,Sub-Saharan Africa,Low income,2023,2.4,2.4,2.2,2.5,2.7,2.5,2.7,1,Low Performers
+GMB,"Gambia, The",Sub-Saharan Africa,Low income,2023,1.8,2.3,2.6,2.3,2.3,2.6,2.4,1,Low Performers
+GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2023,2.7,2.4,2.9,2.6,2.9,2.4,2.3,3,Mid-Low Performers
+GNQ,Equatorial Guinea,Sub-Saharan Africa,Upper middle income,2023,1.7204,2.2722,4.6758,2.913,2.98,3.294,2.2334,3,Mid-Low Performers
+GRC,Greece,Europe & Central Asia,High income,2023,3.2,3.7,3.8,3.7,3.8,3.9,3.9,2,High Performers
+GTM,Guatemala,Latin America & Caribbean,Lower middle income,2023,2.3,2.4,2.8,2.6,2.7,2.6,2.7,3,Mid-Low Performers
+GUY,Guyana,Latin America & Caribbean,Upper middle income,2023,2.3,2.4,2.1,2.4,2.6,2.6,2.2,1,Low Performers
+HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2023,3.8,4.0,4.0,4.0,4.0,4.1,4.2,2,High Performers
+HND,Honduras,Latin America & Caribbean,Lower middle income,2023,2.8,2.7,3.0,2.9,2.7,3.2,2.6,3,Mid-Low Performers
+HRV,Croatia,Europe & Central Asia,Upper middle income,2023,3.0,3.0,3.6,3.3,3.4,3.2,3.4,0,Mid-High Performers
+HTI,Haiti,Latin America & Caribbean,Low income,2023,2.1,1.8,2.3,2.1,2.0,2.5,2.1,1,Low Performers
+HUN,Hungary,Europe & Central Asia,High income,2023,2.7,3.1,3.4,3.2,3.1,3.6,3.4,0,Mid-High Performers
+IDN,Indonesia,East Asia & Pacific,Lower middle income,2023,2.8,2.9,3.0,3.0,2.9,3.3,3.0,3,Mid-Low Performers
+IND,India,South Asia,Lower middle income,2023,3.0,3.2,3.5,3.4,3.5,3.6,3.4,0,Mid-High Performers
+IRL,Ireland,Europe & Central Asia,High income,2023,3.4,3.5,3.6,3.6,3.6,3.7,3.7,2,High Performers
+IRN,"Iran, Islamic Rep.",Middle East & North Africa,Upper middle income,2023,2.2,2.4,2.4,2.3,2.1,2.7,2.4,1,Low Performers
+IRQ,Iraq,Middle East & North Africa,Upper middle income,2023,2.1,2.2,2.5,2.4,2.2,3.0,2.4,1,Low Performers
+ISL,Iceland,Europe & Central Asia,High income,2023,3.7,3.6,3.3,3.6,3.5,3.6,3.7,2,High Performers
+ISR,Israel,Middle East & North Africa,High income,2023,3.4,3.7,3.5,3.6,3.8,3.8,3.7,2,High Performers
+ITA,Italy,Europe & Central Asia,High income,2023,3.4,3.8,3.4,3.7,3.8,3.9,3.9,2,High Performers
+JAM,Jamaica,Latin America & Caribbean,Upper middle income,2023,2.2,2.4,2.4,2.5,2.5,2.9,2.8,1,Low Performers
+JOR,Jordan,Middle East & North Africa,Lower middle income,2023,2.5896,2.8051,2.449,2.802,2.7191,3.2864,3.0045,3,Mid-Low Performers
+JPN,Japan,East Asia & Pacific,High income,2023,3.9,4.2,3.3,3.9,4.1,4.0,4.0,2,High Performers
+KAZ,Kazakhstan,Europe & Central Asia,Upper middle income,2023,2.6,2.5,2.6,2.7,2.7,2.9,2.8,3,Mid-Low Performers
+KEN,Kenya,Sub-Saharan Africa,Lower middle income,2023,3.1502,3.1938,2.9053,3.3072,3.4,3.6681,3.5548,0,Mid-High Performers
+KGZ,Kyrgyz Republic,Europe & Central Asia,Lower middle income,2023,2.2,2.4,2.4,2.3,2.2,2.4,2.3,1,Low Performers
+KHM,Cambodia,East Asia & Pacific,Lower middle income,2023,2.2,2.1,2.3,2.4,2.4,2.7,2.8,1,Low Performers
+KOR,"Korea, Rep.",East Asia & Pacific,High income,2023,3.9,4.1,3.4,3.8,3.8,3.8,3.8,2,High Performers
+KWT,Kuwait,Middle East & North Africa,High income,2023,3.2,3.6,3.2,3.2,2.9,2.8,3.3,0,Mid-High Performers
+LAO,Lao PDR,East Asia & Pacific,Lower middle income,2023,2.3,2.3,2.3,2.4,2.4,2.8,2.4,1,Low Performers
+LBN,Lebanon,Middle East & North Africa,Upper middle income,2023,2.3795,2.6829,2.8722,2.6545,2.1705,2.8934,2.8931,3,Mid-Low Performers
+LBR,Liberia,Sub-Saharan Africa,Low income,2023,2.1,2.4,2.8,2.4,2.4,2.3,2.4,1,Low Performers
+LBY,Libya,Middle East & North Africa,Upper middle income,2023,1.9,1.7,2.0,1.9,1.9,2.2,1.8,1,Low Performers
+LKA,Sri Lanka,South Asia,Lower middle income,2023,2.5,2.4,2.8,2.8,2.7,3.3,3.0,3,Mid-Low Performers
+LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2023,2.1962,1.9239,1.9292,2.1525,1.9414,2.4487,2.4617,1,Low Performers
+LTU,Lithuania,Europe & Central Asia,High income,2023,3.2,3.5,3.4,3.4,3.6,3.6,3.1,0,Mid-High Performers
+LUX,Luxembourg,Europe & Central Asia,High income,2023,3.6,3.6,3.6,3.6,3.9,3.5,3.5,2,High Performers
+LVA,Latvia,Europe & Central Asia,High income,2023,3.3,3.3,3.2,3.5,3.7,4.0,3.6,0,Mid-High Performers
+MAR,Morocco,Middle East & North Africa,Lower middle income,2023,2.2236,2.2614,2.6312,2.5056,2.5484,2.8479,2.4559,1,Low Performers
+MDA,Moldova,Europe & Central Asia,Lower middle income,2023,1.9,1.9,2.7,2.5,2.8,3.0,2.8,3,Mid-Low Performers
+MDG,Madagascar,Sub-Saharan Africa,Low income,2023,1.8,1.8,2.9,2.3,2.2,2.6,2.0,1,Low Performers
+MDV,Maldives,South Asia,Upper middle income,2023,2.4024,2.9625,2.6193,2.7149,2.0789,3.5909,2.661,3,Mid-Low Performers
+MEX,Mexico,Latin America & Caribbean,Upper middle income,2023,2.5,2.8,2.8,2.9,3.0,3.5,3.1,3,Mid-Low Performers
+MKD,"Macedonia, FYR",Europe & Central Asia,Upper middle income,2023,3.1,3.0,2.8,3.1,3.2,3.5,3.2,0,Mid-High Performers
+MLI,Mali,Sub-Saharan Africa,Low income,2023,2.6,2.0,2.6,2.6,2.5,3.1,2.7,3,Mid-Low Performers
+MLT,Malta,Middle East & North Africa,High income,2023,3.4,3.7,3.0,3.3,3.4,3.2,3.4,0,Mid-High Performers
+MMR,Myanmar,East Asia & Pacific,Lower middle income,2023,2.37,2.2951,2.2561,2.4898,2.4375,3.0463,2.545,1,Low Performers
+MNE,Montenegro,Europe & Central Asia,Upper middle income,2023,2.6,2.5,2.8,2.8,2.8,3.2,3.2,3,Mid-Low Performers
+MNG,Mongolia,East Asia & Pacific,Lower middle income,2023,2.5,2.3,2.5,2.5,2.3,2.7,2.4,1,Low Performers
+MOZ,Mozambique,Sub-Saharan Africa,Low income,2023,2.9435,2.4245,3.1838,2.9644,2.5502,3.5224,3.1245,3,Mid-Low Performers
+MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2023,2.1,2.0,2.2,2.3,2.5,2.8,2.5,1,Low Performers
+MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2023,2.4,2.5,1.9,2.5,2.5,3.1,2.9,1,Low Performers
+MWI,Malawi,Sub-Saharan Africa,Low income,2023,2.5755,2.3088,2.501,2.6817,2.7483,2.9502,2.9796,3,Mid-Low Performers
+MYS,Malaysia,East Asia & Pacific,Upper middle income,2023,3.3,3.6,3.7,3.6,3.7,3.7,3.7,2,High Performers
+NAM,Namibia,Sub-Saharan Africa,Upper middle income,2023,2.8,2.8,3.0,2.9,2.9,2.9,2.8,3,Mid-Low Performers
+NER,Niger,Sub-Saharan Africa,Low income,2023,2.1143,2.1612,2.1202,2.1754,2.2136,2.1653,2.2669,1,Low Performers
+NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2023,2.4,2.4,2.5,2.6,2.3,3.1,2.7,3,Mid-Low Performers
+NIC,Nicaragua,Latin America & Caribbean,Lower middle income,2023,2.0,1.9,2.8,2.5,2.8,2.9,2.4,1,Low Performers
+NLD,Netherlands,Europe & Central Asia,High income,2023,3.9,4.2,3.7,4.1,4.2,4.0,4.2,2,High Performers
+NOR,Norway,Europe & Central Asia,High income,2023,3.8,3.9,3.0,3.7,3.8,4.0,3.7,2,High Performers
+NPL,Nepal,South Asia,Low income,2023,2.3186,2.5377,2.6728,2.7266,2.574,3.3507,2.8733,3,Mid-Low Performers
+NZL,New Zealand,East Asia & Pacific,High income,2023,3.4,3.8,3.2,3.6,3.7,3.8,3.8,2,High Performers
+OMN,Oman,Middle East & North Africa,High income,2023,3.0,3.2,3.4,3.3,3.2,3.1,3.9,0,Mid-High Performers
+PAK,Pakistan,South Asia,Lower middle income,2023,2.3391,2.4419,2.7075,2.5933,2.7669,2.8486,2.4235,3,Mid-Low Performers
+PAN,Panama,Latin America & Caribbean,Upper middle income,2023,3.0,3.3,3.1,3.1,3.0,3.4,2.9,0,Mid-High Performers
+PER,Peru,Latin America & Caribbean,Upper middle income,2023,2.6,2.5,3.1,3.0,2.7,3.4,3.4,3,Mid-Low Performers
+PHL,Philippines,East Asia & Pacific,Lower middle income,2023,2.8,3.2,3.1,3.3,3.3,3.9,3.3,0,Mid-High Performers
+PNG,Papua New Guinea,East Asia & Pacific,Lower middle income,2023,2.4,2.4,2.6,2.7,2.7,3.3,3.0,3,Mid-Low Performers
+POL,Poland,Europe & Central Asia,High income,2023,3.4,3.5,3.3,3.6,3.6,3.9,3.8,2,High Performers
+PRT,Portugal,Europe & Central Asia,High income,2023,3.2,3.6,3.1,3.4,3.6,3.6,3.2,0,Mid-High Performers
+PRY,Paraguay,Latin America & Caribbean,Upper middle income,2023,2.4,2.5,2.7,2.7,2.6,3.0,2.8,3,Mid-Low Performers
+QAT,Qatar,Middle East & North Africa,High income,2023,3.1,3.8,3.1,3.5,3.9,3.5,3.6,0,Mid-High Performers
+ROU,Romania,Europe & Central Asia,Upper middle income,2023,2.7,2.9,3.4,3.2,3.3,3.6,3.5,0,Mid-High Performers
+RUS,Russian Federation,Europe & Central Asia,Upper middle income,2023,2.4,2.7,2.3,2.6,2.6,2.9,2.5,1,Low Performers
+RWA,Rwanda,Sub-Saharan Africa,Low income,2023,2.5,2.9,2.4,2.8,3.0,3.1,3.0,3,Mid-Low Performers
+SAU,Saudi Arabia,Middle East & North Africa,High income,2023,3.0,3.6,3.3,3.4,3.3,3.6,3.5,0,Mid-High Performers
+SDN,Sudan,Sub-Saharan Africa,Lower middle income,2023,2.1,2.3,2.4,2.4,2.4,2.7,2.3,1,Low Performers
+SEN,Senegal,Sub-Saharan Africa,Low income,2023,2.1161,2.1425,2.3004,2.088,1.8778,2.1997,1.8504,1,Low Performers
+SGP,Singapore,East Asia & Pacific,High income,2023,4.2,4.6,4.0,4.3,4.4,4.3,4.4,2,High Performers
+SLB,Solomon Islands,East Asia & Pacific,Lower middle income,2023,2.4,2.6,2.9,2.8,2.9,3.2,2.9,3,Mid-Low Performers
+SLE,Sierra Leone,Sub-Saharan Africa,Low income,2023,1.8356,1.9116,2.3555,2.1116,2.0832,2.2048,2.2254,1,Low Performers
+SLV,El Salvador,Latin America & Caribbean,Lower middle income,2023,2.4,2.2,2.6,2.7,2.7,3.2,2.9,3,Mid-Low Performers
+SOM,Somalia,Sub-Saharan Africa,Low income,2023,1.5,1.9,2.4,2.0,1.8,2.3,1.8,1,Low Performers
+SRB,Serbia,Europe & Central Asia,Upper middle income,2023,2.2,2.4,2.9,2.8,2.7,3.4,2.9,3,Mid-Low Performers
+STP,São Tomé and Principe,Sub-Saharan Africa,Lower middle income,2023,2.6406,2.3166,1.9644,2.4437,2.423,2.9269,2.3769,1,Low Performers
+SVK,Slovak Republic,Europe & Central Asia,High income,2023,3.2,3.3,3.0,3.3,3.4,3.5,3.3,0,Mid-High Performers
+SVN,Slovenia,Europe & Central Asia,High income,2023,3.4,3.6,3.4,3.3,3.3,3.3,3.0,0,Mid-High Performers
+SWE,Sweden,Europe & Central Asia,High income,2023,4.0,4.2,3.4,4.0,4.2,4.2,4.1,2,High Performers
+SYR,Syrian Arab Republic,Middle East & North Africa,Lower middle income,2023,2.2,2.2,2.3,2.3,2.2,2.5,2.3,1,Low Performers
+TCD,Chad,Sub-Saharan Africa,Low income,2023,2.2085,2.5454,2.4848,2.4609,2.7871,2.3234,2.4374,1,Low Performers
+TGO,Togo,Sub-Saharan Africa,Low income,2023,2.3,2.3,3.0,2.5,2.4,2.8,2.3,3,Mid-Low Performers
+THA,Thailand,East Asia & Pacific,Upper middle income,2023,3.3,3.7,3.5,3.5,3.5,3.5,3.6,0,Mid-High Performers
+TJK,Tajikistan,Europe & Central Asia,Lower middle income,2023,2.2,2.5,2.5,2.5,2.8,2.9,2.0,1,Low Performers
+TKM,Turkmenistan,Europe & Central Asia,Upper middle income,2023,2.3505,2.324,2.2042,2.3352,2.3018,2.3573,2.4812,1,Low Performers
+TTO,Trinidad and Tobago,Latin America & Caribbean,High income,2023,2.2,2.4,2.5,2.5,2.4,2.9,2.5,1,Low Performers
+TUN,Tunisia,Middle East & North Africa,Lower middle income,2023,1.8382,1.8357,2.0378,2.2999,2.2912,3.0534,2.7423,1,Low Performers
+TUR,Turkey,Europe & Central Asia,Upper middle income,2023,3.0,3.4,3.4,3.4,3.5,3.6,3.5,0,Mid-High Performers
+TWN,"Taiwan, China",East Asia & Pacific,High income,2023,3.5,3.8,3.7,3.9,3.9,4.2,4.2,2,High Performers
+TZA,Tanzania,Sub-Saharan Africa,Low income,2023,3.0935,3.4467,3.1268,3.3101,3.3085,3.7947,3.1448,0,Mid-High Performers
+UGA,Uganda,Sub-Saharan Africa,Low income,2023,2.729,2.3658,2.7455,2.678,2.636,2.8774,2.673,3,Mid-Low Performers
+UKR,Ukraine,Europe & Central Asia,Lower middle income,2023,2.4,2.4,2.8,2.7,2.6,3.1,2.6,3,Mid-Low Performers
+URY,Uruguay,Latin America & Caribbean,High income,2023,2.9,2.7,2.7,3.0,3.1,3.2,3.3,3,Mid-Low Performers
+USA,United States,North America,High income,2023,3.7,3.9,3.4,3.8,3.9,3.8,4.2,2,High Performers
+UZB,Uzbekistan,Europe & Central Asia,Lower middle income,2023,2.6,2.4,2.6,2.6,2.6,2.8,2.4,3,Mid-Low Performers
+VEN,"Venezuela, RB",Latin America & Caribbean,Upper middle income,2023,2.1,2.4,2.0,2.3,2.5,2.5,2.3,1,Low Performers
+VNM,Vietnam,East Asia & Pacific,Lower middle income,2023,3.1,3.2,3.3,3.3,3.2,3.3,3.4,0,Mid-High Performers
+YEM,"Yemen, Rep.",Middle East & North Africa,Lower middle income,2023,1.7,1.9,1.7,2.2,2.6,2.8,2.3,1,Low Performers
+ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2023,3.3,3.6,3.6,3.7,3.8,3.8,3.8,2,High Performers
+ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2023,2.261,2.5499,3.1764,2.6133,2.6418,3.1232,1.8222,3,Mid-Low Performers
+ZWE,Zimbabwe,Sub-Saharan Africa,Low income,2023,2.2,2.4,2.5,2.5,2.3,2.8,2.7,1,Low Performers
