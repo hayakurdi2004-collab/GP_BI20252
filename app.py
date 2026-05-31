@@ -376,7 +376,7 @@ with tab1:
 
     ch = closest_hist_year(sel_year)
     cy_yr      = data["clusters_year"][data["clusters_year"]["Year"] == ch].copy()
-    jordan_row = cy_yr[cy_yr["Country Name"] == "Jordan"]
+    jordan_row = jordan_full[jordan_full["Year"] == sel_year]
 
     if not jordan_row.empty:
         jcluster = jordan_row.iloc[0]["Cluster Label"]
@@ -392,12 +392,17 @@ with tab1:
     with c1:
         if not cy_yr.empty:
             fig = px.scatter(
-                cy_yr, x="Infrastructure", y="LPI_Overall",
-                color="Cluster Label", size="Customs",
-                hover_name="Country Name",
-                hover_data={"Customs":":.2f","Timeliness":":.2f","Cluster Label":True},
-                color_discrete_sequence=["#EF4444","#F59E0B","#3B82F6","#10B981"],
-            )
+    cy_yr, x="Infrastructure", y="LPI_Overall",
+    color="Cluster Label", size="Customs",
+    hover_name="Country Name",
+    hover_data={"Customs":":.2f","Timeliness":":.2f","Cluster Label":True},
+    color_discrete_map={
+        "High Performers": "#10B981",
+        "Mid-High Performers": "#3B82F6",
+        "Mid-Low Performers": "#F59E0B",
+        "Low Performers": "#EF4444",
+    },
+)
             if not jordan_row.empty:
                 jr = jordan_row.iloc[0]
                 fig.add_trace(go.Scatter(
@@ -475,10 +480,14 @@ with tab2:
 
     ch    = closest_hist_year(sel_year)
     cy_yr = data["clusters_year"][data["clusters_year"]["Year"] == ch].copy()
+    
+    
+    
+    
     if ch != sel_year:
         st.info(f"ℹ️ Showing {ch} data (closest historical year to {sel_year})")
 
-    jordan_scores = cy_yr[cy_yr["Country Name"] == "Jordan"][SCORE_COLS]
+    jordan_scores = jordan_full[jordan_full["Year"] == sel_year][SCORE_COLS]
     if not jordan_scores.empty:
         jvals = jordan_scores.iloc[0]
 
@@ -588,7 +597,9 @@ with tab3:
 
     ch    = closest_hist_year(sel_year)
     cy_yr = data["clusters_year"][data["clusters_year"]["Year"] == ch].copy()
-    jordan_scores = cy_yr[cy_yr["Country Name"] == "Jordan"][SCORE_COLS + ["LPI_Overall"]]
+    jordan_scores = jordan_full[jordan_full["Year"] == sel_year][SCORE_COLS + ["LPI_Overall"]]
+    
+    
     if ch != sel_year:
         st.info(f"ℹ️ Using {ch} baseline scores")
 
