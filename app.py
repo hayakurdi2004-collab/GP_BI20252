@@ -21,8 +21,8 @@ st.set_page_config(
 JORDAN_RED   = "#CE1126"
 JORDAN_GREEN = "#007A3D"
 ACCENT_BLUE  = "#2563EB"
-TEXT_DARK    = "#1F2937"
-BG_CHART     = "#F8FAFC"
+TEXT_DARK    = "#F8FAFC"
+BG_CHART     = "#0B1220"
 
 INDICATOR_COLORS = {
     "Customs":                 "#EF4444",
@@ -51,25 +51,14 @@ SCORE_COLS = [
 
 # ── Shared chart layout defaults ──────────────────────────────────────────────
 CHART_LAYOUT = dict(
-    paper_bgcolor="white",
-    plot_bgcolor=BG_CHART,
-    font=dict(family="Inter", color=TEXT_DARK, size=12),
-    title_font=dict(family="Inter", color=TEXT_DARK, size=14),
-    
-    xaxis=dict(
-        color=TEXT_DARK,
-        tickfont=dict(color=TEXT_DARK),
-        title_font=dict(color=TEXT_DARK),
-        gridcolor="#E5E7EB",
-        linecolor="#D1D5DB",
-    ),
-    yaxis=dict(
-        color=TEXT_DARK,
-        tickfont=dict(color=TEXT_DARK),
-        title_font=dict(color=TEXT_DARK),
-        gridcolor="#E5E7EB",
-        linecolor="#D1D5DB",
-    ),
+    paper_bgcolor="#0B1220",
+    plot_bgcolor="#111827",
+    font=dict(family="Inter", color="#F8FAFC", size=12),
+    title_font=dict(family="Inter", color="#F8FAFC", size=14),
+    xaxis=dict(color="#F8FAFC", tickfont=dict(color="#F8FAFC"),
+               title_font=dict(color="#F8FAFC"), gridcolor="#243044", linecolor="#334155"),
+    yaxis=dict(color="#F8FAFC", tickfont=dict(color="#F8FAFC"),
+               title_font=dict(color="#F8FAFC"), gridcolor="#243044", linecolor="#334155"),
 )
 
 def apply_chart_style(fig, title="", height=400, legend_y=-0.2):
@@ -90,7 +79,18 @@ st.markdown("""
 html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 #MainMenu {visibility:hidden;} footer {visibility:hidden;}
 .block-container {padding-top: 1.5rem; padding-bottom: 2rem;}
+.stApp {
+    background: linear-gradient(180deg, #020617 0%, #0B1220 45%, #111827 100%);
+    color: #F8FAFC;
+}
 
+.block-container {
+    background: transparent;
+}
+
+h1, h2, h3, h4, h5, h6, p, label, span, div {
+    color: #F8FAFC;
+}
 .app-header {
     background: linear-gradient(135deg, #CE1126 0%, #8B0000 40%, #1a1a2e 100%);
     border-radius: 16px; padding: 28px 36px; margin-bottom: 24px; color: white;
@@ -99,12 +99,14 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 .app-header p  { margin:6px 0 0; opacity:.85; font-size:.95rem; }
 
 .kpi-card {
-    background: white; border-radius: 14px; padding: 20px 24px;
-    border: 1px solid #E5E7EB; box-shadow: 0 1px 4px rgba(0,0,0,.06); text-align: center;
+    background: linear-gradient(180deg, #111827 0%, #0F172A 100%);
+    border-radius: 14px; padding: 20px 24px;
+    border: 1px solid #334155;
+    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+    text-align: center;
 }
-.kpi-label { font-size:.78rem; color:#6B7280; font-weight:600;
-             text-transform:uppercase; letter-spacing:.04em; margin-bottom:6px; }
-.kpi-value { font-size:2rem; font-weight:700; color:#1F2937; line-height:1; }
+.kpi-value { font-size:2rem; font-weight:700; color:#F8FAFC; line-height:1; }
+.kpi-label { font-size:.78rem; color:#CBD5E1;
 .kpi-delta { font-size:.82rem; margin-top:4px; }
 .delta-up   { color:#10B981; }
 .delta-down { color:#EF4444; }
@@ -145,7 +147,7 @@ section[data-testid="stSidebar"] hr { border-color:#334155; }
 .cluster-low    { background:#FEE2E2; color:#991B1B; }
 
 .priority-row {
-    display:flex; align-items:center; gap:12px; background:white;
+    display:flex; align-items:center; gap:12px; background:#111827;
     border-radius:10px; padding:12px 16px; margin-bottom:8px;
     border:1px solid #E5E7EB; box-shadow:0 1px 3px rgba(0,0,0,.05);
 }
@@ -546,7 +548,7 @@ with tab2:
                     <div style="background:white;border-radius:8px;padding:10px 14px;
                                 margin-bottom:6px;border:1px solid #E5E7EB;
                                 display:flex;justify-content:space-between;align-items:center">
-                      <span style="font-weight:600;font-size:.88rem;color:#1F2937">
+                      <span style="font-weight:600;font-size:.88rem;color:#F8FAFC">
                         {INDICATOR_LABELS.get(ind,ind)}</span>
                       <span style="font-size:.85rem;font-weight:700;
                                    color:{'#10B981' if gap>=0 else '#EF4444'}">

@@ -1,438 +1,736 @@
-# Jordan Logistics Performance — Business Intelligence Graduation Project
+# Jordan Logistics Performance Index (LPI) Decision Support System
 
-**University of Petra — Business Intelligence Graduation Project, 2025/2026**
+## Graduation Project Documentation
 
----
-
-## Title Page & Authors
-
-**Project Title:** Jordan Logistics Performance Intelligence and Decision-Support Tool
-
-**Authors:**
-- Haya Kurdi, [202210598]
-
-
-**Supervised by:** [Dr.Hussam Barham]
-
-**Course:** 307498 – Graduation Project  
-**Semester:** 2025/2026  
-**Date:** [Submission Date]
+| | |
+|---|---|
+| **Student Name** | Haya AlKurdi |
+| **University** | University of Petra |
+| **Department** | Business Intelligence and Data Analytics |
+| **Project Type** | Data Analytics, Forecasting, and Decision Support System |
+| **Submission Date** | 3 / 6 / 2026 |
 
 ---
 
 ## Table of Contents
 
-1. [Abstract](#abstract)
-2. [Acknowledgment](#acknowledgment)
-3. [Business Intelligence Project Description and Objectives](#business-intelligence-project-description-and-objectives)
-4. [Data Research and Acquiring Effort](#data-research-and-acquiring-effort)
-5. [Data Description and Understanding](#data-description-and-understanding)
-6. [Data Primary Cleaning and Transformation](#data-primary-cleaning-and-transformation)
-7. [Data Visualization and Insights](#data-visualization-and-insights)
-8. [Dashboard Design and Business Insights](#dashboard-design-and-business-insights)
-9. [Advanced Analytics and AI Modeling](#advanced-analytics-and-ai-modeling)
-10. [Tools Research and Selection Effort](#tools-research-and-selection-effort)
-11. [Project Deployment Effort and Use Case](#project-deployment-effort-and-use-case)
-12. [Results](#results)
-13. [Code Setup and Dependencies](#code-setup-and-dependencies)
-14. [Project Structure](#project-structure)
-15. [Dashboard Preview](#dashboard-preview)
-16. [References](#references)
+1. [Project Introduction](#1-project-introduction)
+2. [Business Understanding](#2-business-understanding)
+3. [Dataset](#3-dataset)
+4. [AI Part](#4-ai-part)
+5. [Code Explanation](#5-code-explanation)
+6. [Results](#6-results)
+7. [Performance Measurements](#7-performance-measurements)
+8. [Flowchart](#8-flowchart)
+9. [Block Diagram](#9-block-diagram)
+10. [Challenges and Solutions](#10-challenges-and-solutions)
+11. [Future Work](#11-future-work)
+12. [Conclusion](#12-conclusion)
+13. [References](#13-references)
 
 ---
 
-## Abstract
+## 1. Project Introduction
 
-This project analyzes Jordan’s logistics performance using the World Bank Logistics Performance Index (LPI). The objective is to understand Jordan’s logistics strengths and weaknesses, compare its performance with other countries, forecast future logistics trends, and support data-driven improvement decisions.
+### 1.1 Project Idea
 
-The implementation combines Business Intelligence dashboards, Python analytics, KNIME preprocessing, forecasting, clustering, what-if analysis, and Streamlit deployment. Power BI was used for traditional dashboard reporting and business visualizations, while Streamlit was used to build an interactive web-based simulation tool.
+This project focuses on analyzing Jordan's Logistics Performance Index (LPI) using historical data obtained from the World Bank. The project applies data analytics and machine learning techniques to evaluate Jordan's logistics performance, identify strengths and weaknesses, compare Jordan with other countries and regions, and predict future performance trends.
 
-The main findings show that Jordan’s weakest logistics indicators are International Shipments and Customs. The what-if analysis suggests that customs reform and shipment facilitation may improve Jordan’s overall logistics performance. The final solution provides interactive visualizations, scenario simulation, reform priority scoring, and rule-based recommendations.
+The project includes data preprocessing, exploratory data analysis (EDA), clustering analysis, forecasting, gap analysis, what-if scenario simulation, and recommendation generation. These components work together to provide a comprehensive understanding of Jordan's logistics performance and support data-driven decision-making.
 
----
+To enhance usability and accessibility, an interactive Streamlit web application was developed to visualize the results, explore different scenarios, and present insights through dashboards, forecasts, comparisons, and strategic recommendations.
 
-## Acknowledgment
+### 1.2 Problem Statement
 
-We would like to thank the University of Petra and the Business Intelligence department for providing guidance and support throughout this graduation project. We also acknowledge the World Bank Open Data platform for providing the Logistics Performance Index and GDP datasets used in this project.
+The Logistics Performance Index (LPI) is one of the most important global indicators used to evaluate logistics efficiency and supply chain performance. However, the index consists of multiple indicators collected over different years, making it difficult to understand overall performance trends and identify the factors that have the greatest impact on a country's logistics performance.
 
----
+For Jordan, analyzing individual LPI indicators separately does not provide a complete picture of logistics performance. Stakeholders need a way to understand historical trends, compare Jordan with other countries, identify performance gaps, predict future outcomes, and evaluate the potential impact of improving specific indicators.
 
-## Business Intelligence Project Description and Objectives
+Therefore, there is a need for an analytical framework that transforms LPI data into meaningful insights and supports the evaluation of current performance, future forecasts, and improvement opportunities.
 
-This project focuses on logistics performance analysis in Jordan.
+### 1.3 Project Importance
 
-The project addresses the logistics and supply-chain domain by analyzing how Jordan performs across logistics indicators such as Customs, Infrastructure, International Shipments, Logistics Quality, Tracking and Tracing, and Timeliness.
+The importance of this project is that it helps identify Jordan's logistics strengths and weaknesses using data-driven methods. Instead of relying only on static reports, the system provides interactive visualizations, forecasting results, gap analysis, and policy improvement scenarios.
 
-### Business Problem
+### 1.4 Project Objectives
 
-Jordan has moderate logistics performance and faces challenges in specific logistics indicators. Weak logistics performance can affect trade efficiency, shipment reliability, supply-chain competitiveness, and economic development.
+The main objectives of this project are:
 
-### Objectives
-
-The project aims to:
-
-- Analyze Jordan’s historical Logistics Performance Index trends
-- Identify Jordan’s weakest logistics indicators
-- Compare Jordan with regional and global countries
-- Cluster countries based on logistics performance similarity
-- Forecast future LPI behavior
-- Simulate improvement scenarios using what-if analysis
-- Build Power BI dashboards for business reporting
-- Build a Streamlit interactive decision-support tool
-- Provide strategic recommendations for logistics improvement
-
-More details are available in:
-[Project Description](docs/01_project_description.md)
+- Analyze Jordan's historical LPI performance.
+- Compare Jordan with global and regional benchmarks.
+- Classify countries into logistics performance clusters.
+- Forecast Jordan's LPI performance for future years.
+- Identify gaps between Jordan and peer countries.
+- Simulate what-if improvement scenarios.
+- Provide decision-support recommendations.
+- Build an interactive Streamlit application.
+- Integrate World Bank API to support updated data retrieval.
 
 ---
 
-## Data Research and Acquiring Effort
+## 2. Business Understanding
 
-The project uses data from the World Bank.
+### 2.1 Target Users
 
-### Main Dataset
+The target users of this system are:
 
-**Logistics Performance Index (LPI)**  
-Source: World Bank Open Data  
-Link: https://data.worldbank.org/indicator/LP.LPI.OVRL.XQ
+- Jordanian policymakers.
+- Ministry of Transport.
+- Jordan Customs Department.
+- Economic planning institutions.
+- Logistics and supply chain stakeholders.
+- Researchers interested in logistics performance.
 
-The LPI dataset was selected because it measures logistics performance across countries and includes indicators related to customs, infrastructure, shipment quality, tracking, and timeliness.
+### 2.2 Business Story
 
-### Additional Dataset
+Jordan's logistics performance is an important factor in trade efficiency and economic competitiveness. The Logistics Performance Index provides a global measure of logistics quality, but the raw data alone does not directly show decision-makers what actions should be prioritized.
 
-**GDP Dataset**  
-Source: World Bank Open Data  
-Link: https://data.worldbank.org/indicator/NY.GDP.MKTP.CD
+This project builds a Decision Support System that answers important questions such as:
 
-GDP was added as supporting economic context. It was not used as a direct forecasting feature, but it helped explain the broader economic environment around logistics development.
+- Where does Jordan stand compared to other countries?
+- Which logistics indicators are the weakest?
+- Which indicators have the highest impact on the overall LPI score?
+- What is the expected future performance?
+- What would happen if specific indicators improved?
 
-More details are available in:
-[Data Research](docs/02_data_research.md)
+By answering these questions, the system supports strategic planning and helps decision-makers identify the most important areas for improvement.
+
+### 2.3 Analytical Components
+
+The project consists of several analytical components that work together to provide a comprehensive evaluation of Jordan's logistics performance.
+
+- **Exploratory Data Analysis (EDA)** was used to understand historical trends and identify patterns within the LPI data.
+- **Clustering Analysis** was applied to group countries with similar logistics performance levels and determine Jordan's relative position among them.
+- **Forecasting Models** were developed to estimate future LPI performance and analyze potential trends for the coming years.
+- **Gap Analysis** was used to identify differences between Jordan's performance and benchmark countries or regional averages.
+- **What-If Analysis** was implemented to evaluate the potential impact of improving specific logistics indicators on the overall LPI score.
+- **A Recommendation Engine** was developed to prioritize indicators that require improvement and support evidence-based decision-making.
+- **An interactive Streamlit application** was created to visualize the analytical results and provide an accessible interface for exploring insights.
 
 ---
 
-## Data Description and Understanding
+## 3. Dataset
 
-The dataset contains country-level logistics indicators across selected years.
+### 3.1 Data Source
 
-### Main Fields
+The dataset was obtained from the World Bank Logistics Performance Index (LPI) database.
 
-| Field | Description |
+**Source:** https://data.worldbank.org/indicator/LP.LPI.OVRL.XQ
+
+### 3.2 Dataset Size
+
+The final cleaned dataset contains:
+
+- 22,610 rows
+- 9 columns
+- 168 countries
+- Years covered: 2007, 2010, 2012, 2014, 2016, 2018, and 2023
+
+### 3.3 Type of Data
+
+The dataset used in this project is a structured panel dataset obtained from the World Bank Logistics Performance Index (LPI).
+
+It combines:
+
+- **Cross-Country Data**, as it contains logistics performance measurements for 168 countries.
+- **Time-Series Data**, as observations are recorded across multiple years.
+- **Numerical Data**, as the primary variables represent quantitative LPI indicator scores.
+
+Because multiple countries are observed repeatedly over different years, the dataset can be classified as a **panel dataset**.
+
+### 3.4 Dataset Features
+
+| Column Name | Description |
 |---|---|
-| Country Name | Name of the country |
-| Country Code | ISO country code |
-| Indicator Name | Name of the LPI indicator |
-| Indicator Code | World Bank indicator code |
-| Year | Reporting year |
-| Value | LPI score or GDP value |
+| Country Code | Country identifier |
+| Country Name | Country name |
+| Region | Geographic region |
+| Income Group | Income classification |
+| Indicator Code | Indicator identifier |
+| Indicator Short | Short indicator name |
+| Indicator Type | LPI indicator category |
+| Year | Observation year |
+| Value | Indicator score |
 
-### Main LPI Indicators
+### 3.5 Data Issues
 
-| Indicator Code | Indicator |
+Several challenges were identified in the original dataset before the analysis phase:
+
+- Missing values across multiple countries, indicators, and years.
+- Large gaps between survey years because the LPI is not published annually.
+- A significant five-year gap between 2018 and 2023.
+- The original dataset was not structured in an analysis-ready format, as years were stored as separate columns.
+- Variations in data availability across countries and indicators.
+
+### 3.6 Data Cleaning
+
+Several preprocessing steps were performed to prepare the dataset for analysis:
+
+- Converted the dataset from wide format to long format using the `melt()` function.
+- Converted year values into a single `Year` column.
+- Converted indicator values into numerical format.
+- Removed duplicate records.
+- Merged country information such as `Region` and `Income Group`.
+- Created indicator labels and indicator types.
+- Reorganized the dataset into a structured format suitable for analysis.
+
+These steps improved data consistency and prepared the dataset for forecasting, clustering, and visualization tasks.
+
+### 3.7 Missing Value Treatment
+
+The dataset contained missing values across several countries, indicators, and years. A detailed missing value analysis was performed before applying any analytical models.
+
+To address missing observations:
+
+- Small gaps between historical years were filled using **Linear Interpolation**.
+- For the larger gap between 2018 and 2023, a **hybrid forecasting approach** was used.
+- Historical trends were preserved while avoiding unrealistic jumps in indicator values.
+
+This approach allowed the project to maintain data continuity while minimizing distortion of the original observations.
+
+### 3.8 Removing Unnecessary Data
+
+Several attributes were removed during preprocessing because they were not required for forecasting, clustering, or visualization tasks. Examples include redundant descriptive fields that duplicated existing information already represented by other attributes. Removing unnecessary fields reduced dataset complexity and improved processing efficiency.
+
+### 3.9 Encoding
+
+Encoding was not required in this project because the analytical models were based primarily on numerical LPI indicator values. The project did not involve categorical classification tasks that required Label Encoding or One-Hot Encoding.
+
+### 3.10 Normalization / Standardization
+
+Standardization was applied before the clustering stage because K-Means clustering is sensitive to feature scales. The `StandardScaler` technique from Scikit-Learn was used to standardize logistics indicators before training the clustering model. This ensured that all indicators contributed fairly to the clustering process.
+
+### 3.11 Train/Test Split
+
+The forecasting model was trained using historical observations from 2007 to 2018. The year 2023 was reserved as a testing period to evaluate forecasting accuracy before generating future predictions.
+
+| Split | Period |
 |---|---|
-| LP.LPI.OVRL.XQ | Overall LPI |
-| LP.LPI.CUST.XQ | Customs |
-| LP.LPI.INFR.XQ | Infrastructure |
-| LP.LPI.ITRN.XQ | International Shipments |
-| LP.LPI.LOGS.XQ | Logistics Quality |
-| LP.LPI.TRAC.XQ | Tracking and Tracing |
-| LP.LPI.TIME.XQ | Timeliness |
+| Training Data | 2007–2018 |
+| Testing Data | 2023 |
+| Forecast Horizon | 2024–2026 |
 
-Exploratory analysis was used to discover patterns, compare countries, study correlations, and identify Jordan’s weakest indicators.
-
-More details are available in:
-[Exploratory Data Analysis](docs/04_exploratory_data_analysis.md)
+This approach allowed the model to be evaluated on unseen data before producing future forecasts.
 
 ---
 
-## Data Primary Cleaning and Transformation
+## 4. AI Part
 
-The raw dataset required several preprocessing steps before analysis.
+### 4.1 Overview of Analytical Models
 
-Main preprocessing steps included:
+This project combines multiple analytical and machine learning techniques to evaluate Jordan's logistics performance and generate data-driven insights. The main analytical models used in this project are:
 
-- Loading raw World Bank files
-- Removing unnecessary metadata
-- Reshaping data from wide format to long format
-- Renaming columns
-- Converting Year and Value columns to numeric types
-- Handling missing values
-- Applying interpolation and gap-filling
-- Removing or controlling invalid observations
-- Exporting clean analytical datasets
+- K-Means Clustering
+- Linear Regression
+- Polynomial Regression
+- What-If Analysis
+- Recommendation Engine
 
-A dedicated gap-filling strategy was used because LPI data is not reported annually. Linear interpolation and conservative estimation were applied to preserve useful time-series continuity.
-
-KNIME was also used to preprocess the GDP dataset through a visual ETL workflow.
-
-More details are available in:
-[Data Preprocessing](docs/03_data_preprocessing.md)
+These models work together to analyze historical LPI data, identify performance patterns, forecast future outcomes, and evaluate potential improvement scenarios.
 
 ---
 
-## Data Visualization and Insights
+### 4.2 Clustering Analysis
 
-Visualizations were created to understand:
+**Algorithm Used:** K-Means Clustering was used to group countries with similar logistics performance levels based on their Logistics Performance Index (LPI) indicators.
 
-- Jordan’s historical LPI trend
-- Weak indicator ranking
-- Country comparisons
-- Indicator relationships
-- Forecast behavior
-- What-if scenarios
-- GDP economic context
+**Why K-Means?** K-Means was selected because it is one of the most widely used unsupervised machine learning algorithms for identifying patterns and grouping similar observations.
 
-Key visualization insights:
+**Features Used:**
+- Customs
+- Infrastructure
+- International Shipments
+- Logistics Quality and Competence
+- Tracking and Tracing
+- Timeliness
+- Overall LPI Score
 
-- Jordan’s weakest indicators are International Shipments and Customs.
-- Customs showed stronger relationship with Overall LPI than International Shipments.
-- Jordan’s LPI trend shows moderate performance with limited improvement.
-- GDP provides economic context but was not treated as a direct cause of LPI change.
+**Training Process:** Countries were grouped into four clusters:
+- Low Performers
+- Mid-Low Performers
+- Mid-High Performers
+- High Performers
 
-More details are available in:
-[EDA Documentation](docs/04_exploratory_data_analysis.md)
+**Model Evaluation:** The Elbow Method and Silhouette Score were used to evaluate clustering quality.
+
+<br>
+
+![Figure 4.1](images/elbow_method.png)
+
+*Figure 4.1: Elbow Method Used to Determine the Optimal Number of Clusters.*
+
+<br>
+
+![Figure 4.2](images/clustering_full.png)
+
+*Figure 4.2: Country Clustering Results Using K-Means and PCA Visualization.*
 
 ---
 
-## Dashboard Design and Business Insights
+### 4.3 Forecasting Analysis
 
-Power BI was used to create the main Business Intelligence dashboard.
+**Forecasting Objective:** The forecasting component was developed to estimate Jordan's future Logistics Performance Index (LPI) scores for 2024–2026.
 
-The Power BI dashboard focused on:
+**Algorithms Used:**
+- Linear Regression
+- Polynomial Regression
 
-- KPI reporting
-- Jordan LPI overview
-- indicator comparison
-- country comparison
-- trend visualization
-- business-oriented insights
+**Why These Algorithms?** Linear Regression provides interpretable long-term trends, while Polynomial Regression captures non-linear behavior in logistics performance.
 
-### Business Questions Answered
+**Training Process:**
+- Training Data: 2007–2018
+- Testing Data: 2023
 
-| Business Question | Dashboard / Analysis Component |
+**Forecast Results:** Forecasts were generated for 2024, 2025, and 2026.
+
+<br>
+
+![Figure 4.3](images/forecast_multicountry.png)
+
+*Figure 4.3: Historical and Forecasted LPI Performance for Jordan (2024–2026).*
+
+---
+
+### 4.4 Gap Analysis
+
+Gap Analysis was performed to compare Jordan's logistics performance against benchmark groups. The primary benchmark used was the MENA regional average.
+
+The analysis focused on:
+- Customs
+- Infrastructure
+- International Shipments
+- Logistics Quality and Competence
+- Tracking and Tracing
+- Timeliness
+
+<br>
+
+![Figure 4.4](images/gap_analysis_radar.png)
+
+*Figure 4.4: Jordan Compared with the MENA Average Across LPI Indicators.*
+
+---
+
+### 4.5 What-If Analysis
+
+The What-If Analysis module was developed to evaluate the impact of improving selected logistics indicators. The simulation enables users to test alternative scenarios and estimate their effect on Jordan's overall LPI performance.
+
+<br>
+
+![Figure 4.5](images/whatif_bars.png)
+
+*Figure 4.5: What-If Analysis Interface Showing Simulated LPI Performance and Rank Impact.*
+
+---
+
+### 4.6 Recommendation Engine
+
+Recommendations were generated using:
+- Clustering Results
+- Forecasting Results
+- Gap Analysis Results
+- What-If Analysis Results
+
+The system identifies the indicators that should be prioritized for improvement.
+
+<br>
+
+![Figure 4.6](images/recommendation_engine.png)
+
+*Figure 4.6: Policy Recommendation Engine and Prioritized Improvement Actions.*
+
+---
+
+### 4.7 Libraries and Tools Used
+
+| Tool / Library | Purpose |
 |---|---|
-| How has Jordan’s LPI changed over time? | Historical LPI trend |
-| What are Jordan’s weakest logistics indicators? | Weak indicator ranking |
-| How does Jordan compare with other countries? | Country comparison visuals |
-| Which indicators should be prioritized? | Indicator impact and what-if analysis |
-| What improvement scenario may increase LPI? | Streamlit what-if simulator |
-
-### Streamlit Dashboard
-
-Streamlit was used to extend the dashboard into an interactive simulation application. Users can change improvement assumptions and immediately observe projected LPI changes and recommendations.
-
-Live application:  
-https://gpbi20252-gqcxmgnwreelog4izl8syj.streamlit.app/
-
-More details are available in:
-[Streamlit Application](docs/08_streamlit_application.md)
+| Pandas | Data cleaning and manipulation |
+| NumPy | Numerical calculations |
+| Scikit-Learn | Clustering, forecasting, and preprocessing |
+| Matplotlib | Data visualization |
+| Streamlit | Interactive web application |
+| World Bank API | Data retrieval and updates |
+| GitHub | Version control and project management |
 
 ---
 
-## Advanced Analytics and AI Modeling
+## 5. Code Explanation
 
-This project includes several advanced analytics components.
+### 5.1 Data Cleaning Code
 
-### 1. Clustering Analysis
+The purpose of this module is to transform the original World Bank Logistics Performance Index dataset into a structured and analysis-ready format.
 
-K-Means clustering was used to group countries based on logistics performance similarity.
+```python
+df_melted = df_data.melt(
+    id_vars=['Country Name','Country Code',
+             'Indicator Name','Indicator Code'],
+    value_vars=YEAR_COLS,
+    var_name='Year',
+    value_name='Value'
+)
 
-The clustering process included:
+df_melted['Year'] = df_melted['Year'].astype(int)
+df_melted['Value'] = pd.to_numeric(df_melted['Value'], errors='coerce')
+```
 
-- feature scaling
+This code converts the dataset from wide format into long format and prepares it for analysis.
+
+---
+
+### 5.2 Missing Value Treatment Code
+
+```python
+if (y_after - y_before) <= 4:
+    ratio = (year - y_before) / (y_after - y_before)
+    value = v_before + ratio * (v_after - v_before)
+```
+
+This code applies linear interpolation for small gaps between survey years.
+
+```python
+pred_lin = lin_model.predict(np.array([[year]]))[0]
+pred_poly = poly_model.predict(np.array([[year]]))[0]
+
+pred = 0.85 * pred_lin + 0.15 * pred_poly
+pred = np.clip(pred, 1.0, 5.0)
+```
+
+This code estimates values in the large 2018–2023 gap using a hybrid forecasting approach.
+
+---
+
+### 5.3 Clustering Code
+
+```python
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(df_latest[FEATURES])
+```
+
+This code standardizes the selected indicators before clustering.
+
+```python
+kmeans = KMeans(
+    n_clusters=4,
+    random_state=42,
+    n_init=10
+)
+
+df_latest['Cluster'] = kmeans.fit_predict(X_scaled)
+```
+
+This code assigns each country to a logistics performance cluster.
+
+```python
+sil_score = silhouette_score(
+    X_scaled,
+    df_latest['Cluster']
+)
+```
+
+This code evaluates clustering quality using the Silhouette Score.
+
+---
+
+### 5.4 Forecasting Code
+
+The forecasting module predicts Jordan's future logistics performance for the years 2024–2026.
+
+```python
+train_mask = years <= 2018
+test_mask = years == 2023
+```
+
+This code separates the historical data into training and testing periods.
+
+```python
+m_lin = LinearRegression()
+m_lin.fit(X_train, y_train, sample_weight=w_train)
+```
+
+This code trains the Linear Regression model using weighted observations.
+
+```python
+poly = PolynomialFeatures(degree=2)
+X_tr_p = poly.fit_transform(X_train)
+
+m_poly = LinearRegression()
+m_poly.fit(X_tr_p, y_train, sample_weight=w_train)
+```
+
+This code trains the Polynomial Regression model to capture non-linear trends.
+
+```python
+err_lin = abs(m_lin.predict(X_test)[0] - y_test[0])
+err_poly = abs(m_poly.predict(X_te_p)[0] - y_test[0])
+```
+
+This code compares forecasting errors and helps select the most suitable model.
+
+---
+
+### 5.5 What-If Analysis Code
+
+This module evaluates the impact of improving weak logistics indicators on Jordan's overall LPI performance.
+
+```python
+indicator_ranking = latest_indicators[
+    ['Indicator Code', 'Indicator Name', 'Value']
+].sort_values('Value')
+```
+
+This code ranks Jordan's logistics indicators from weakest to strongest.
+
+```python
+corr = pivot[overall_indicator].corr(pivot[ind])
+```
+
+This code estimates the relationship between each logistics indicator and the overall LPI score.
+
+```python
+impact_worst_1 = improve_worst_1 * corr_1 * impact_weight
+impact_worst_2 = improve_worst_2 * corr_2 * impact_weight
+
+scenario_combined = baseline + impact_worst_1 + impact_worst_2
+```
+
+This code simulates the impact of improving weak indicators on Jordan's overall logistics performance.
+
+---
+
+### 5.6 Streamlit Application Code
+
+The Streamlit application serves as the interactive user interface of the project.
+
+```python
+tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([
+    "📍 Cluster Position",
+    "🔍 Gap Analysis",
+    "🔮 What-If Simulator",
+    "📈 Trend & Forecast",
+    "🎯 DSS Recommendations",
+    "💬 Ask the Data",
+    "🌐 Live World Bank Data",
+])
+```
+
+This code creates the main navigation tabs used throughout the dashboard.
+
+```python
+if WB_API_AVAILABLE:
+    if st.button("🔄 Fetch Latest from World Bank"):
+        live = fetch_jordan_latest()
+```
+
+This code connects the dashboard to the World Bank API and allows users to retrieve updated logistics data when available.
+
+---
+
+## 6. Results
+
+This section presents the main findings obtained from clustering, forecasting, gap analysis, what-if analysis, and recommendation generation.
+
+### 6.1 Clustering Results
+
+The K-Means clustering model successfully grouped countries into four logistics performance categories: High Performers, Mid-High Performers, Mid-Low Performers, and Low Performers. Jordan was assigned to a cluster based on its logistics indicators and overall LPI score.
+
+<br>
+
+![Figure 6.1](images/elbow_method.png)
+
+*Figure 6.1: Elbow Method Used for Selecting the Optimal Number of Clusters.*
+
+<br>
+
+![Figure 6.2](images/clustering_full.png)
+
+*Figure 6.2: Country Clustering Results Using K-Means.*
+
+---
+
+### 6.2 Forecasting Results
+
+Forecasting models were developed to estimate Jordan's future logistics performance for the years 2024–2026. The forecasting results provide an estimate of future logistics performance based on historical trends and observed patterns.
+
+<br>
+
+![Figure 6.3](images/forecast_multicountry.png)
+
+*Figure 6.3: Historical and Forecasted LPI Performance for Jordan.*
+
+---
+
+### 6.3 Gap Analysis Results
+
+Gap Analysis was performed to compare Jordan's logistics performance with benchmark countries and regional averages. The analysis identified performance differences across the six LPI indicators and highlighted the areas requiring improvement.
+
+<br>
+
+![Figure 6.4](images/gap_analysis_radar.png)
+
+*Figure 6.4: Gap Analysis Dashboard Comparing Jordan with the MENA Average.*
+
+The radar chart reveals that Jordan performs below the MENA average across most LPI indicators. The most critical performance gap is observed in **International Shipments**, where Jordan scores 0.426 points below the regional average. **Logistics Quality and Competence** follows with a gap of 0.200 points, while **Customs** and **Infrastructure** show gaps of 0.154 and 0.139 respectively. **Tracking and Tracing** shows a minimal gap of 0.008 points. Notably, Jordan outperforms the MENA average in **Timeliness** by 0.080 points, representing the only indicator where Jordan holds a competitive advantage over the regional benchmark.
+
+---
+
+### 6.4 What-If Analysis Results
+
+Several improvement scenarios were simulated to estimate their impact on Jordan's future logistics performance. The analysis demonstrated that targeted improvements in weak indicators can positively influence the overall LPI score.
+
+<br>
+
+![Figure 6.6](images/whatif_bars.png)
+
+*Figure 6.6: Impact of Indicator Adjustments on Jordan's Overall LPI Score.*
+
+The What-If simulator allows users to adjust individual logistics indicators and observe the resulting change in Jordan's overall LPI score. In the scenario shown above, adjustments to key indicators such as Customs, Infrastructure, and International Shipments resulted in a simulated score of **2.810**, compared to the current baseline of **3.351**. The rank change visualization highlights the sensitivity of Jordan's overall performance to improvements in targeted indicators.
+
+<br>
+
+![Figure 6.7](images/scenarios.png)
+
+*Figure 6.7: Pre-Built Policy Scenarios and Expected Logistics Performance Improvements.*
+
+The pre-built scenario analysis presents four standardized improvement pathways. **Scenario A**, which focuses on fixing the single weakest indicator, yields an improvement of **+0.073** points, bringing the overall score to 2.761. **Scenario B**, targeting the top two weakest indicators, produces an improvement of **+0.122** points with a resulting score of 2.810. **Scenario C**, which addresses all three weakest indicators simultaneously, achieves a gain of **+0.153** points and a score of 2.841. The most ambitious pathway, **Scenario D**, targets the Mid-High Performers benchmark level and projects a substantial improvement of **+0.625** points, bringing Jordan's forecasted score to **3.313**.
+
+---
+
+### 6.5 Recommendation Results
+
+The recommendation engine identified indicators that require the highest priority for improvement. The generated recommendations provide a practical roadmap for improving Jordan's logistics performance.
+
+<br>
+
+![Figure 6.8](images/recommendation_engine.png)
+
+*Figure 6.8: Recommendation Engine Results and Priority Ranking of Logistics Indicators.*
+
+The Policy Recommendation Engine ranks logistics indicators based on a combination of current performance scores and their estimated impact on the overall LPI. **Logistics Quality** is identified as the top priority, with the highest impact score of 0.960 and a current score of 2.701, making it the highest leverage point for improvement. **Customs** ranks second with an impact of 0.813, followed by **Timeliness** at 0.718. Tracking and Tracing, Infrastructure, and International Shipments follow in descending order of priority. The key insights panel further highlights that **International Shipments**, with the lowest score of 2.509, represents the indicator with the most room for improvement, while **Timeliness** at 3.285 serves as Jordan's strongest competitive advantage.
+
+---
+
+## 7. Performance Measurements
+
+The project does not involve a classification task; therefore, classification metrics such as Accuracy, Precision, Recall, F1-Score, ROC Curve, and Confusion Matrix were not applicable. Instead, forecasting performance was evaluated using regression metrics.
+
+### 7.1 Forecasting Evaluation Metrics
+
+The following metrics were used:
+
+| Metric | Description |
+|---|---|
+| R² Score | Measures how well the forecasting model explains the variation in historical LPI values |
+| RMSE | Measures the average magnitude of prediction errors |
+| MAE | Measures the average absolute difference between predicted and actual values |
+| Test Error | Calculated by comparing predicted values with actual observations from 2023 |
+
+### 7.2 Clustering Evaluation
+
+The clustering model was evaluated using:
 - Elbow Method
-- PCA visualization
-- cluster labeling
-- Jordan cluster movement analysis
+- Silhouette Score
 
-More details:
-[Clustering Analysis](docs/05_clustering_analysis.md)
+<br>
 
-### 2. Forecasting Analysis
+![Figure 7.2](images/residual_plot.png)
 
-Forecasting was used to estimate future LPI behavior.
+*Figure 7.2: Residual Plot for Forecasting Model Errors.*
 
-The forecasting process included:
+---
 
-- train-test split
-- holdout validation using 2023
-- linear regression
-- polynomial regression
-- weighted forecasting
-- adaptive model selection
-- evaluation metrics
+## 8. Flowchart
 
-More details:
-[Forecasting Analysis](docs/06_forecasting_analysis.md)
-
-### 3. What-if Analysis
-
-What-if analysis was used to simulate improvement scenarios for Jordan.
-
-The simulation uses:
-
-```text
-Estimated Impact = Improvement Amount × Correlation with Overall LPI × Impact Weight
-```md
 ```
-
-The Streamlit application includes:
-
-* scenario sliders
-* simulated LPI
-* reform priority score
-* rule-based recommendations
-* strategic insights
-
-More details:
-[What-if Analysis](docs/07_what_if_analysis.md)
-
----
-
-## Tools Research and Selection Effort
-
-| Tool         | Purpose                           | Reason for Selection                        |
-| ------------ | --------------------------------- | ------------------------------------------- |
-| Python       | Data analysis and modeling        | Flexible and suitable for analytics         |
-| Pandas       | Data cleaning                     | Efficient tabular data handling             |
-| NumPy        | Numerical processing              | Supports calculations and arrays            |
-| Matplotlib   | Visualization                     | Generates analytical charts                 |
-| Scikit-learn | Clustering and forecasting        | Machine learning support                    |
-| KNIME        | GDP preprocessing                 | Visual ETL workflow                         |
-| Power BI     | BI dashboards                     | Required BI dashboarding and reporting      |
-| Streamlit    | Interactive app deployment        | Easy Python-based dashboard deployment      |
-| GitHub       | Version control and documentation | Markdown documentation and project tracking |
-
----
-
-## Project Deployment Effort and Use Case
-
-The project can be consumed in two ways:
-
-### 1. Power BI Dashboard
-
-Business users can use the Power BI dashboard to monitor logistics KPIs, trends, comparisons, and indicator performance.
-
-### 2. Streamlit Web Application
-
-Business users can use the Streamlit web application to simulate improvement scenarios and view recommendations.
-
-Deployment steps:
-
-1. Project files were pushed to GitHub.
-2. Required dependencies were added to `requirements.txt`.
-3. The Streamlit app was connected to the GitHub repository.
-4. The app was deployed using Streamlit Community Cloud.
-5. The public app link was generated and tested.
-
-Live application:
-https://gpbi20252-gqcxmgnwreelog4izl8syj.streamlit.app/
-
----
-
-## Results
-
-The project produced several important results.
-
-Jordan’s weakest logistics indicators were identified as Customs and International Shipments. These indicators became the focus of what-if simulation and recommendations.
-
-Forecasting showed that Jordan’s LPI performance may remain moderate if no major reforms are introduced. This supports the need for targeted logistics improvement strategies.
-
-The what-if simulation showed that customs modernization and shipment facilitation may improve Jordan’s overall logistics performance. The Streamlit tool provides reform priority scoring and rule-based recommendations to support logistics decision-making.
-
----
-
-## Code Setup and Dependencies
-
-To run the project locally:
-
-```bash
-git clone https://github.com/hayakurdi2004-collab/GP_BI20252.git
-cd GP_BI20252
-pip install -r requirements.txt
-python -m streamlit run app.py
-```
-
-Required packages are listed in:
-
-```text
-requirements.txt
+Start
+  ↓
+Collect World Bank LPI Data
+  ↓
+Data Cleaning and Preprocessing
+  ↓
+Missing Value Treatment
+  ↓
+EDA
+  ↓
+K-Means Clustering
+  ↓
+Forecasting Models
+  ↓
+Gap Analysis
+  ↓
+What-If Analysis
+  ↓
+Recommendation Generation
+  ↓
+Streamlit Dashboard
+  ↓
+End
 ```
 
 ---
 
-## Project Structure
+## 9. Block Diagram
 
-```text
-GP_BI20252/
-│
-├── data/
-├── docs/
-├── images/
-├── knime/
-├── outputs/
-│
-├── 01_cleaning.py
-├── 01b_interpolation.py
-├── 02_outliers.py
-├── 02a_eda.py
-├── 02b_pattern.py
-├── 02c_clustering.py
-├── 02d_clustering_by_year.py
-├── 03_forecasting.py
-├── 03b_evaluation.py
-├── 04_whatif.py
-├── app.py
-├── requirements.txt
-└── README.md
+```
+World Bank Dataset
+        ↓
+Data Processing Layer
+        ↓
+    Analytical Layer
+  ┌──────────────────────────────────────┐
+  │  Clustering  │  Forecasting          │
+  │  Gap Analysis  │  What-If Analysis   │
+  └──────────────────────────────────────┘
+        ↓
+Decision Support Layer
+        ↓
+Visualization Layer
+        ↓
+    End User
 ```
 
 ---
 
-## Dashboard Preview
+## 10. Challenges and Solutions
 
-### Main Dashboard
+Several challenges were encountered during the project:
 
-![Main Dashboard](images/home_dashboard.png)
-
-### Decision-Support Features
-
-![Decision Support](images/decision_support.png)
-
-### What-if Simulation
-
-![What-if](images/what_if_analysis.png)
-
-### GDP Economic Context
-
-![GDP](images/gdp_context.png)
-
-### Indicator Impact Details
-
-![Impact](images/indicator_impact.png)
-
-### Sidebar Inputs
-
-![Sidebar](images/sidebar_inputs.png)
+| Challenge | Solution |
+|---|---|
+| Missing values across countries and indicators | Linear interpolation and hybrid forecasting |
+| Large data gap between 2018 and 2023 | Hybrid model combining Linear and Polynomial Regression |
+| Selecting an appropriate forecasting model | Model comparison using RMSE, MAE, and R² Score |
+| Integrating multiple analytical modules into one dashboard | Streamlit multi-tab architecture |
 
 ---
 
-## References
+## 11. Future Work
 
-* World Bank Open Data — Logistics Performance Index
-  https://data.worldbank.org/indicator/LP.LPI.OVRL.XQ
+Future improvements may include:
 
-* World Bank Open Data — GDP Current US$
-  https://data.worldbank.org/indicator/NY.GDP.MKTP.CD
+- Incorporating additional logistics-related datasets.
+- Expanding forecasting horizons beyond 2026.
+- Developing advanced machine learning forecasting models.
+- Deploying the Streamlit application online.
+- Adding real-time logistics indicators from external sources.
 
-* Streamlit Documentation
-  https://docs.streamlit.io/
+---
 
-* Microsoft Power BI Documentation
-  https://learn.microsoft.com/en-us/power-bi/
+## 12. Conclusion
 
-* Scikit-learn Documentation
-  https://scikit-learn.org/stable/
+This project developed an interactive Logistics Performance Index (LPI) Decision Support System for Jordan using World Bank data. The system integrates data preprocessing, clustering, forecasting, gap analysis, what-if analysis, and recommendation generation within a unified Streamlit dashboard.
 
-```
-```
+The results provide valuable insights into Jordan's logistics performance, identify areas requiring improvement, and support evidence-based decision-making. Overall, the project demonstrates how data analytics and machine learning techniques can be used to support logistics planning and strategic decision-making.
+
+---
+
+## 13. References
+
+1. World Bank. Logistics Performance Index (LPI). https://lpi.worldbank.org
+2. World Bank Data API. https://datahelpdesk.worldbank.org
+3. Scikit-Learn Documentation. https://scikit-learn.org
+4. Streamlit Documentation. https://docs.streamlit.io
+5. Pandas Documentation. https://pandas.pydata.org
+6. NumPy Documentation. https://numpy.org
+7. Matplotlib Documentation. https://matplotlib.org
+8. Python Software Foundation. https://www.python.org
