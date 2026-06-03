@@ -9,6 +9,7 @@
 | **Department** | Business Intelligence and Data Analytics |
 | **Project Type** | Data Analytics, Forecasting, and Decision Support System |
 | **Submission Date** | 3 / 6 / 2026 |
+| **Supervisor** | Dr.Hussam Barham |
 
 ---
 
