@@ -513,6 +513,8 @@ tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([
     "🌐 Live World Bank Data",
 ])
 ```
+ ### 5.7 Live Streamlit Application
+ [Open Streamlit Dashboard]   https://gpbi20252-uznbgc3kzaewsofzqnjxnn.streamlit.app
 
 This code creates the main navigation tabs used throughout the dashboard.
 
