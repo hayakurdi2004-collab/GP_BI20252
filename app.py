@@ -106,50 +106,71 @@ h1, h2, h3, h4, h5, h6, p, label, span, div {
     text-align: center;
 }
 .kpi-value { font-size:2rem; font-weight:700; color:#F8FAFC; line-height:1; }
-.kpi-label { font-size:.78rem; color:#CBD5E1;
+.kpi-label { font-size:.78rem; color:#CBD5E1; }
 .kpi-delta { font-size:.82rem; margin-top:4px; }
 .delta-up   { color:#10B981; }
 .delta-down { color:#EF4444; }
 .delta-neu  { color:#6B7280; }
 
 .section-title {
-    font-size:1.25rem; font-weight:700; color:#1F2937;
+    font-size:1.25rem; font-weight:700; color:#F8FAFC;
     border-left:4px solid #CE1126; padding-left:12px; margin:24px 0 14px;
 }
 
+/* Dark alert boxes */
 .alert-box { border-radius:10px; padding:14px 18px; margin-bottom:12px;
              font-size:.9rem; line-height:1.5; }
-.alert-red    { background:#FEF2F2; border-left:4px solid #EF4444; color:#991B1B; }
-.alert-green  { background:#F0FDF4; border-left:4px solid #10B981; color:#065F46; }
-.alert-blue   { background:#EFF6FF; border-left:4px solid #3B82F6; color:#1E40AF; }
-.alert-amber  { background:#FFFBEB; border-left:4px solid #F59E0B; color:#92400E; }
+.alert-red    { background:#3B0000; border-left:4px solid #EF4444; color:#FCA5A5; }
+.alert-green  { background:#052e16; border-left:4px solid #10B981; color:#6EE7B7; }
+.alert-blue   { background:#0c1a3a; border-left:4px solid #3B82F6; color:#93C5FD; }
+.alert-amber  { background:#2d1b00; border-left:4px solid #F59E0B; color:#FCD34D; }
 
 .stTabs [data-baseweb="tab-list"] {
-    gap:8px; background:transparent; border-bottom:2px solid #E5E7EB;
+    gap:8px; background:transparent; border-bottom:2px solid #334155;
 }
 .stTabs [data-baseweb="tab"] {
     background:transparent; border-radius:8px 8px 0 0;
-    padding:8px 18px; font-weight:600; color:#6B7280; border:none; font-size:.88rem;
+    padding:8px 18px; font-weight:600; color:#9CA3AF; border:none; font-size:.88rem;
 }
 .stTabs [aria-selected="true"] { background:#CE1126 !important; color:white !important; }
 
+/* Sidebar - fully dark */
 section[data-testid="stSidebar"] {
-    background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+    background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%) !important;
 }
-section[data-testid="stSidebar"] * { color: white !important; }
-section[data-testid="stSidebar"] hr { border-color:#334155; }
+section[data-testid="stSidebar"] > div:first-child {
+    background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%) !important;
+}
+section[data-testid="stSidebar"] .stSelectbox label,
+section[data-testid="stSidebar"] .stButton label,
+section[data-testid="stSidebar"] p,
+section[data-testid="stSidebar"] span,
+section[data-testid="stSidebar"] div,
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3,
+section[data-testid="stSidebar"] small,
+section[data-testid="stSidebar"] li { color: #F8FAFC !important; }
+section[data-testid="stSidebar"] hr { border-color:#334155 !important; }
+section[data-testid="stSidebar"] .stSelectbox > div > div {
+    background-color: #1E293B !important;
+    border-color: #334155 !important;
+    color: #F8FAFC !important;
+}
 
+/* Dark cluster badges */
 .cluster-badge { display:inline-block; border-radius:20px; padding:4px 14px;
                  font-weight:600; font-size:.85rem; }
-.cluster-high   { background:#DCFCE7; color:#166534; }
-.cluster-midhi  { background:#DBEAFE; color:#1E40AF; }
-.cluster-midlo  { background:#FEF9C3; color:#92400E; }
-.cluster-low    { background:#FEE2E2; color:#991B1B; }
+.cluster-high   { background:#166534; color:#DCFCE7; }
+.cluster-midhi  { background:#1E40AF; color:#DBEAFE; }
+.cluster-midlo  { background:#92400E; color:#FEF9C3; }
+.cluster-low    { background:#991B1B; color:#FEE2E2; }
 
+/* Dark priority rows */
 .priority-row {
-    display:flex; align-items:center; gap:12px; background:#111827;
+    display:flex; align-items:center; gap:12px; background:#1E293B;
     border-radius:10px; padding:12px 16px; margin-bottom:8px;
-    border:1px solid #E5E7EB; box-shadow:0 1px 3px rgba(0,0,0,.05);
+    border:1px solid #334155; box-shadow:0 1px 3px rgba(0,0,0,.3);
 }
 .priority-badge {
     background:#CE1126; color:white; border-radius:50%;
@@ -335,15 +356,15 @@ if not jrow.empty:
     pr    = jprev.iloc[0] if not jprev.empty else None
     rank  = get_jordan_rank(sel_year)
     is_fc = r["Type"] == "Forecast"
-    fc_badge = ' <span style="font-size:.7rem;background:#EFF6FF;color:#1E40AF;padding:2px 6px;border-radius:10px">Forecast</span>' if is_fc else ''
+    fc_badge = ' <span style="font-size:.7rem;background:#1E40AF;color:#DBEAFE;padding:2px 6px;border-radius:10px">Forecast</span>' if is_fc else ''
 
     k1, k2, k3, k4, k5 = st.columns(5)
     for col, lbl, val, prev_val, hb in [
         (k1, "Overall LPI Score",    r["LPI_Overall"],                                      pr["LPI_Overall"]    if pr is not None else None, True),
         (k2, "Global Rank",          rank,                                                   None,                False),
-        (k3, "Timeliness Score",     r["Timeliness"]    ,              pr["Timeliness"]     if pr is not None else None, True),
-        (k4, "Customs Score",        r["Customs"]       ,              pr["Customs"]        if pr is not None else None, True),
-        (k5, "Infrastructure Score", r["Infrastructure"] ,             pr["Infrastructure"] if pr is not None else None, True),
+        (k3, "Timeliness Score",     r["Timeliness"],              pr["Timeliness"]     if pr is not None else None, True),
+        (k4, "Customs Score",        r["Customs"],                 pr["Customs"]        if pr is not None else None, True),
+        (k5, "Infrastructure Score", r["Infrastructure"],          pr["Infrastructure"] if pr is not None else None, True),
     ]:
         if isinstance(val, float) and not np.isnan(val):
             disp = f"{val:.3f}"
@@ -394,17 +415,17 @@ with tab1:
     with c1:
         if not cy_yr.empty:
             fig = px.scatter(
-    cy_yr, x="Infrastructure", y="LPI_Overall",
-    color="Cluster Label", size="Customs",
-    hover_name="Country Name",
-    hover_data={"Customs":":.2f","Timeliness":":.2f","Cluster Label":True},
-    color_discrete_map={
-        "High Performers": "#10B981",
-        "Mid-High Performers": "#3B82F6",
-        "Mid-Low Performers": "#F59E0B",
-        "Low Performers": "#EF4444",
-    },
-)
+                cy_yr, x="Infrastructure", y="LPI_Overall",
+                color="Cluster Label", size="Customs",
+                hover_name="Country Name",
+                hover_data={"Customs":":.2f","Timeliness":":.2f","Cluster Label":True},
+                color_discrete_map={
+                    "High Performers": "#10B981",
+                    "Mid-High Performers": "#3B82F6",
+                    "Mid-Low Performers": "#F59E0B",
+                    "Low Performers": "#EF4444",
+                },
+            )
             if not jordan_row.empty:
                 jr = jordan_row.iloc[0]
                 fig.add_trace(go.Scatter(
@@ -429,14 +450,14 @@ with tab1:
             for _, row in summary.iterrows():
                 is_j   = (not jordan_row.empty and
                           row["Cluster Label"] == jordan_row.iloc[0]["Cluster Label"])
-                border = f"border:2px solid {JORDAN_RED};" if is_j else ""
+                border = f"border:2px solid {JORDAN_RED};" if is_j else "border:1px solid #334155;"
                 st.markdown(f"""
-                <div style="background:white;border-radius:10px;padding:12px 16px;
+                <div style="background:#1E293B;border-radius:10px;padding:12px 16px;
                             margin-bottom:8px;{border}">
                   <span class="cluster-badge {cluster_css(row['Cluster Label'])}">
                     {row['Cluster Label']}</span>
                   {'&nbsp;<b style="color:#CE1126">◀ Jordan</b>' if is_j else ''}
-                  <div style="margin-top:8px;font-size:.82rem;color:#4B5563;line-height:1.8">
+                  <div style="margin-top:8px;font-size:.82rem;color:#CBD5E1;line-height:1.8">
                     🌍 {int(row['Countries'])} countries<br>
                     📊 Avg LPI: <b>{row['Avg_LPI']:.2f}</b>
                   </div>
@@ -482,10 +503,7 @@ with tab2:
 
     ch    = closest_hist_year(sel_year)
     cy_yr = data["clusters_year"][data["clusters_year"]["Year"] == ch].copy()
-    
-    
-    
-    
+
     if ch != sel_year:
         st.info(f"ℹ️ Showing {ch} data (closest historical year to {sel_year})")
 
@@ -517,19 +535,19 @@ with tab2:
                     line=dict(color=ACCENT_BLUE, width=2, dash="dot"), name=bench_label,
                 ))
             fig_r.update_layout(
-                paper_bgcolor="white",
-                font=dict(family="Inter", color=TEXT_DARK, size=12),
-                title=dict(text=f"Jordan vs {bench_label} ({ch})", font=dict(color=TEXT_DARK, size=14)),
+                paper_bgcolor="#0B1220",
+                font=dict(family="Inter", color="#F8FAFC", size=12),
+                title=dict(text=f"Jordan vs {bench_label} ({ch})", font=dict(color="#F8FAFC", size=14)),
                 polar=dict(
-                    bgcolor=BG_CHART,
+                    bgcolor="#111827",
                     radialaxis=dict(visible=True, range=[0,5],
-                                   tickfont=dict(color=TEXT_DARK),
-                                   gridcolor="#D1D5DB"),
-                    angularaxis=dict(tickfont=dict(color=TEXT_DARK, size=11),
-                                     gridcolor="#D1D5DB"),
+                                   tickfont=dict(color="#F8FAFC"),
+                                   gridcolor="#334155"),
+                    angularaxis=dict(tickfont=dict(color="#F8FAFC", size=11),
+                                     gridcolor="#334155"),
                 ),
                 showlegend=True,
-                legend=dict(font=dict(color=TEXT_DARK), orientation="h", y=-0.12),
+                legend=dict(font=dict(color="#F8FAFC"), orientation="h", y=-0.12),
                 height=420,
             )
             st.plotly_chart(fig_r, use_container_width=True)
@@ -545,8 +563,8 @@ with tab2:
                     if gap < worst_gap:
                         worst_gap, worst_ind = gap, INDICATOR_LABELS.get(ind, ind)
                     st.markdown(f"""
-                    <div style="background:white;border-radius:8px;padding:10px 14px;
-                                margin-bottom:6px;border:1px solid #E5E7EB;
+                    <div style="background:#1E293B;border-radius:8px;padding:10px 14px;
+                                margin-bottom:6px;border:1px solid #334155;
                                 display:flex;justify-content:space-between;align-items:center">
                       <span style="font-weight:600;font-size:.88rem;color:#F8FAFC">
                         {INDICATOR_LABELS.get(ind,ind)}</span>
@@ -585,7 +603,7 @@ with tab2:
                 xaxis=dict(range=[0, 5.8], title="Score (1–5)",
                            tickfont=dict(color=TEXT_DARK),
                            title_font=dict(color=TEXT_DARK),
-                           gridcolor="#E5E7EB"),
+                           gridcolor="#243044"),
                 yaxis=dict(tickfont=dict(color=TEXT_DARK),
                            title_font=dict(color=TEXT_DARK)),
             )
@@ -600,8 +618,7 @@ with tab3:
     ch    = closest_hist_year(sel_year)
     cy_yr = data["clusters_year"][data["clusters_year"]["Year"] == ch].copy()
     jordan_scores = jordan_full[jordan_full["Year"] == sel_year][SCORE_COLS + ["LPI_Overall"]]
-    
-    
+
     if ch != sel_year:
         st.info(f"ℹ️ Using {ch} baseline scores")
 
@@ -676,7 +693,7 @@ with tab3:
             fig_wa.update_layout(
                 barmode="group",
                 xaxis=dict(range=[0, 5.8], tickfont=dict(color=TEXT_DARK),
-                           gridcolor="#E5E7EB"),
+                           gridcolor="#243044"),
                 yaxis=dict(tickfont=dict(color=TEXT_DARK)),
             )
             st.plotly_chart(fig_wa, use_container_width=True)
@@ -689,14 +706,14 @@ with tab3:
         for i, (_, row) in enumerate(wr.iterrows()):
             imp = float(row["Improvement"])
             cols_s[i].markdown(f"""
-            <div style="background:white;border-radius:12px;padding:16px;
-                        border:1px solid #E5E7EB;text-align:center">
+            <div style="background:#1E293B;border-radius:12px;padding:16px;
+                        border:1px solid #334155;text-align:center">
               <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;
-                          color:#6B7280;margin-bottom:8px">{row['Scenario']}</div>
+                          color:#9CA3AF;margin-bottom:8px">{row['Scenario']}</div>
               <div style="font-size:1.5rem;font-weight:700;
                           color:{'#10B981' if imp>0 else '#EF4444'}">+{imp:.3f}</div>
-              <div style="font-size:.78rem;color:#9CA3AF;margin-top:4px">improvement</div>
-              <div style="font-size:1rem;font-weight:700;color:#1D4ED8;margin-top:6px">
+              <div style="font-size:.78rem;color:#6B7280;margin-top:4px">improvement</div>
+              <div style="font-size:1rem;font-weight:700;color:#60A5FA;margin-top:6px">
                 → {row['New Score']:.3f}</div>
             </div>""", unsafe_allow_html=True)
 
@@ -771,12 +788,12 @@ with tab4:
                 </div>""", unsafe_allow_html=True)
         for _, row in fc_j.iterrows():
             st.markdown(f"""
-            <div style="background:white;border-radius:10px;padding:12px 16px;
-                        margin-bottom:8px;border:1px solid #E5E7EB">
-              <div style="font-weight:700;color:#1F2937">{int(row['Year'])}</div>
+            <div style="background:#1E293B;border-radius:10px;padding:12px 16px;
+                        margin-bottom:8px;border:1px solid #334155">
+              <div style="font-weight:700;color:#F8FAFC">{int(row['Year'])}</div>
               <div style="font-size:1.4rem;font-weight:700;color:{JORDAN_RED}">
                 {row['Predicted LPI Score']:.3f}</div>
-              <div style="font-size:.78rem;color:#6B7280">
+              <div style="font-size:.78rem;color:#9CA3AF">
                 CI: [{row['CI Lower']:.3f} – {row['CI Upper']:.3f}]</div>
             </div>""", unsafe_allow_html=True)
 
@@ -861,13 +878,13 @@ with tab5:
                 <div class="priority-row">
                   <div class="priority-badge">{i+1}</div>
                   <div style="flex:1">
-                    <div style="font-weight:600;color:#1F2937;font-size:.9rem">
+                    <div style="font-weight:600;color:#F8FAFC;font-size:.9rem">
                       {row['Indicator Name']}</div>
-                    <div style="font-size:.8rem;color:#6B7280;margin-top:2px">
+                    <div style="font-size:.8rem;color:#CBD5E1;margin-top:2px">
                       Current: {row['Current Score']:.3f} &nbsp;|&nbsp;
                       Impact: {row['Impact Score']:.3f}
                       {'&nbsp;|&nbsp;'+gap_str if gap_str else ''}</div>
-                    <div style="background:#F3F4F6;border-radius:4px;height:6px;margin-top:6px">
+                    <div style="background:#334155;border-radius:4px;height:6px;margin-top:6px">
                       <div style="background:#CE1126;width:{bw}%;height:6px;border-radius:4px">
                       </div></div>
                   </div>
@@ -915,10 +932,10 @@ with tab5:
             fig_imp.update_layout(
                 showlegend=False,
                 xaxis=dict(title="Current Score", tickfont=dict(color=TEXT_DARK),
-                           title_font=dict(color=TEXT_DARK), gridcolor="#E5E7EB"),
+                           title_font=dict(color=TEXT_DARK), gridcolor="#243044"),
                 yaxis=dict(title="Correlation with Overall LPI",
                            tickfont=dict(color=TEXT_DARK),
-                           title_font=dict(color=TEXT_DARK), gridcolor="#E5E7EB"),
+                           title_font=dict(color=TEXT_DARK), gridcolor="#243044"),
             )
             st.plotly_chart(fig_imp, use_container_width=True)
 
@@ -935,12 +952,11 @@ with tab5:
 with tab6:
     st.markdown('<div class="section-title">💬 Ask the Data</div>', unsafe_allow_html=True)
     st.markdown(
-        '<p style="color:#6B7280;margin-bottom:16px">Ask questions about Jordan\'s LPI '
+        '<p style="color:#CBD5E1;margin-bottom:16px">Ask questions about Jordan\'s LPI '
         'in English or Arabic — no AI required, answers come directly from the data.</p>',
         unsafe_allow_html=True,
     )
 
-    # ── Example questions ─────────────────────────────────────────────────────
     st.markdown("**💡 Try asking:**")
     example_cols = st.columns(3)
     examples = [
@@ -957,15 +973,12 @@ with tab6:
 
     st.markdown("---")
 
-    # ── Chat history ──────────────────────────────────────────────────────────
     if "chat_history" not in st.session_state:
         st.session_state["chat_history"] = []
     if "chat_input_val" not in st.session_state:
         st.session_state["chat_input_val"] = ""
 
-    # ── Chatbot engine ────────────────────────────────────────────────────────
     def build_knowledge():
-        """Pre-compute facts from data for fast lookup."""
         kb = {}
         jc = data["jordan_cluster"]
         fc = data["forecast"][data["forecast"]["Country Name"] == "Jordan"]
@@ -975,7 +988,6 @@ with tab6:
         wr = data["whatif_results"]
         cy = data["clusters_year"]
 
-        # Jordan scores by year
         kb["scores_by_year"] = {
             int(r["Year"]): {
                 "overall": round(r["LPI_Overall"], 3),
@@ -990,7 +1002,6 @@ with tab6:
             for _, r in jc.iterrows()
         }
 
-        # Forecast
         kb["forecast"] = {
             int(r["Year"]): {
                 "score": round(r["Predicted LPI Score"], 3),
@@ -1000,23 +1011,19 @@ with tab6:
             for _, r in fc.iterrows()
         }
 
-        # Indicator ranking (weakest/strongest)
         if not ir.empty:
             kb["weakest"]  = ir.loc[ir["Value"].idxmin(), "Indicator Name"]
             kb["strongest"]= ir.loc[ir["Value"].idxmax(), "Indicator Name"]
             kb["rankings"] = ir.set_index("Indicator Name")["Value"].to_dict()
 
-        # Impact (most impactful)
         if not ii.empty:
             kb["most_impactful"] = ii.loc[ii["Correlation with Overall"].idxmax(), "Indicator Name"]
             kb["impacts"]        = ii.set_index("Indicator Name")["Correlation with Overall"].to_dict()
 
-        # Best/worst year
         if kb["scores_by_year"]:
             kb["best_year"]  = max(kb["scores_by_year"], key=lambda y: kb["scores_by_year"][y]["overall"])
             kb["worst_year"] = min(kb["scores_by_year"], key=lambda y: kb["scores_by_year"][y]["overall"])
 
-        # MENA average (latest year)
         latest_hist = max(cy["Year"].unique())
         cy_latest   = cy[cy["Year"] == latest_hist]
         mena        = cy_latest[cy_latest["Region"] == "Middle East & North Africa"]
@@ -1031,12 +1038,10 @@ with tab6:
             "tracking": round(mena["Tracking_Tracing"].mean(), 3),
         }
 
-        # Jordan MENA gap
         jlatest = kb["scores_by_year"].get(latest_hist, {})
         if jlatest:
             kb["mena_gap"] = round(jlatest["overall"] - kb["mena_avg"]["overall"], 3)
 
-        # Global rank
         if not cl.empty:
             rank_df = cl[
                 (cl["Indicator Short"] == "LPI Overall Rank") &
@@ -1044,7 +1049,6 @@ with tab6:
             ][["Year","Value"]].dropna()
             kb["ranks"] = {int(r["Year"]): int(r["Value"]) for _, r in rank_df.iterrows()}
 
-        # Whatif scenarios
         if not wr.empty:
             kb["scenarios"] = wr[["Scenario","New Score","Improvement"]].to_dict("records")
 
@@ -1059,7 +1063,6 @@ with tab6:
     def answer(q: str) -> str:
         q_low = q.lower().strip()
 
-        # ── Year-specific score ───────────────────────────────────────────────
         for year in kb["scores_by_year"]:
             if str(year) in q:
                 s = kb["scores_by_year"][year]
@@ -1091,26 +1094,22 @@ with tab6:
                     f"| 🏷️ Cluster | {s['cluster']} |"
                 )
 
-        # ── Forecast ──────────────────────────────────────────────────────────
         if any(w in q_low for w in ["forecast","predict","2024","2025","2026","توقع","مستقبل"]):
             lines = ["📈 Jordan's LPI **Forecast**:\n\n| Year | Score | 95% CI |", "|---|---|---|"]
             for yr, f in kb["forecast"].items():
                 lines.append(f"| {yr} | **{f['score']}** | [{f['ci_lower']} – {f['ci_upper']}] |")
             return "\n".join(lines)
 
-        # ── Weakest ───────────────────────────────────────────────────────────
         if any(w in q_low for w in ["weak","worst","lowest","أضعف","أسوأ","أدنى"]):
             w = kb.get("weakest","N/A")
             s = kb.get("rankings",{}).get(w,"N/A")
             return f"⚠️ Jordan's **weakest indicator** is **{w}** with a score of **{s:.3f}**.\n\nThis is the area with the most room for improvement."
 
-        # ── Strongest ─────────────────────────────────────────────────────────
         if any(w in q_low for w in ["strong","best","highest","أقوى","أفضل","أعلى"]):
             s  = kb.get("strongest","N/A")
             sc = kb.get("rankings",{}).get(s,"N/A")
             return f"💪 Jordan's **strongest indicator** is **{s}** with a score of **{sc:.3f}**.\n\nThis is Jordan's competitive advantage in logistics."
 
-        # ── MENA comparison ───────────────────────────────────────────────────
         if any(w in q_low for w in ["mena","compare","region","منطقة","مقارنة","الشرق"]):
             m   = kb["mena_avg"]
             gap = kb.get("mena_gap", 0)
@@ -1130,7 +1129,6 @@ with tab6:
                 f"Jordan is **{abs(gap):.3f} points {pos}** the MENA average overall."
             )
 
-        # ── Best/worst year ───────────────────────────────────────────────────
         if any(w in q_low for w in ["best year","أفضل سنة","top year"]):
             yr = kb.get("best_year")
             sc = kb["scores_by_year"][yr]["overall"] if yr else "N/A"
@@ -1141,17 +1139,14 @@ with tab6:
             sc = kb["scores_by_year"][yr]["overall"] if yr else "N/A"
             return f"📉 Jordan's **worst year** was **{yr}** with an overall LPI score of **{sc}**."
 
-        # ── Global rank ───────────────────────────────────────────────────────
         if any(w in q_low for w in ["rank","رتبة","مرتبة","position"]):
             ranks = kb.get("ranks", {})
             if ranks:
-                latest_rank_yr = max(ranks)
                 lines = ["🏆 Jordan's **Global LPI Rank**:\n\n| Year | Rank |\n|---|---|"]
                 for yr in sorted(ranks):
                     lines.append(f"| {yr} | #{ranks[yr]} |")
                 return "\n".join(lines)
 
-        # ── Impact / most important indicator ─────────────────────────────────
         if any(w in q_low for w in ["impact","important","priority","أهم","تأثير","أولوية"]):
             mi = kb.get("most_impactful","N/A")
             ic = kb.get("impacts",{}).get(mi,"N/A")
@@ -1161,7 +1156,6 @@ with tab6:
                 f"Improving this indicator will have the biggest effect on Jordan's overall score."
             )
 
-        # ── Cluster ───────────────────────────────────────────────────────────
         if any(w in q_low for w in ["cluster","group","category","مجموعة","تصنيف"]):
             latest_yr = max(kb["scores_by_year"])
             cl = kb["scores_by_year"][latest_yr]["cluster"]
@@ -1170,7 +1164,6 @@ with tab6:
                 f"This is based on clustering analysis of 170 countries using all 6 LPI indicators."
             )
 
-        # ── Scenarios ─────────────────────────────────────────────────────────
         if any(w in q_low for w in ["scenario","improve","what if","ماذا لو","سيناريو","تحسين"]):
             sc = kb.get("scenarios", [])
             if sc:
@@ -1179,7 +1172,6 @@ with tab6:
                     lines.append(f"| {s['Scenario']} | {s['New Score']:.3f} | +{s['Improvement']:.3f} |")
                 return "\n".join(lines)
 
-        # ── All indicators summary ─────────────────────────────────────────────
         if any(w in q_low for w in ["all indicator","كل المؤشرات","all score","summary","ملخص"]):
             rnk = kb.get("rankings", {})
             imp = kb.get("impacts", {})
@@ -1189,7 +1181,6 @@ with tab6:
                 lines.append(f"| {ind} | {sc:.3f} | {ic:.3f} |")
             return "\n".join(lines)
 
-        # ── Fallback ──────────────────────────────────────────────────────────
         return (
             "🤔 I didn't find an exact match for your question. Try asking about:\n\n"
             "- **Scores**: *'What is Jordan's score in 2018?'*\n"
@@ -1200,7 +1191,6 @@ with tab6:
             "- **Scenarios**: *'What are the improvement scenarios?'*"
         )
 
-    # ── Chat UI ───────────────────────────────────────────────────────────────
     chat_container = st.container()
 
     with chat_container:
@@ -1212,7 +1202,6 @@ with tab6:
     user_input = st.chat_input("Ask about Jordan's LPI data...",
                                 key="chat_main")
 
-    # Handle example button click
     if st.session_state.get("chat_input_val"):
         user_input = st.session_state["chat_input_val"]
         st.session_state["chat_input_val"] = ""
@@ -1265,7 +1254,6 @@ with tab7:
               <div class="kpi-delta delta-neu">Year: {info['year']}</div>
             </div><br>""", unsafe_allow_html=True)
 
-        # Compare live vs local CSV
         st.markdown('<div class="section-title" style="font-size:1rem">'
                     'Live vs Local CSV Comparison</div>', unsafe_allow_html=True)
 
@@ -1290,7 +1278,6 @@ with tab7:
         df_compare = pd.DataFrame(rows)
         st.dataframe(df_compare, use_container_width=True, hide_index=True)
 
-        # Bar chart comparison
         df_scores_only = df_compare[
             df_compare["Indicator"].str.contains("Score") &
             df_compare["Live (API)"].notna() &
@@ -1329,9 +1316,9 @@ with tab7:
         st.markdown("""
         <div style="text-align:center;padding:60px 20px;color:#9CA3AF">
           <div style="font-size:3rem">🌐</div>
-          <div style="font-size:1.1rem;font-weight:600;margin-top:12px">
+          <div style="font-size:1.1rem;font-weight:600;margin-top:12px;color:#CBD5E1">
             No live data loaded yet</div>
-          <div style="font-size:.9rem;margin-top:8px">
+          <div style="font-size:.9rem;margin-top:8px;color:#9CA3AF">
             Click <b>"🔄 Fetch Latest from World Bank"</b> in the sidebar</div>
         </div>""", unsafe_allow_html=True)
 
