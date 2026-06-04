@@ -152,9 +152,52 @@ section[data-testid="stSidebar"] h3,
 section[data-testid="stSidebar"] small,
 section[data-testid="stSidebar"] li { color: #F8FAFC !important; }
 section[data-testid="stSidebar"] hr { border-color:#334155 !important; }
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%) !important;
+}
+section[data-testid="stSidebar"] > div:first-child {
+    background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%) !important;
+}
+section[data-testid="stSidebar"] .stSelectbox label,
+section[data-testid="stSidebar"] .stButton label,
+section[data-testid="stSidebar"] p,
+section[data-testid="stSidebar"] span,
+section[data-testid="stSidebar"] div,
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3,
+section[data-testid="stSidebar"] small,
+section[data-testid="stSidebar"] li { color: #F8FAFC !important; }
+section[data-testid="stSidebar"] hr { border-color:#334155 !important; }
 section[data-testid="stSidebar"] .stSelectbox > div > div {
     background-color: #1E293B !important;
     border-color: #334155 !important;
+    color: #F8FAFC !important;
+}
+
+/* Dropdown list داكن */
+[data-baseweb="popover"] {
+    background-color: #1E293B !important;
+}
+[data-baseweb="popover"] ul {
+    background-color: #1E293B !important;
+}
+[data-baseweb="popover"] li {
+    background-color: #1E293B !important;
+    color: #F8FAFC !important;
+}
+[data-baseweb="popover"] li:hover {
+    background-color: #334155 !important;
+}
+[data-baseweb="menu"] {
+    background-color: #1E293B !important;
+}
+[data-baseweb="menu"] * {
+    background-color: #1E293B !important;
+    color: #F8FAFC !important;
+}
+[data-baseweb="select"] * {
+    background-color: #1E293B !important;
     color: #F8FAFC !important;
 }
 
