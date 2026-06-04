@@ -79,6 +79,11 @@ st.markdown("""
 html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 #MainMenu {visibility:hidden;} footer {visibility:hidden;}
 .block-container {padding-top: 1.5rem; padding-bottom: 2rem;}
+section[data-testid="stSidebar"] .stButton > button {
+    background-color: #CE1126 !important;
+    color: #F8FAFC !important;
+    border: none !important;
+}
 .stApp {
     background: linear-gradient(180deg, #020617 0%, #0B1220 45%, #111827 100%);
     color: #F8FAFC;
