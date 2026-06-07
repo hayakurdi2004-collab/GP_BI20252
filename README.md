@@ -53,6 +53,7 @@ For Jordan, analyzing individual LPI indicators separately does not provide a co
 Therefore, there is a need for an analytical framework that transforms LPI data into meaningful insights and supports the evaluation of current performance, future forecasts, and improvement opportunities.
 
 ### 1.3 Project Importance
+<img width="246" height="180" alt="image" src="https://github.com/user-attachments/assets/b586e3f8-adc6-4308-8d4d-47e6cb27c760" />
 
 The importance of this project is that it helps identify Jordan's logistics strengths and weaknesses using data-driven methods. Instead of relying only on static reports, the system provides interactive visualizations, forecasting results, gap analysis, and policy improvement scenarios.
 
@@ -80,10 +81,10 @@ The target users of this system are:
 
 - Jordanian policymakers.
 - Ministry of Transport.
-- Jordan Customs Department.
-- Economic planning institutions.
+- Jordan Customs Department.https://www.bing.com/images/search?view=detailV2&ccid=dGjTLZbl&id=7996F532343C788607630EDA423147D0A3B3F406&thid=OIP.dGjTLZblIidGlHrZKAQ9VAHaEW&mediaurl=https%3a%2f%2fwww.marketingevolution.com%2fhubfs%2fcustomer-segmentation-1.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.7468d32d96e5222746947ad928043d54%3frik%3dBvSzo9BHMULaDg%26pid%3dImgRaw%26r%3d0&exph=1328&expw=2258&q=target+user&FORM=IRPRST&ck=7F1413C078913962537550B12BC235E7&selectedIndex=6&itb=0
+- Economic planning institutions.                               
 - Logistics and supply chain stakeholders.
-- Researchers interested in logistics performance.
+- Researchers interested in logistics performance.        
 
 ### 2.2 Business Story
 
