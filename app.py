@@ -374,7 +374,7 @@ with st.sidebar:
 Data: World Bank LPI
 Years: 2007–2022 (interpolated)
 Forecast: 2024–2026
-Countries: 170 | Indicators: 6
+Countries: 168 | Indicators: 6
 """)
 
 # ── Header ────────────────────────────────────────────────────────────────────
@@ -442,7 +442,7 @@ tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([
 
 # ── TAB 1 ─────────────────────────────────────────────────────────────────────
 with tab1:
-    st.markdown('<div class="section-title">Jordan\'s Cluster Position Among 170 Countries</div>',
+    st.markdown('<div class="section-title">Jordan\'s Cluster Position Among 168 Countries</div>',
                 unsafe_allow_html=True)
 
     ch = closest_hist_year(sel_year)
@@ -1209,7 +1209,7 @@ with tab6:
             cl = kb["scores_by_year"][latest_yr]["cluster"]
             return (
                 f"🏷️ Jordan is currently classified as: **{cl}**\n\n"
-                f"This is based on clustering analysis of 170 countries using all 6 LPI indicators."
+                f"This is based on clustering analysis of 168 countries using all 6 LPI indicators."
             )
 
         if any(w in q_low for w in ["scenario","improve","what if","ماذا لو","سيناريو","تحسين"]):
