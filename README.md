@@ -10,7 +10,7 @@
 | **Project Type** | Data Analytics, Forecasting, and Decision Support System |
 | **Submission Date** | 3 / 6 / 2026 |
 | **Supervisor** | Dr.Hussam Barham |
-web app link: https://gpbi20252-uznbgc3kzaewsofzqnjxnn.streamlit.app
+web app link:     https://gpbi20252-uznbgc3kzaewsofzqnjxnn.streamlit.app
 ---
 
 ## Table of Contents
