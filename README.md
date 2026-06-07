@@ -74,7 +74,7 @@ The main objectives of this project are:
 ---
 
 ## 2. Business Understanding
-                                                                                <img width="262" height="180" alt="image" src="https://github.com/user-attachments/assets/9cfde4d1-7783-4578-9f29-33cc8aa9ed07" />
+<img width="262" height="180" alt="image" src="https://github.com/user-attachments/assets/07cafb8d-f3b6-49ab-974e-f81f33449566" />
 
 ### 2.1 Target Users
 
