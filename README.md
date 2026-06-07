@@ -33,7 +33,8 @@ web app link :                          https://gpbi20252-uznbgc3kzaewsofzqnjxnn
 
 ## 1. Project Introduction
 <img width="253" height="180" alt="image" src="https://github.com/user-attachments/assets/5c2da8a4-3bcf-47c9-972a-88580db6f372" />
-
+<img width="318" height="174" alt="image" src="https://github.com/user-attachments/assets/ccb75152-c970-46a5-844b-b4121de099a1" />
+<img width="321" height="180" alt="image" src="https://github.com/user-attachments/assets/283240db-8758-42dd-a80d-2935a9314079" />
 
 ### 1.1 Project Idea
 
