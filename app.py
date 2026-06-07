@@ -84,6 +84,27 @@ section[data-testid="stSidebar"] .stButton > button {
     color: #F8FAFC !important;
     border: none !important;
 }
+            .stButton > button {
+    background-color: #1E293B !important;
+    color: #F8FAFC !important;
+    border: 1px solid #334155 !important;
+}
+            .stChatInput textarea {
+    background-color: #1E293B !important;
+    color: #F8FAFC !important;
+}
+
+.stChatInput input {
+    background-color: #1E293B !important;
+    color: #F8FAFC !important;
+}
+            [data-testid="stChatInput"] {
+    background-color: #1E293B !important;
+}
+
+[data-testid="stChatInput"] textarea {
+    color: #F8FAFC !important;
+}
 .stApp {
     background: linear-gradient(180deg, #020617 0%, #0B1220 45%, #111827 100%);
     color: #F8FAFC;
