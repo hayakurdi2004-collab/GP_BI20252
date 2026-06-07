@@ -116,6 +116,7 @@ The project consists of several analytical components that work together to prov
 ---
 
 ## 3. Dataset
+<img width="1274" height="586" alt="Screenshot 2026-06-08 021313" src="https://github.com/user-attachments/assets/25e96fb8-11a8-4824-8057-03761bb16d45" />
 
 ### 3.1 Data Source
 
