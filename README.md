@@ -81,7 +81,8 @@ The target users of this system are:
 
 - Jordanian policymakers.
 - Ministry of Transport.
-- Jordan Customs Department.https://www.bing.com/images/search?view=detailV2&ccid=dGjTLZbl&id=7996F532343C788607630EDA423147D0A3B3F406&thid=OIP.dGjTLZblIidGlHrZKAQ9VAHaEW&mediaurl=https%3a%2f%2fwww.marketingevolution.com%2fhubfs%2fcustomer-segmentation-1.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.7468d32d96e5222746947ad928043d54%3frik%3dBvSzo9BHMULaDg%26pid%3dImgRaw%26r%3d0&exph=1328&expw=2258&q=target+user&FORM=IRPRST&ck=7F1413C078913962537550B12BC235E7&selectedIndex=6&itb=0
+- Jordan Customs Department                                <img width="278" height="180" alt="image" src="https://github.com/user-                                                     attachments/assets/be05e24e-7fdc-47c8-b752-cf1115987362" />
+
 - Economic planning institutions.                               
 - Logistics and supply chain stakeholders.
 - Researchers interested in logistics performance.        
