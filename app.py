@@ -1345,7 +1345,6 @@ with tab7:
             })
 
         df_compare = pd.DataFrame(rows)
-        st.dataframe(df_compare, use_container_width=True, hide_index=True)
 
         df_scores_only = df_compare[
             df_compare["Indicator"].str.contains("Score") &
